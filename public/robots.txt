@@ -1,4 +1,8 @@
+# Jazz Circle — robots.txt
+
 User-agent: *
 Allow: /
+Disallow: /_next/
+Disallow: /api/
 
 Sitemap: https://jazzcircle.app/sitemap.xml
