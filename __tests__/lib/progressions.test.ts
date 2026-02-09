@@ -8,8 +8,8 @@ import type { MusicalKey } from '@/lib/music/types';
    ═══════════════════════════════════════════════════════════ */
 
 describe('JAZZ_PROGRESSIONS', () => {
-  it('has 7 templates', () => {
-    expect(JAZZ_PROGRESSIONS).toHaveLength(7);
+  it('has 5 templates', () => {
+    expect(JAZZ_PROGRESSIONS).toHaveLength(5);
   });
 
   it('each template has a unique id', () => {

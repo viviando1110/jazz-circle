@@ -2,17 +2,19 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import MobileNav from '@/components/layout/MobileNav';
 
 const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/progressions', label: 'Progressions' },
-  { href: '/standards', label: 'Standards' },
+  { href: '/standards', label: 'Songs' },
   { href: '/about', label: 'About' },
 ];
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 bg-[var(--surface)] border-b border-[var(--border)]">
@@ -26,15 +28,24 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm text-[var(--cream-dim)] hover:text-[var(--cream)] transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const isActive = link.href === '/'
+              ? pathname === '/'
+              : pathname.startsWith(link.href);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-sm transition-colors ${
+                  isActive
+                    ? 'text-[var(--gold)] font-medium'
+                    : 'text-[var(--cream-dim)] hover:text-[var(--cream)]'
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Mobile hamburger */}

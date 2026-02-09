@@ -13,7 +13,7 @@ export default function Footer() {
               Privacy
             </Link>
             <Link href="/standards" className="hover:text-[var(--cream)] transition-colors">
-              Standards
+              Songs
             </Link>
           </div>
           <p>&copy; {new Date().getFullYear()} Jazz Circle. Built with Next.js.</p>

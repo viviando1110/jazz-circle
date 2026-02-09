@@ -41,7 +41,7 @@ export function ChordChart({ sections, activeBarIndex, onBarClick }: ChordChartP
                   `}
                 >
                   {/* Bar number */}
-                  <span className="absolute left-1.5 top-1 text-[10px] text-neutral-500">
+                  <span className="absolute left-1.5 top-1 text-[10px] text-neutral-400">
                     {bar.bar}
                   </span>
 

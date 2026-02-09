@@ -37,8 +37,8 @@ export function generateKeyPageMeta(key: MusicalKey): Metadata {
 }
 
 export function generateStandardPageMeta(standard: Standard): Metadata {
-  const title = `${standard.title} Jazz Chord Changes & Analysis`;
-  const description = `Learn the chord changes, harmonic analysis, and practice tips for ${standard.title} by ${standard.composer}. Includes scale guides and playback.`;
+  const title = `${standard.title} — Jazz Chord Changes & Analysis`;
+  const description = `Learn the chord changes, harmonic analysis, and practice tips for ${standard.title} by ${standard.composer}. Includes scale guides, notation, and playback.`;
 
   return {
     title,
@@ -57,7 +57,7 @@ export function generateProgressionsPageMeta(): Metadata {
   return {
     title: 'Common Jazz Progressions — ii-V-I, Turnarounds, Blues & More',
     description:
-      'Learn essential jazz chord progressions: ii-V-I, I-vi-ii-V turnarounds, jazz blues, modal vamps, and Coltrane changes. Transpose to any key with interactive playback.',
+      'Learn essential jazz chord progressions: ii-V-I, I-vi-ii-V turnarounds, jazz blues, and modal vamps. Transpose to any key with interactive playback.',
     openGraph: {
       title: 'Common Jazz Progressions — ii-V-I, Turnarounds, Blues & More',
       description:

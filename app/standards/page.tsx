@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { STANDARDS } from '@/lib/music/standards';
 
 export const metadata: Metadata = {
-  title: 'Jazz Standards — Chord Changes & Analysis',
+  title: 'Jazz Songs — Chord Changes & Analysis',
   description:
-    'Browse jazz standards with chord changes, harmonic analysis, scale guides, and interactive playback. Learn the harmony behind the most important jazz tunes.',
+    'Browse jazz songs with chord changes, harmonic analysis, scale guides, and interactive playback. Learn the harmony behind the most important jazz tunes.',
 };
 
 function difficultyColor(difficulty: string): string {
@@ -26,11 +26,11 @@ export default function StandardsIndexPage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <header className="mb-8">
         <h1 className="text-3xl font-serif font-bold text-[var(--gold)] sm:text-4xl mb-2">
-          Jazz Standards
+          Jazz Songs
         </h1>
         <p className="text-sm text-[var(--cream-dim)]">
           Explore chord changes, harmonic analysis, and practice guidance for essential
-          jazz standards.
+          jazz songs.
         </p>
       </header>
 
@@ -69,12 +69,22 @@ export default function StandardsIndexPage() {
         ))}
       </div>
 
-      {STANDARDS.length <= 1 && (
-        <p className="mt-8 text-sm text-[var(--cream-dim)] text-center">
-          More standards coming soon. Check back for additional tunes with chord changes
-          and analysis.
-        </p>
-      )}
+      {/* Coming soon teaser */}
+      <section className="mt-12">
+        <h2 className="text-lg font-semibold text-[var(--cream)] mb-4">
+          Coming Soon
+        </h2>
+        <div className="grid gap-2 sm:grid-cols-2">
+          {['Blue Bossa', 'All The Things You Are', 'Fly Me to the Moon', 'So What', 'Take the A Train', 'Stella by Starlight'].map((title) => (
+            <div
+              key={title}
+              className="flex items-center gap-3 rounded-lg border border-[var(--border)] bg-[var(--surface)] px-4 py-3 opacity-60"
+            >
+              <span className="text-sm text-[var(--cream-dim)]">{title}</span>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

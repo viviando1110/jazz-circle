@@ -59,22 +59,6 @@ export const JAZZ_PROGRESSIONS: ProgressionTemplate[] = [
     bars: '2 bars',
     category: 'modal',
   },
-  {
-    id: 'backdoor-ii-V',
-    name: 'Backdoor ii – V',
-    degrees: [3, 6],
-    description: 'iv-m7 to bVII7 resolving to I. Smooth unexpected resolution.',
-    bars: '4 bars',
-    category: 'advanced',
-  },
-  {
-    id: 'coltrane-changes',
-    name: 'Coltrane Changes',
-    degrees: [0, 4, 1, 5, 2, 0],
-    description: 'Major third cycle. Giant Steps-style key center movement.',
-    bars: '4 bars',
-    category: 'advanced',
-  },
 ];
 
 /* ═══════════════════════════════════════════════════════════

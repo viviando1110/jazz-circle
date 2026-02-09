@@ -10,6 +10,7 @@ interface CircleOfFifthsProps {
   hoveredWedge: string | null;
   onSelectKey: (key: MusicalKey) => void;
   onHoverWedge: (id: string | null) => void;
+  compact?: boolean;
 }
 
 const CX = 250;
@@ -38,12 +39,16 @@ export default function CircleOfFifths({
   hoveredWedge,
   onSelectKey,
   onHoverWedge,
+  compact = false,
 }: CircleOfFifthsProps) {
   const minorByRelative = new Map<string, MusicalKey>();
   KEYS_MINOR.forEach((k) => minorByRelative.set(k.relativeKey, k));
 
   return (
-    <div className="w-full max-w-[300px] md:max-w-[440px] mx-auto">
+    <div className={compact
+      ? "w-full max-w-[200px] md:max-w-[300px] mx-auto"
+      : "w-full max-w-[300px] md:max-w-[440px] mx-auto"
+    }>
       <svg
         viewBox="0 0 500 500"
         width="100%"

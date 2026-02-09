@@ -29,21 +29,25 @@ export function createSynthEngine(): AudioEngine {
       // Must be called inside a user gesture handler.
       await Tone.start();
 
-      reverb = new Tone.Reverb({ decay: 1.5, wet: 0.2 });
-      await reverb.ready;
+      if (!reverb) {
+        reverb = new Tone.Reverb({ decay: 1.5, wet: 0.2 });
+        await reverb.ready;
+      }
 
-      synth = new Tone.PolySynth(Tone.Synth, {
-        oscillator: { type: 'triangle' },
-        envelope: {
-          attack: 0.02,
-          decay: 0.3,
-          sustain: 0.5,
-          release: 0.5,
-        },
-      });
+      if (!synth) {
+        synth = new Tone.PolySynth(Tone.Synth, {
+          oscillator: { type: 'triangle' },
+          envelope: {
+            attack: 0.02,
+            decay: 0.3,
+            sustain: 0.5,
+            release: 0.5,
+          },
+        });
 
-      synth.connect(reverb);
-      reverb.toDestination();
+        synth.connect(reverb);
+        reverb.toDestination();
+      }
 
       ready = true;
     },

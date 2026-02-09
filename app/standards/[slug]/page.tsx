@@ -16,8 +16,8 @@ export function generateMetadata({ params }: PageProps): Metadata {
   if (!standard) return {};
 
   return {
-    title: `${standard.title} Jazz Chord Changes & Analysis`,
-    description: `Learn the chord changes, harmonic analysis, and practice tips for ${standard.title} by ${standard.composer}. Includes scale guides and playback.`,
+    title: `${standard.title} — Jazz Chord Changes & Analysis`,
+    description: `Learn the chord changes, harmonic analysis, and practice tips for ${standard.title} by ${standard.composer}. Includes scale guides, notation, and playback.`,
   };
 }
 

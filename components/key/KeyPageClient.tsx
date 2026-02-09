@@ -9,6 +9,7 @@ import ChordDetail from '@/components/chords/ChordDetail';
 import PianoKeyboard from '@/components/piano/PianoKeyboard';
 import { ProgressionList } from '@/components/progressions/ProgressionList';
 import { ProgressionPlayer } from '@/components/progressions/ProgressionPlayer';
+import DiatonicStaffDisplay from '@/components/notation/DiatonicStaffDisplay';
 
 interface KeyPageClientProps {
   musicalKey: MusicalKey;
@@ -32,6 +33,11 @@ export default function KeyPageClient({ musicalKey }: KeyPageClientProps) {
 
   return (
     <div className="space-y-8">
+      {/* Staff notation */}
+      <section>
+        <DiatonicStaffDisplay musicalKey={musicalKey} />
+      </section>
+
       {/* Diatonic chords */}
       <section>
         <DiatonicChords
