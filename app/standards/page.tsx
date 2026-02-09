@@ -69,21 +69,13 @@ export default function StandardsIndexPage() {
         ))}
       </div>
 
-      {/* Coming soon teaser */}
-      <section className="mt-12">
-        <h2 className="text-lg font-semibold text-[var(--cream)] mb-4">
-          Coming Soon
-        </h2>
-        <div className="grid gap-2 sm:grid-cols-2">
-          {['Blue Bossa', 'All The Things You Are', 'Fly Me to the Moon', 'So What', 'Take the A Train', 'Stella by Starlight'].map((title) => (
-            <div
-              key={title}
-              className="flex items-center gap-3 rounded-lg border border-[var(--border)] bg-[var(--surface)] px-4 py-3 opacity-60"
-            >
-              <span className="text-sm text-[var(--cream-dim)]">{title}</span>
-            </div>
-          ))}
-        </div>
+      {/* SEO content */}
+      <section className="mt-12 text-sm text-[var(--cream-dim)] max-w-2xl">
+        <p>
+          Each song includes chord changes, section-by-section harmonic analysis,
+          scale suggestions for improvisation, and interactive playback with tempo control.
+          Transpose between common keys and practice at your own pace.
+        </p>
       </section>
     </div>
   );
