@@ -1,21 +1,40 @@
 import type { Metadata } from 'next';
 import type { MusicalKey, Standard } from '@/lib/music/types';
 
-const SITE_URL = 'https://jazzcircle.app';
+const SITE_URL = 'https://jazz-circle.com';
+const SITE_NAME = 'Jazz Circle';
+
+function ogDefaults() {
+  return {
+    siteName: SITE_NAME,
+    locale: 'en_US',
+  } as const;
+}
+
+function twitterCard(title: string, description: string) {
+  return {
+    card: 'summary_large_image' as const,
+    title,
+    description,
+  };
+}
 
 export function generateHomeMeta(): Metadata {
+  const title = 'Jazz Circle — Interactive Circle of Fifths for Jazz Musicians';
+  const description =
+    'Learn jazz harmony with an interactive Circle of Fifths. Explore diatonic chords, jazz progressions, 100+ song chord charts with notation and audio playback.';
+
   return {
-    title: 'Jazz Circle of Fifths — Interactive Jazz Theory Tool',
-    description:
-      'Explore jazz harmony with our interactive Circle of Fifths. Learn diatonic chords, scale suggestions, chord voicings, and common jazz progressions in all 24 keys.',
+    title,
+    description,
     openGraph: {
-      title: 'Jazz Circle of Fifths — Interactive Jazz Theory Tool',
-      description:
-        'Explore jazz harmony with our interactive Circle of Fifths. Diatonic chords, scales, voicings, and progressions in all 24 keys.',
+      ...ogDefaults(),
+      title,
+      description,
       url: SITE_URL,
-      siteName: 'Jazz Circle',
       type: 'website',
     },
+    twitter: twitterCard(title, description),
   };
 }
 
@@ -27,44 +46,49 @@ export function generateKeyPageMeta(key: MusicalKey): Metadata {
     title,
     description,
     openGraph: {
+      ...ogDefaults(),
       title,
       description,
       url: `${SITE_URL}/key/${key.slug}`,
-      siteName: 'Jazz Circle',
       type: 'article',
     },
+    twitter: twitterCard(title, description),
   };
 }
 
 export function generateStandardPageMeta(standard: Standard): Metadata {
-  const title = `${standard.title} — Jazz Chord Changes & Analysis`;
+  const title = `${standard.title} Chord Changes — Jazz Circle`;
   const description = `Learn the chord changes, harmonic analysis, and practice tips for ${standard.title} by ${standard.composer}. Includes scale guides, notation, and playback.`;
+
+  return {
+    title: `${standard.title} — Jazz Chord Changes & Analysis`,
+    description,
+    openGraph: {
+      ...ogDefaults(),
+      title,
+      description,
+      url: `${SITE_URL}/standards/${standard.slug}`,
+      type: 'article',
+    },
+    twitter: twitterCard(title, description),
+  };
+}
+
+export function generateProgressionsPageMeta(): Metadata {
+  const title = 'Common Jazz Progressions — ii-V-I, Turnarounds, Blues & More';
+  const description =
+    'Learn essential jazz chord progressions: ii-V-I, I-vi-ii-V turnarounds, jazz blues, and modal vamps. Transpose to any key with interactive playback.';
 
   return {
     title,
     description,
     openGraph: {
+      ...ogDefaults(),
       title,
       description,
-      url: `${SITE_URL}/standards/${standard.slug}`,
-      siteName: 'Jazz Circle',
-      type: 'article',
-    },
-  };
-}
-
-export function generateProgressionsPageMeta(): Metadata {
-  return {
-    title: 'Common Jazz Progressions — ii-V-I, Turnarounds, Blues & More',
-    description:
-      'Learn essential jazz chord progressions: ii-V-I, I-vi-ii-V turnarounds, jazz blues, and modal vamps. Transpose to any key with interactive playback.',
-    openGraph: {
-      title: 'Common Jazz Progressions — ii-V-I, Turnarounds, Blues & More',
-      description:
-        'Essential jazz progressions with interactive playback. Transpose to any key.',
       url: `${SITE_URL}/progressions`,
-      siteName: 'Jazz Circle',
       type: 'website',
     },
+    twitter: twitterCard(title, description),
   };
 }

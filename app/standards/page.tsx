@@ -1,11 +1,27 @@
 import type { Metadata } from 'next';
 import { STANDARDS } from '@/lib/music/standards';
 import { SongsSearch } from '@/components/standards/SongsSearch';
+import AdSlot from '@/components/ads/AdSlot';
 
 export const metadata: Metadata = {
   title: 'Jazz Songs — Chord Changes & Analysis',
   description:
     'Browse jazz songs with chord changes, harmonic analysis, scale guides, and interactive playback. Learn the harmony behind the most important jazz tunes.',
+  openGraph: {
+    title: 'Jazz Songs — Chord Changes & Analysis',
+    description:
+      'Browse jazz songs with chord changes, harmonic analysis, scale guides, and interactive playback.',
+    url: 'https://jazz-circle.com/standards',
+    siteName: 'Jazz Circle',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Jazz Songs — Chord Changes & Analysis',
+    description:
+      'Browse jazz songs with chord changes, harmonic analysis, and interactive playback.',
+  },
 };
 
 export default function StandardsIndexPage() {
@@ -22,6 +38,8 @@ export default function StandardsIndexPage() {
       </header>
 
       <SongsSearch standards={STANDARDS} />
+
+      <AdSlot slot="placeholder" format="horizontal" />
 
       {/* SEO content */}
       <section className="mt-12 text-sm text-[var(--cream-dim)] max-w-2xl">

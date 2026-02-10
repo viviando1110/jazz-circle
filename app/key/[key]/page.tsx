@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { ALL_KEYS, getKeyBySlug } from '@/lib/music/keys';
 import { generateKeyPageMeta } from '@/lib/seo';
 import KeyPageClient from '@/components/key/KeyPageClient';
+import AdSlot from '@/components/ads/AdSlot';
 
 interface PageProps {
   params: { key: string };
@@ -42,6 +43,8 @@ export default function KeyPage({ params }: PageProps) {
       </header>
 
       <KeyPageClient musicalKey={musicalKey} />
+
+      <AdSlot slot="placeholder" format="horizontal" />
 
       {/* SEO content */}
       <section className="mt-16 space-y-3 text-sm text-[var(--cream-dim)] max-w-2xl">

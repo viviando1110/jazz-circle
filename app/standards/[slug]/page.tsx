@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { STANDARDS, getStandardBySlug } from '@/lib/music/standards';
+import { generateStandardPageMeta } from '@/lib/seo';
 import { StandardPageClient } from '@/components/standards/StandardPageClient';
 
 interface PageProps {
@@ -14,11 +15,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: PageProps): Metadata {
   const standard = getStandardBySlug(params.slug);
   if (!standard) return {};
-
-  return {
-    title: `${standard.title} — Jazz Chord Changes & Analysis`,
-    description: `Learn the chord changes, harmonic analysis, and practice tips for ${standard.title} by ${standard.composer}. Includes scale guides, notation, and playback.`,
-  };
+  return generateStandardPageMeta(standard);
 }
 
 export default function StandardPage({ params }: PageProps) {

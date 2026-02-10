@@ -1,31 +1,43 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 interface AdSlotProps {
-  slotId: string;
-  format: 'horizontal' | 'rectangle';
+  slot: string;
+  format?: 'auto' | 'horizontal' | 'vertical' | 'rectangle';
+  className?: string;
 }
 
-export default function AdSlot({ slotId, format }: AdSlotProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [mounted, setMounted] = useState(false);
+export default function AdSlot({ slot, format = 'auto', className = '' }: AdSlotProps) {
+  const adRef = useRef<HTMLModElement>(null);
+  const pushed = useRef(false);
 
   useEffect(() => {
-    setMounted(true);
+    if (!process.env.NEXT_PUBLIC_ADSENSE_ID) return;
+    if (pushed.current) return;
+    try {
+      const w = window as unknown as { adsbygoogle: Record<string, unknown>[] };
+      w.adsbygoogle = w.adsbygoogle || [];
+      w.adsbygoogle.push({});
+      pushed.current = true;
+    } catch {
+      // AdSense not loaded yet — safe to ignore
+    }
   }, []);
 
-  if (!mounted) return null;
-
-  const heightClass = format === 'horizontal' ? 'h-[90px]' : 'h-[250px]';
+  if (!process.env.NEXT_PUBLIC_ADSENSE_ID) return null;
 
   return (
-    <div
-      ref={containerRef}
-      className={`w-full ${heightClass} flex items-center justify-center bg-[var(--surface)] border border-[var(--border)] rounded-lg text-xs text-[var(--cream-dim)]`}
-      data-ad-slot={slotId}
-    >
-      Ad
+    <div className={`ad-container my-6 ${className}`}>
+      <ins
+        ref={adRef}
+        className="adsbygoogle"
+        style={{ display: 'block' }}
+        data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_ID}
+        data-ad-slot={slot}
+        data-ad-format={format}
+        data-full-width-responsive="true"
+      />
     </div>
   );
 }

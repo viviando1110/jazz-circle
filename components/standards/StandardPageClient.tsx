@@ -10,6 +10,7 @@ import { ChordChart } from './ChordChart';
 import { SectionAnalysis } from './SectionAnalysis';
 import { TransposeToggle } from './TransposeToggle';
 import LeadSheetNotation from '@/components/notation/LeadSheetNotation';
+import AdSlot from '@/components/ads/AdSlot';
 import type { NoteName, ChordQuality } from '@/lib/music/types';
 import { CHROMATIC } from '@/lib/constants';
 
@@ -159,6 +160,8 @@ export function StandardPageClient({ standard }: StandardPageClientProps) {
         <h2 className="text-lg font-semibold text-neutral-100 mb-3">Notation</h2>
         <LeadSheetNotation sections={displaySections} />
       </div>
+
+      <AdSlot slot="placeholder" format="horizontal" />
 
       {/* Chord Chart */}
       <ChordChart
