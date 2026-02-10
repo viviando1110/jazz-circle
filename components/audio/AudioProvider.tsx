@@ -16,13 +16,13 @@ import { createSynthEngine } from './engines/synthEngine';
 interface AudioContextValue {
   engine: AudioEngine | null;
   isReady: boolean;
-  init: () => Promise<void>;
+  init: () => Promise<AudioEngine | null>;
 }
 
 const AudioCtx = createContext<AudioContextValue>({
   engine: null,
   isReady: false,
-  init: async () => {},
+  init: async () => null,
 });
 
 export function AudioProvider({ children }: { children: ReactNode }) {
@@ -37,65 +37,36 @@ export function AudioProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
-  const init = useCallback(async () => {
-    const engine = engineRef.current;
-    if (!engine) return;
+  const init = useCallback(async (): Promise<AudioEngine | null> => {
+    let engine = engineRef.current;
+    if (!engine) return null;
     if (engine.isReady) {
       setIsReady(true);
-      return;
+      return engine;
     }
     try {
       await engine.init();
       setIsReady(true);
+      return engine;
     } catch {
       // Sampled engine failed — try synth fallback.
       engineRef.current = createSynthEngine();
+      engine = engineRef.current;
       try {
-        await engineRef.current.init();
+        await engine.init();
         setIsReady(true);
+        return engine;
       } catch {
         // Both engines failed — stay not ready.
+        return null;
       }
     }
   }, []);
 
-  // Auto-init on first user gesture (click or keydown).
-  // Keep listeners alive until init actually succeeds.
-  // If sampled engine fails, fall back to synth engine.
-  useEffect(() => {
-    if (isReady) return;
-
-    const handleGesture = async () => {
-      const engine = engineRef.current;
-      if (!engine) return;
-      try {
-        await engine.init();
-        setIsReady(true);
-        window.removeEventListener('click', handleGesture);
-        window.removeEventListener('keydown', handleGesture);
-      } catch {
-        // Sampled engine failed to load — fall back to synth engine.
-        // This can happen if sample URLs are unreachable or CORS issues occur.
-        engineRef.current = createSynthEngine();
-        try {
-          await engineRef.current.init();
-          setIsReady(true);
-          window.removeEventListener('click', handleGesture);
-          window.removeEventListener('keydown', handleGesture);
-        } catch {
-          // Synth engine also failed — keep listeners alive for next gesture.
-        }
-      }
-    };
-
-    window.addEventListener('click', handleGesture);
-    window.addEventListener('keydown', handleGesture);
-
-    return () => {
-      window.removeEventListener('click', handleGesture);
-      window.removeEventListener('keydown', handleGesture);
-    };
-  }, [isReady]);
+  // Audio init is handled lazily: useAudio().playChord / playProgression
+  // call engine.init() before playing. This avoids window-level click
+  // listeners that can interfere with other interactive elements (e.g. SVG
+  // circle wedges) on the first page load.
 
   return (
     <AudioCtx.Provider

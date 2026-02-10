@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { useAudio } from '@/components/audio/useAudio';
 
 export interface PlaybackState {
@@ -28,11 +28,21 @@ export function usePlayback(defaultTempo = 120): UsePlaybackReturn {
   const [tempo, setTempoState] = useState(defaultTempo);
   const tempoRef = useRef(defaultTempo);
 
+  const stopRef = useRef<() => void>(() => {});
+
   const stop = useCallback(() => {
     engineStop();
     setIsPlaying(false);
     setCurrentChordIndex(-1);
   }, [engineStop]);
+
+  // Keep ref in sync so cleanup can call latest stop
+  stopRef.current = stop;
+
+  // Stop playback when the component unmounts (e.g. page navigation)
+  useEffect(() => {
+    return () => stopRef.current();
+  }, []);
 
   const pause = useCallback(() => {
     engineStop();

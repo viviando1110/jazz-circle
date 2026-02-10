@@ -1,0 +1,81 @@
+// NOTE: Only chord progressions, analysis, and practice tips. NO melody or lyrics (copyrighted).
+
+import type { Standard } from '@/lib/music/types';
+
+export const MY_FUNNY_VALENTINE: Standard = {
+  title: 'My Funny Valentine',
+  slug: 'my-funny-valentine',
+  composer: 'Richard Rodgers',
+  year: 1937,
+  form: 'ABAB',
+  defaultKey: 'C minor',
+  alternateKey: 'D minor',
+  tempo: { slow: 60, medium: 90, fast: 120 },
+  timeSignature: '4/4',
+  totalBars: 36,
+  difficulty: 'intermediate',
+  tags: ['standard', 'ballad', 'rodgers-hart', '1930s'],
+  description: 'Classic ballad with a haunting melody in minor. Features chromatic descending bass lines and sophisticated harmonic movement.',
+  sections: [
+    {
+      name: 'A',
+      label: 'A Section',
+      bars: [
+        { bar: 1, chords: [{ symbol: 'Cm7', beats: 4 }] },
+        { bar: 2, chords: [{ symbol: 'Cm7/Bb', beats: 4 }] },
+        { bar: 3, chords: [{ symbol: 'Abmaj7', beats: 4 }] },
+        { bar: 4, chords: [{ symbol: 'Fm7', beats: 4 }] },
+        { bar: 5, chords: [{ symbol: 'Dm7b5', beats: 4 }] },
+        { bar: 6, chords: [{ symbol: 'G7', beats: 4 }] },
+        { bar: 7, chords: [{ symbol: 'Cm7', beats: 2 }, { symbol: 'Abmaj7', beats: 2 }] },
+        { bar: 8, chords: [{ symbol: 'Dm7b5', beats: 2 }, { symbol: 'G7', beats: 2 }] },
+      ],
+    },
+    {
+      name: 'B',
+      label: 'B Section',
+      bars: [
+        { bar: 9, chords: [{ symbol: 'Cm7', beats: 4 }] },
+        { bar: 10, chords: [{ symbol: 'Cm7/Bb', beats: 4 }] },
+        { bar: 11, chords: [{ symbol: 'Abmaj7', beats: 4 }] },
+        { bar: 12, chords: [{ symbol: 'Fm7', beats: 4 }] },
+        { bar: 13, chords: [{ symbol: 'Bbm7', beats: 4 }] },
+        { bar: 14, chords: [{ symbol: 'Eb7', beats: 4 }] },
+        { bar: 15, chords: [{ symbol: 'Abmaj7', beats: 4 }] },
+        { bar: 16, chords: [{ symbol: 'Dm7b5', beats: 2 }, { symbol: 'G7', beats: 2 }] },
+      ],
+    },
+    {
+      name: 'A',
+      label: 'A Section (repeat)',
+      bars: [
+        { bar: 17, chords: [{ symbol: 'Cm7', beats: 4 }] },
+        { bar: 18, chords: [{ symbol: 'Cm7/Bb', beats: 4 }] },
+        { bar: 19, chords: [{ symbol: 'Abmaj7', beats: 4 }] },
+        { bar: 20, chords: [{ symbol: 'Fm7', beats: 4 }] },
+        { bar: 21, chords: [{ symbol: 'Dm7b5', beats: 4 }] },
+        { bar: 22, chords: [{ symbol: 'G7', beats: 4 }] },
+        { bar: 23, chords: [{ symbol: 'Cm7', beats: 2 }, { symbol: 'Abmaj7', beats: 2 }] },
+        { bar: 24, chords: [{ symbol: 'Dm7b5', beats: 2 }, { symbol: 'G7', beats: 2 }] },
+      ],
+    },
+    {
+      name: 'B',
+      label: 'B Section (final)',
+      bars: [
+        { bar: 25, chords: [{ symbol: 'Cm7', beats: 4 }] },
+        { bar: 26, chords: [{ symbol: 'Cm7/Bb', beats: 4 }] },
+        { bar: 27, chords: [{ symbol: 'Abmaj7', beats: 4 }] },
+        { bar: 28, chords: [{ symbol: 'Fm7', beats: 4 }] },
+        { bar: 29, chords: [{ symbol: 'Bbm7', beats: 4 }] },
+        { bar: 30, chords: [{ symbol: 'Eb7', beats: 4 }] },
+        { bar: 31, chords: [{ symbol: 'Abmaj7', beats: 4 }] },
+        { bar: 32, chords: [{ symbol: 'Fm7', beats: 4 }] },
+        { bar: 33, chords: [{ symbol: 'Dm7b5', beats: 2 }, { symbol: 'G7b9', beats: 2 }] },
+        { bar: 34, chords: [{ symbol: 'Cm7', beats: 2 }, { symbol: 'Abmaj7', beats: 2 }] },
+        { bar: 35, chords: [{ symbol: 'Dm7b5', beats: 2 }, { symbol: 'G7b9', beats: 2 }] },
+        { bar: 36, chords: [{ symbol: 'Cm7', beats: 4 }] },
+      ],
+    },
+  ],
+};

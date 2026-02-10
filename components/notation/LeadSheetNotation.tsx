@@ -1,10 +1,13 @@
 'use client';
 
 // components/notation/LeadSheetNotation.tsx
-// Renders lead-sheet style notation (slash notation with chord symbols above).
+// Renders lead-sheet style notation (chord voicings on staff with chord symbols above).
 
 import { useRef, useEffect, useState } from 'react';
-import { Renderer, Stave, StaveNote, Voice, Formatter, Annotation } from 'vexflow';
+import { Renderer, Stave, StaveNote, Voice, Formatter, Annotation, Accidental } from 'vexflow';
+import { chordToVexKeys } from '@/lib/music/vexflow-utils';
+import type { NoteName, ChordQuality } from '@/lib/music/types';
+import { CHROMATIC } from '@/lib/constants';
 
 interface LeadSheetNotationProps {
   /** Sections of the lead sheet, each with a name, label, and bars */
@@ -18,32 +21,92 @@ interface LeadSheetNotationProps {
   }[];
 }
 
-/**
- * Duration mapping from beats to VexFlow duration strings.
- */
+/** Duration mapping from beats to VexFlow duration strings. */
 function beatsToDuration(beats: number): string {
-  if (beats >= 4) return 'w'; // whole note
-  if (beats >= 2) return 'h'; // half note
-  return 'q'; // quarter note
+  if (beats >= 4) return 'w';
+  if (beats >= 2) return 'h';
+  return 'q';
 }
 
-/**
- * Create slash notes for a bar.
- * For each chord, create notes with the appropriate duration.
- */
+/** Map of chord quality strings to ChordQuality type, sorted longest-first for matching. */
+const QUALITY_MAP: Record<string, ChordQuality> = {
+  'maj7#11': 'maj7#11', 'augmaj7': 'augmaj7',
+  'maj13': 'maj13', 'maj7': 'maj7', 'maj9': 'maj9',
+  'm7b5': 'm7b5', '7sus4': '7sus4',
+  '7alt': '7alt', '7#9': '7#9', '7b9': '7b9',
+  'dim7': 'dim7', 'sus4': 'sus4',
+  'm11': 'm11', 'm9': 'm9', 'm7': 'm7', 'm6': 'm6',
+  '6/9': '6/9', '13': '13', '9': '9', '7': '7', '6': '6',
+  'aug': 'aug',
+};
+const QUALITY_KEYS = Object.keys(QUALITY_MAP).sort((a, b) => b.length - a.length);
+
+/** Parse a chord symbol string into root NoteName and ChordQuality. */
+function parseChordSymbol(symbol: string): { root: NoteName; quality: ChordQuality } | null {
+  let root: NoteName;
+  let qualityStr: string;
+
+  // Try two-char root first (Db, Eb, Gb, Ab, Bb)
+  if (symbol.length >= 2 && CHROMATIC.includes(symbol.slice(0, 2) as NoteName)) {
+    root = symbol.slice(0, 2) as NoteName;
+    qualityStr = symbol.slice(2);
+  } else if (CHROMATIC.includes(symbol.slice(0, 1) as NoteName)) {
+    root = symbol.slice(0, 1) as NoteName;
+    qualityStr = symbol.slice(1);
+  } else {
+    return null;
+  }
+
+  for (const key of QUALITY_KEYS) {
+    if (qualityStr === key) {
+      return { root, quality: QUALITY_MAP[key] };
+    }
+  }
+
+  // Handle bare triads and common shorthand
+  if (qualityStr === '') return { root, quality: 'maj7' };
+  if (qualityStr === 'm') return { root, quality: 'm7' };
+  return null;
+}
+
+/** Extract accidental ('b' or '#') from a VexFlow key string like 'db/4'. */
+function extractAccidental(vexKey: string): string | null {
+  const notePart = vexKey.split('/')[0];
+  if (notePart.length > 1 && notePart.endsWith('b')) return 'b';
+  if (notePart.length > 1 && notePart.endsWith('#')) return '#';
+  return null;
+}
+
+/** Create notes for a bar with full chord voicings and chord symbols above. */
 function createBarNotes(chords: { symbol: string; beats: number }[]) {
   const notes: StaveNote[] = [];
 
   for (const chord of chords) {
     const duration = beatsToDuration(chord.beats);
+    const parsed = parseChordSymbol(chord.symbol);
 
-    // Create a note at b/4 (middle line, treble clef)
-    const note = new StaveNote({
-      keys: ['b/4'],
-      duration,
-    });
+    let keys: string[];
+    if (parsed) {
+      keys = chordToVexKeys(parsed.root, parsed.quality, 4);
+    } else {
+      // Fallback: just use root note from symbol
+      const rootChar = chord.symbol[0].toLowerCase();
+      const acc = chord.symbol.length >= 2 && chord.symbol[1] === 'b' ? 'b'
+        : chord.symbol.length >= 2 && chord.symbol[1] === '#' ? '#' : '';
+      keys = [`${rootChar}${acc}/4`];
+    }
 
-    // Add chord symbol as annotation above the note
+    const note = new StaveNote({ keys, duration });
+
+    // Add accidental modifiers for each note that needs one
+    for (let i = 0; i < keys.length; i++) {
+      const acc = extractAccidental(keys[i]);
+      if (acc) {
+        note.addModifier(new Accidental(acc), i);
+      }
+    }
+
+    // Add chord symbol as annotation above the notes
     const annotation = new Annotation(chord.symbol);
     annotation.setVerticalJustification(Annotation.VerticalJustify.TOP);
     note.addModifier(annotation);
@@ -86,19 +149,23 @@ export default function LeadSheetNotation({ sections }: LeadSheetNotationProps) 
     try {
       // Constants for layout
       const STAVE_WIDTH = Math.max(measuredWidth - 20, 300);
-      const STAVE_HEIGHT = 100;
+      const STAVE_HEIGHT = 130;
       const BARS_PER_LINE = 4;
       const MARGIN_LEFT = 10;
       const MARGIN_TOP = 60;
-      const SECTION_LABEL_OFFSET = -30;
+      const SECTION_GAP = 30; // extra vertical space before each new section label
+      const SECTION_LABEL_OFFSET = -10; // label above the stave
 
-      // Calculate total height needed
+      // Calculate total height needed (account for section gaps)
       let totalBars = 0;
-      for (const section of sections) {
-        totalBars += section.bars.length;
+      let sectionBreaks = 0;
+      for (let si = 0; si < sections.length; si++) {
+        totalBars += sections[si].bars.length;
+        // Count line breaks at section boundaries (except first section)
+        if (si > 0) sectionBreaks++;
       }
-      const totalLines = Math.ceil(totalBars / BARS_PER_LINE);
-      const containerHeight = MARGIN_TOP + totalLines * STAVE_HEIGHT + 40;
+      const totalLines = Math.ceil(totalBars / BARS_PER_LINE) + sectionBreaks;
+      const containerHeight = MARGIN_TOP + totalLines * STAVE_HEIGHT + sectionBreaks * SECTION_GAP + 40;
 
       // Create VexFlow renderer (SVG mode)
       const renderer = new Renderer(container, Renderer.Backends.SVG);
@@ -111,21 +178,31 @@ export default function LeadSheetNotation({ sections }: LeadSheetNotationProps) 
 
       let currentLine = 0;
       let currentBarInLine = 0;
-      let isFirstBarOfSection = true;
+      let sectionGapAccum = 0; // accumulated extra gap from section breaks
+      let isFirstSection = true;
 
       for (const section of sections) {
-        // Draw section label
-        if (isFirstBarOfSection) {
-          const labelY = MARGIN_TOP + currentLine * STAVE_HEIGHT + SECTION_LABEL_OFFSET;
-          context.setFont('Arial', 14, 'bold');
-          context.fillText(section.label, MARGIN_LEFT, labelY);
+        // Add gap before each section (except the first)
+        if (!isFirstSection) {
+          // If previous section didn't end on a line boundary, move to next line
+          if (currentBarInLine !== 0) {
+            currentBarInLine = 0;
+            currentLine++;
+          }
+          sectionGapAccum += SECTION_GAP;
         }
+        isFirstSection = false;
+
+        // Draw section label
+        const labelY = MARGIN_TOP + currentLine * STAVE_HEIGHT + sectionGapAccum + SECTION_LABEL_OFFSET;
+        context.setFont('Arial', 14, 'bold');
+        context.fillText(section.label, MARGIN_LEFT, labelY);
 
         for (const bar of section.bars) {
           // Calculate position for this bar
           const barWidth = STAVE_WIDTH / BARS_PER_LINE;
           const x = MARGIN_LEFT + currentBarInLine * barWidth;
-          const y = MARGIN_TOP + currentLine * STAVE_HEIGHT;
+          const y = MARGIN_TOP + currentLine * STAVE_HEIGHT + sectionGapAccum;
 
           // Create stave for this bar
           const stave = new Stave(x, y, barWidth);
@@ -161,15 +238,7 @@ export default function LeadSheetNotation({ sections }: LeadSheetNotationProps) 
             currentLine++;
           }
 
-          isFirstBarOfSection = false;
         }
-
-        // Next section starts fresh
-        if (currentBarInLine !== 0) {
-          currentBarInLine = 0;
-          currentLine++;
-        }
-        isFirstBarOfSection = true;
       }
     } catch {
       // VexFlow rendering failed — component renders empty

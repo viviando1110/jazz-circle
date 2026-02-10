@@ -147,7 +147,7 @@ export interface StandardSection {
   name: string;
   label: string;
   bars: StandardBar[];
-  analysis: SectionAnalysis;
+  analysis?: SectionAnalysis;
 }
 
 export interface Standard {

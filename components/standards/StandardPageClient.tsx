@@ -53,8 +53,14 @@ function parseForVoicing(symbol: string): { root: NoteName; quality: ChordQualit
   const QUALITY_MAP: Record<string, ChordQuality> = {
     'maj7': 'maj7', 'm7': 'm7', '7': '7', 'm7b5': 'm7b5', 'dim7': 'dim7',
     'maj9': 'maj9', '9': '9', 'm9': 'm9', 'sus4': 'sus4', '7sus4': '7sus4',
-    '6': '6', 'm6': 'm6',
+    '6': '6', 'm6': 'm6', '7alt': '7alt', '7b9': '7b9', '7#9': '7#9',
+    'maj7#11': 'maj7#11', '13': '13', 'm11': 'm11', '6/9': '6/9',
+    'aug': 'aug', 'augmaj7': 'augmaj7', 'maj13': 'maj13',
   };
+
+  // Handle bare triads
+  if (qualityStr === '') return { root, quality: 'maj7' };
+  if (qualityStr === 'm') return { root, quality: 'm7' };
 
   const quality: ChordQuality = QUALITY_MAP[qualityStr] ?? 'm7';
   return { root, quality };
@@ -161,20 +167,22 @@ export function StandardPageClient({ standard }: StandardPageClientProps) {
         onBarClick={(bar) => setActiveBarIndex(bar)}
       />
 
-      {/* Section Analysis */}
-      <div className="space-y-3">
-        <h2 className="text-lg font-semibold text-neutral-100">Section Analysis</h2>
-        {standard.sections.map((section) => (
-          <SectionAnalysis
-            key={section.name}
-            section={section}
-            isExpanded={expandedSection === section.name}
-            onToggle={() =>
-              setExpandedSection((prev) => (prev === section.name ? '' : section.name))
-            }
-          />
-        ))}
-      </div>
+      {/* Section Analysis (only if at least one section has analysis data) */}
+      {standard.sections.some((s) => s.analysis) && (
+        <div className="space-y-3">
+          <h2 className="text-lg font-semibold text-neutral-100">Section Analysis</h2>
+          {standard.sections.map((section) => (
+            <SectionAnalysis
+              key={section.name}
+              section={section}
+              isExpanded={expandedSection === section.name}
+              onToggle={() =>
+                setExpandedSection((prev) => (prev === section.name ? '' : section.name))
+              }
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

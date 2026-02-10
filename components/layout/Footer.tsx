@@ -15,8 +15,11 @@ export default function Footer() {
             <Link href="/standards" className="hover:text-[var(--cream)] transition-colors">
               Songs
             </Link>
+            <Link href="/contact" className="hover:text-[var(--cream)] transition-colors">
+              Contact
+            </Link>
           </div>
-          <p>&copy; {new Date().getFullYear()} Jazz Circle. Built with Next.js.</p>
+          <p>&copy; {new Date().getFullYear()} Lov Co. LLC. Built with Next.js.</p>
         </div>
       </div>
     </footer>

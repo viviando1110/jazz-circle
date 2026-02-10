@@ -27,6 +27,9 @@ export function SectionAnalysis({
 
   const { analysis } = section;
 
+  // Skip rendering if this section has no analysis data
+  if (!analysis) return null;
+
   return (
     <div className="rounded-lg border border-neutral-700 bg-neutral-800/50">
       {/* Header */}

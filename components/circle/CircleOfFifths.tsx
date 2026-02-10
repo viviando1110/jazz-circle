@@ -52,8 +52,8 @@ export default function CircleOfFifths({
       <svg
         viewBox="0 0 500 500"
         width="100%"
-        role="img"
-        aria-label="Circle of Fifths"
+        role="application"
+        aria-label="Circle of Fifths — select a key"
       >
         {CIRCLE_OF_FIFTHS_ORDER.map((note, i) => {
           const startAngle = i * WEDGE_ANGLE - WEDGE_ANGLE / 2;

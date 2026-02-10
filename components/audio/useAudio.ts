@@ -12,11 +12,14 @@ export function useAudio() {
 
   const playChord = useCallback(
     async (notes: number[], duration?: number) => {
-      if (!engine) return;
-      if (!engine.isReady) await engine.init();
-      await engine.playChord(notes, duration);
+      // Use context engine if available, otherwise init lazily.
+      // This handles the first-play case where context hasn't re-rendered yet.
+      const eng = engine ?? await init();
+      if (!eng) return;
+      if (!eng.isReady) await eng.init();
+      await eng.playChord(notes, duration);
     },
-    [engine],
+    [engine, init],
   );
 
   const playProgression = useCallback(
@@ -25,11 +28,12 @@ export function useAudio() {
       bpm: number,
       onChordChange?: (index: number) => void,
     ) => {
-      if (!engine) return;
-      if (!engine.isReady) await engine.init();
-      await engine.playProgression(chords, bpm, onChordChange);
+      const eng = engine ?? await init();
+      if (!eng) return;
+      if (!eng.isReady) await eng.init();
+      await eng.playProgression(chords, bpm, onChordChange);
     },
-    [engine],
+    [engine, init],
   );
 
   const stop = useCallback(() => {
