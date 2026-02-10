@@ -5,4 +5,4 @@ Allow: /
 Disallow: /_next/
 Disallow: /api/
 
-Sitemap: https://jazzcircle.app/sitemap.xml
+Sitemap: https://jazz-circle.com/sitemap.xml
