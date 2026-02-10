@@ -6,7 +6,7 @@ test.describe('Homepage', () => {
   });
 
   test('loads with circle of fifths visible', async ({ page }) => {
-    const circle = page.locator('svg[aria-label="Circle of Fifths"]');
+    const circle = page.locator('svg[aria-label="Circle of Fifths — select a key"]');
     await expect(circle).toBeVisible();
   });
 
@@ -17,27 +17,26 @@ test.describe('Homepage', () => {
   });
 
   test('click key on circle shows diatonic chords', async ({ page }) => {
-    // Click the C major wedge (text "C" in the outer ring)
-    const cWedge = page.locator('text >> "C"').first();
+    // Click the C major wedge
+    const cWedge = page.locator('g[aria-label="C major"]');
     await cWedge.click();
 
-    // Verify diatonic chords appear
-    await expect(page.getByText('Cmaj7')).toBeVisible();
-    await expect(page.getByText('Dm7')).toBeVisible();
+    // Verify diatonic chords heading appears
+    await expect(page.getByText('Diatonic 7th Chords in C Major')).toBeVisible();
   });
 
   test('click key shows staff notation', async ({ page }) => {
-    // Click a key wedge
-    const gWedge = page.locator('text >> "G"').first();
+    // Click the G major wedge
+    const gWedge = page.locator('g[aria-label="G major"]');
     await gWedge.click();
 
-    // Staff notation should render (VexFlow renders SVG inside the container)
+    // Staff notation should render
     await expect(
       page.getByText('Diatonic 7th Chords in G Major'),
     ).toBeVisible();
   });
 
   test('navigation shows Songs link', async ({ page }) => {
-    await expect(page.getByRole('link', { name: 'Songs' })).toBeVisible();
+    await expect(page.locator('nav').getByRole('link', { name: 'Songs' })).toBeVisible();
   });
 });

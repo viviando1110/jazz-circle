@@ -12,6 +12,8 @@ function midiToFrequencies(notes: number[]): number[] {
 export function createSynthEngine(): AudioEngine {
   let synth: Tone.PolySynth | null = null;
   let reverb: Tone.Reverb | null = null;
+  let clickHigh: Tone.MembraneSynth | null = null;
+  let clickLow: Tone.MembraneSynth | null = null;
   let ready = false;
 
   // Cancellation handle for in-progress progression playback.
@@ -110,6 +112,35 @@ export function createSynthEngine(): AudioEngine {
 
       if (synth) {
         synth.releaseAll();
+      }
+    },
+
+    async playNote(midi: number, duration = 0.5, velocity = 0.8): Promise<void> {
+      if (!synth || !ready) return;
+      const freq = Tone.Frequency(midi, 'midi').toFrequency();
+      synth.triggerAttackRelease(freq, duration, undefined, velocity);
+    },
+
+    async playClick(accent: boolean): Promise<void> {
+      if (!ready) return;
+
+      if (!clickHigh) {
+        clickHigh = new Tone.MembraneSynth({
+          pitchDecay: 0.008,
+          octaves: 2,
+          envelope: { attack: 0.001, decay: 0.1, sustain: 0, release: 0.05 },
+        }).toDestination();
+        clickLow = new Tone.MembraneSynth({
+          pitchDecay: 0.008,
+          octaves: 2,
+          envelope: { attack: 0.001, decay: 0.08, sustain: 0, release: 0.05 },
+        }).toDestination();
+      }
+
+      if (accent) {
+        clickHigh.triggerAttackRelease('C5', '16n');
+      } else {
+        clickLow!.triggerAttackRelease('G4', '16n');
       }
     },
   };

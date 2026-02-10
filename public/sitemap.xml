@@ -134,6 +134,9 @@
 <url><loc>https://jazz-circle.com/key/ab-minor</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 <url><loc>https://jazz-circle.com/key/db-minor</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 <url><loc>https://jazz-circle.com/key/gb-minor</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://jazz-circle.com/practice</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://jazz-circle.com/voicings</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://jazz-circle.com/practice/melody</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://jazz-circle.com/about</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
 <url><loc>https://jazz-circle.com/contact</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 <url><loc>https://jazz-circle.com/privacy</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>

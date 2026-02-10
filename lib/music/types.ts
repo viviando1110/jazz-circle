@@ -186,6 +186,10 @@ export interface AudioEngine {
   stop(): void;
   /** Whether the audio engine is initialized and ready */
   isReady: boolean;
+  /** Play a single MIDI note */
+  playNote?(midi: number, duration?: number, velocity?: number): Promise<void>;
+  /** Play a metronome click */
+  playClick?(accent: boolean): Promise<void>;
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -221,3 +225,38 @@ export interface ChordExtensions {
 
 /** Maps a chord quality to its common jazz extensions */
 export type ExtensionMap = Record<string, string[]>;
+
+/* ═══════════════════════════════════════════════════════════
+   Phase 3: Practice Tools & Melody Generation Types
+   ═══════════════════════════════════════════════════════════ */
+
+/** A single note with timing and velocity */
+export interface MelodyNote {
+  midi: number;
+  durationBeats: number;
+  velocity?: number; // 0-1, default 0.8
+}
+
+/** Voice leading voicing type */
+export type VoicingType =
+  | 'root-position' | 'rootless-a' | 'rootless-b'
+  | 'shell' | 'drop2' | 'drop3';
+
+/** Lick generation style */
+export type LickStyle = 'bebop' | 'blues' | 'modal';
+
+/** Melody generation options */
+export interface MelodyOptions {
+  complexity: 'simple' | 'medium' | 'bebop';
+  lowMidi?: number;   // default 60 (C4)
+  highMidi?: number;  // default 79 (G5)
+}
+
+/** Practice mode configuration */
+export interface PracticeConfig {
+  tempo: number;
+  countIn: boolean;      // 4 clicks before start
+  loop: boolean;
+  metronomeOn: boolean;
+  timeSignature: [number, number]; // [beats, beatValue]
+}

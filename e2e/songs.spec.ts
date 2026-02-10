@@ -37,8 +37,9 @@ test.describe('Songs (Standards) pages', () => {
 
   test('song page shows transpose toggle', async ({ page }) => {
     await page.goto('/standards/autumn-leaves');
-    // TransposeToggle should be present
-    const toggleArea = page.getByText('Gm');
-    await expect(toggleArea).toBeVisible();
+    // TransposeToggle has role="group" with aria-label="Key selection"
+    const toggle = page.locator('[role="group"][aria-label="Key selection"]');
+    await expect(toggle).toBeVisible();
+    await expect(toggle.getByText('G Minor (Real Book)')).toBeVisible();
   });
 });
