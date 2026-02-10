@@ -4,12 +4,14 @@ import { useState } from 'react';
 import ScaleGuide from '@/components/practice/ScaleGuide';
 import VoiceLeadingVisualizer from '@/components/practice/VoiceLeadingVisualizer';
 import LickGenerator from '@/components/practice/LickGenerator';
+import ImprovisationPlayer from '@/components/practice/ImprovisationPlayer';
 import type { NoteName, ChordQuality } from '@/lib/music/types';
 
 interface SongChord {
   root: NoteName;
   quality: ChordQuality;
   symbol: string;
+  durationBeats: number;
 }
 
 interface SongPracticeToolbarProps {
@@ -87,10 +89,13 @@ export function SongPracticeToolbar({ chords, currentChordIndex, isPlaying }: So
 
           {/* Tab content */}
           {activeTab === 'improvise' && (
-            <ScaleGuide
-              root={currentChord.root}
-              quality={currentChord.quality}
-            />
+            <>
+              <ScaleGuide
+                root={currentChord.root}
+                quality={currentChord.quality}
+              />
+              <ImprovisationPlayer chords={chords} />
+            </>
           )}
 
           {activeTab === 'voiceleading' && (

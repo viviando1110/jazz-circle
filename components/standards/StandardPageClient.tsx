@@ -79,6 +79,7 @@ export function StandardPageClient({ standard }: StandardPageClientProps) {
         b.chords.map((c) => ({
           ...parseForVoicing(c.symbol),
           symbol: c.symbol,
+          durationBeats: c.beats,
         }))
       )
     ),

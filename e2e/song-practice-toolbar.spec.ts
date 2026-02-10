@@ -156,6 +156,53 @@ test.describe('Song Practice Toolbar on multiple songs', () => {
   });
 });
 
+test.describe('Solo Generator (ImprovisationPlayer)', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/standards/autumn-leaves');
+    await page.waitForLoadState('networkidle');
+    await page.getByRole('button', { name: 'Practice Tools' }).click();
+  });
+
+  test('Improvise tab shows Solo Generator section', async ({ page }) => {
+    await expect(page.getByText('Solo Generator')).toBeVisible();
+  });
+
+  test('style buttons (Bebop/Blues/Modal) visible in Improvise tab', async ({ page }) => {
+    await expect(page.getByRole('button', { name: 'Bebop' }).first()).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Blues' }).first()).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Modal' }).first()).toBeVisible();
+  });
+
+  test('Generate Solo button creates notation display', async ({ page }) => {
+    await page.getByRole('button', { name: 'Generate Solo' }).click();
+
+    // After generating, Play and Another one buttons should appear
+    await expect(page.getByRole('button', { name: 'Play' }).first()).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Another one' }).first()).toBeVisible();
+
+    // SVG notation should appear in the solo generator area
+    const soloArea = page.locator('.overflow-x-auto').last();
+    await expect(soloArea.locator('svg')).toBeVisible();
+  });
+
+  test('Another One button produces a variation', async ({ page }) => {
+    await page.getByRole('button', { name: 'Generate Solo' }).click();
+    await expect(page.getByRole('button', { name: 'Another one' }).first()).toBeVisible();
+
+    // Click Another One and verify it still shows notation
+    await page.getByRole('button', { name: 'Another one' }).first().click();
+    const soloArea = page.locator('.overflow-x-auto').last();
+    await expect(soloArea.locator('svg')).toBeVisible();
+  });
+
+  test('Solo Generator also available on Blue Bossa', async ({ page }) => {
+    await page.goto('/standards/blue-bossa');
+    await page.waitForLoadState('networkidle');
+    await page.getByRole('button', { name: 'Practice Tools' }).click();
+    await expect(page.getByText('Solo Generator')).toBeVisible();
+  });
+});
+
 test.describe('Song page playback + practice toolbar coexistence', () => {
   test('playback controls and practice toolbar both present', async ({ page }) => {
     await page.goto('/standards/autumn-leaves');

@@ -73,9 +73,15 @@ export default function MelodyDisplay({
     }
 
     try {
+      // For long melodies, scale width proportionally so notation stays legible
+      const totalBeats = melody.reduce((sum, n) => sum + n.durationBeats, 0);
+      const renderWidth = totalBeats > 16
+        ? Math.max(measuredWidth, totalBeats * 40)
+        : measuredWidth;
+
       const renderer = new Renderer(container, Renderer.Backends.SVG);
       const height = 200;
-      renderer.resize(measuredWidth, height);
+      renderer.resize(renderWidth, height);
       const context = renderer.getContext();
 
       // Dark theme colors
@@ -84,7 +90,7 @@ export default function MelodyDisplay({
 
       const staveX = 10;
       const staveY = 40;
-      const staveWidth = measuredWidth - 20;
+      const staveWidth = renderWidth - 20;
       const stave = new Stave(staveX, staveY, staveWidth);
       stave.addClef('treble').addTimeSignature('4/4');
       stave.setContext(context).draw();
