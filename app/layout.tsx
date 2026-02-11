@@ -5,6 +5,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
 import AdSenseScript from '@/components/ads/AdSenseScript';
+import { themeScript } from '@/lib/theme-script';
 import './globals.css';
 
 const playfair = Playfair_Display({
@@ -58,8 +59,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${playfair.variable} ${dmSans.variable} ${dmMono.variable}`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className="font-sans antialiased min-h-screen flex flex-col">
         <GoogleAnalytics />
         <AdSenseScript />

@@ -7,6 +7,8 @@ interface PianoKeyboardProps {
   scaleNotes?: NoteName[];
   /** MIDI note numbers for octave-specific highlighting (e.g., voice leading) */
   midiNotes?: number[];
+  /** Live MIDI input notes, highlighted in green to distinguish from chord highlights */
+  midiInputNotes?: Set<number>;
   /** Enable smooth CSS transition between highlight states */
   animateTransition?: boolean;
 }
@@ -49,6 +51,7 @@ export default function PianoKeyboard({
   highlightedNotes,
   scaleNotes,
   midiNotes,
+  midiInputNotes,
   animateTransition = true,
 }: PianoKeyboardProps) {
   const highlightSet = new Set(highlightedNotes);
@@ -64,20 +67,23 @@ export default function PianoKeyboard({
   }
 
   function whiteKeyFill(note: NoteName, octaveIdx: number): string {
+    if (midiInputNotes?.has(whiteKeyMidi(note, octaveIdx))) return 'var(--green)';
     if (midiSet?.has(whiteKeyMidi(note, octaveIdx))) return 'var(--gold)';
     if (highlightSet.has(note)) return 'var(--gold)';
-    if (scaleSet.has(note)) return '#2a2520';
-    return '#f0e8dc';
+    if (scaleSet.has(note)) return 'var(--piano-white-scale)';
+    return 'var(--piano-white)';
   }
 
   function blackKeyFill(note: NoteName, octaveIdx: number): string {
+    if (midiInputNotes?.has(blackKeyMidi(note, octaveIdx))) return 'var(--green)';
     if (midiSet?.has(blackKeyMidi(note, octaveIdx))) return 'var(--gold)';
     if (highlightSet.has(note)) return 'var(--gold)';
-    if (scaleSet.has(note)) return '#3a3535';
-    return '#1a1a1a';
+    if (scaleSet.has(note)) return 'var(--piano-black-scale)';
+    return 'var(--piano-black)';
   }
 
   function isWhiteHighlighted(note: NoteName, octaveIdx: number): boolean {
+    if (midiInputNotes?.has(whiteKeyMidi(note, octaveIdx))) return true;
     if (midiSet?.has(whiteKeyMidi(note, octaveIdx))) return true;
     return highlightSet.has(note);
   }

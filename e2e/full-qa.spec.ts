@@ -41,7 +41,7 @@ test.describe('Homepage — Circle of Fifths', () => {
   });
 
   test('prompt text shows when no key selected', async ({ page }) => {
-    await expect(page.getByText(/Select a key from the Circle/)).toBeVisible();
+    await expect(page.getByText(/Click any key to see/)).toBeVisible();
   });
 
   test('clicking C Major on circle shows diatonic chords', async ({ page }) => {

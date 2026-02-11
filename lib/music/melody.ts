@@ -545,13 +545,125 @@ function generateModalLick(
 }
 
 /* ═══════════════════════════════════════════════════════════
+   Advanced Improvisation Helpers
+   ═══════════════════════════════════════════════════════════ */
+
+interface ImprovContext {
+  chordIdx: number;
+  totalChords: number;
+  progress: number;          // 0.0–1.0 position in progression
+  motif: number[];           // interval pattern (semitone offsets)
+  beatsBeforeChord: number;  // total beats elapsed before this chord
+  totalBeats: number;        // total beats in entire progression
+}
+
+type StateUpdater = (prevMidi: number, prevPrevMidi: number) => void;
+
+/** 3rd and 7th of a chord (guide tones) as MIDI values in range. */
+function guideToneMidis(
+  root: NoteName, quality: ChordQuality, low: number, high: number,
+): number[] {
+  const notes = getChordNotes(root, quality);
+  const guides = [notes[1], notes[3]].filter(Boolean);
+  const result: number[] = [];
+  for (const n of guides) {
+    const base = noteToMidi(n, 0);
+    for (let o = 0; o <= 10; o++) {
+      const m = base + o * SEMITONES_PER_OCTAVE;
+      if (m >= low && m <= high) result.push(m);
+    }
+  }
+  return result.sort((a, b) => a - b);
+}
+
+/**
+ * 8-note bebop scale. Adds chromatic passing tone so chord tones
+ * naturally land on downbeats during continuous 8th-note runs.
+ * Dominant: Mixolydian + natural 7. Major: Ionian + b6. Minor: Dorian + natural 7.
+ */
+function bebopScaleMidis(
+  root: NoteName, quality: ChordQuality, low: number, high: number,
+): number[] {
+  // Dominant chords: use the built-in Bebop Dominant scale
+  if (quality === '7' || quality === '9' || quality === '13') {
+    const notes = getScaleNotes(root, 'Bebop Dominant');
+    const result: number[] = [];
+    for (const n of notes) {
+      const base = noteToMidi(n, 0);
+      for (let o = 0; o <= 10; o++) {
+        const m = base + o * SEMITONES_PER_OCTAVE;
+        if (m >= low && m <= high) result.push(m);
+      }
+    }
+    return result.sort((a, b) => a - b);
+  }
+
+  // Other qualities: add a chromatic passing tone to primary scale
+  const suggestions = getScaleSuggestions(quality);
+  const scaleName = suggestions.length > 0 ? suggestions[0].scale : 'Ionian';
+  const scaleNotes = getScaleNotes(root, scaleName);
+  const rootMidi = noteToMidi(root, 0);
+  const intervals = scaleNotes.map(n =>
+    ((noteToMidi(n, 0) - rootMidi) % 12 + 12) % 12,
+  );
+  // Major: add b6 (8). Minor/other: add natural 7 (11).
+  const passingTone = (quality === 'maj7' || quality === 'maj9') ? 8 : 11;
+  if (!intervals.includes(passingTone)) intervals.push(passingTone);
+  intervals.sort((a, b) => a - b);
+
+  const result: number[] = [];
+  for (const iv of intervals) {
+    for (let o = 0; o <= 10; o++) {
+      const m = rootMidi + iv + o * SEMITONES_PER_OCTAVE;
+      if (m >= low && m <= high) result.push(m);
+    }
+  }
+  return result.sort((a, b) => a - b);
+}
+
+/**
+ * Enclosure: approach target from diatonic above + chromatic below.
+ * Returns [upper, lower] MIDI values.
+ */
+function enclosureApproach(
+  target: number, scaleMidis: number[], low: number, high: number,
+): [number, number] {
+  const above = scaleMidis.filter(m => m > target);
+  const upper = above.length > 0 ? above[0] : clampToRange(target + 1, low, high);
+  return [clampToRange(upper, low, high), clampToRange(target - 1, low, high)];
+}
+
+/** Deterministic motif patterns (semitone intervals from starting note). */
+function pickMotif(seed: number): number[] {
+  const patterns = [
+    [0, 2, 4, 2],         // ascending step-leap-step
+    [0, -2, -3, -5],      // descending scale fragment
+    [0, 4, 2, 5],         // ascending with skip
+    [0, -1, 3, 1],        // chromatic down then leap up
+    [0, 5, 3, 7],         // ascending 3rds
+    [0, -3, -1, -5],      // descending 3rds
+    [0, 7, 5, 4],         // leap up then stepwise down
+    [0, -2, 1, -4],       // zigzag descending
+    [0, 3, 7, 5],         // arpeggio up then step down
+  ];
+  return patterns[seed % patterns.length];
+}
+
+/** Apply motif intervals from a starting note, snapping to nearest scale tone. */
+function applyMotif(
+  motif: number[], start: number, scaleMidis: number[], low: number, high: number,
+): number[] {
+  return motif.map(iv => clampToRange(closestTo(start + iv, scaleMidis), low, high));
+}
+
+/* ═══════════════════════════════════════════════════════════
    generateImprovisation — Full Solo Over Chord Progression
    ═══════════════════════════════════════════════════════════ */
 
 /**
  * Generate a stylistically varied improvisation over a full chord progression.
- * Unlike generateLick (single chord) or generatePracticeMelody (mechanical),
- * this produces musically authentic solos with multi-chord voice leading.
+ * Features: enclosures, guide-tone voice leading, bebop scales, motivic
+ * development, phrase rests, rhythmic variety, and dynamic contour.
  *
  * Output is deterministic: same inputs → same output.
  */
@@ -570,6 +682,8 @@ export function generateImprovisation(
   const startOffset = Math.floor(variationSeed / 3);
 
   const melody: MelodyNote[] = [];
+  const motif = pickMotif(variationSeed);
+  const totalProgressionBeats = chords.reduce((s, c) => s + c.durationBeats, 0);
 
   // Pick starting note from first chord
   const firstCMidis = chordToneMidis(chords[0].root, chords[0].quality, lowMidi, highMidi);
@@ -578,6 +692,7 @@ export function generateImprovisation(
     ? firstCMidis[startIdx]
     : Math.round((lowMidi + highMidi) / 2);
   let prevPrevMidi = prevMidi;
+  let beatsElapsedSoFar = 0;
 
   for (let ci = 0; ci < chords.length; ci++) {
     const chord = chords[ci];
@@ -585,9 +700,12 @@ export function generateImprovisation(
     const sMidis = scaleToneMidis(chord.root, chord.quality, lowMidi, highMidi);
     const beats = chord.durationBeats;
 
-    // Voice-lead into new chord: start from closest chord tone
+    // Voice-lead into new chord via guide tones (3rd/7th)
     if (ci > 0 && cMidis.length > 0) {
-      prevMidi = closestTo(prevMidi, cMidis);
+      const gMidis = guideToneMidis(chord.root, chord.quality, lowMidi, highMidi);
+      prevMidi = gMidis.length > 0
+        ? closestTo(prevMidi, gMidis)
+        : closestTo(prevMidi, cMidis);
     }
 
     // Get next chord for approach-note targeting
@@ -596,13 +714,26 @@ export function generateImprovisation(
       ? chordToneMidis(nextChord.root, nextChord.quality, lowMidi, highMidi)
       : [];
 
+    const ctx: ImprovContext = {
+      chordIdx: ci,
+      totalChords: chords.length,
+      progress: chords.length > 1 ? ci / (chords.length - 1) : 0,
+      motif,
+      beatsBeforeChord: beatsElapsedSoFar,
+      totalBeats: totalProgressionBeats,
+    };
+
+    const update: StateUpdater = (pm, ppm) => { prevMidi = pm; prevPrevMidi = ppm; };
+
     if (style === 'bebop') {
-      improviseBebop(melody, beats, cMidis, sMidis, nextCMidis, nextChord, lowMidi, highMidi, ci, prevMidi, prevPrevMidi, (pm, ppm) => { prevMidi = pm; prevPrevMidi = ppm; });
+      improviseBebop(melody, beats, chord, cMidis, sMidis, nextCMidis, nextChord, lowMidi, highMidi, prevMidi, prevPrevMidi, update, ctx);
     } else if (style === 'blues') {
-      improviseBlues(melody, beats, cMidis, chord, nextCMidis, nextChord, lowMidi, highMidi, ci, prevMidi, prevPrevMidi, (pm, ppm) => { prevMidi = pm; prevPrevMidi = ppm; });
+      improviseBlues(melody, beats, chord, cMidis, nextCMidis, nextChord, lowMidi, highMidi, prevMidi, prevPrevMidi, update, ctx);
     } else {
-      improviseModal(melody, beats, cMidis, sMidis, lowMidi, highMidi, ci, prevMidi, prevPrevMidi, (pm, ppm) => { prevMidi = pm; prevPrevMidi = ppm; });
+      improviseModal(melody, beats, chord, cMidis, sMidis, lowMidi, highMidi, prevMidi, prevPrevMidi, update, ctx);
     }
+
+    beatsElapsedSoFar += beats;
   }
 
   // Ensure final note resolves to a chord tone
@@ -610,91 +741,178 @@ export function generateImprovisation(
   const lastCMidis = chordToneMidis(lastChord.root, lastChord.quality, lowMidi, highMidi);
   ensureLastNoteIsChordTone(melody, lastCMidis, lastChord, lowMidi, highMidi);
 
-  // Apply variation transform
+  // Apply variation transform (skip rests)
   if (transform === 1) {
-    // Octave shift: +12 if fits, else -12
     for (let i = 0; i < melody.length; i++) {
+      if (melody[i].velocity === 0) continue;
       const up = melody[i].midi + 12;
       melody[i] = { ...melody[i], midi: up <= highMidi + 12 ? up : melody[i].midi - 12 };
       melody[i].midi = clampToRange(melody[i].midi, lowMidi, highMidi);
     }
   } else if (transform === 2) {
-    // Reverse contour: swap MIDI values, keep durations
-    const midis = melody.map((n) => n.midi).reverse();
-    for (let i = 0; i < melody.length; i++) {
-      melody[i] = { ...melody[i], midi: clampToRange(midis[i], lowMidi, highMidi) };
-    }
+    const nonRest = melody.reduce<number[]>((a, n, i) => {
+      if (n.velocity !== 0) a.push(i);
+      return a;
+    }, []);
+    const reversed = nonRest.map(i => melody[i].midi).reverse();
+    nonRest.forEach((idx, i) => {
+      melody[idx] = { ...melody[idx], midi: clampToRange(reversed[i], lowMidi, highMidi) };
+    });
   }
 
   return melody;
 }
 
-type StateUpdater = (prevMidi: number, prevPrevMidi: number) => void;
+/* ═══════════════════════════════════════════════════════════
+   Bebop Improvisation
+   ═══════════════════════════════════════════════════════════ */
 
-/** Bebop improv: 8th-note runs with chromatic approach to next chord. */
+/**
+ * Bebop improv: 8-note bebop scale runs, enclosures around guide tones,
+ * phrase rests, chromatic approach to next chord, motivic statements.
+ */
 function improviseBebop(
-  melody: MelodyNote[], beats: number, cMidis: number[], sMidis: number[],
+  melody: MelodyNote[], beats: number, chord: ChordInput,
+  cMidis: number[], sMidis: number[],
   nextCMidis: number[], nextChord: ChordInput | null,
-  lowMidi: number, highMidi: number, chordIdx: number,
-  prevMidi: number, prevPrevMidi: number, setState: StateUpdater,
+  lowMidi: number, highMidi: number,
+  prevMidi: number, prevPrevMidi: number,
+  setState: StateUpdater, ctx: ImprovContext,
 ): void {
+  // Use 8-note bebop scale for smoother downbeat placement
+  const bsMidis = bebopScaleMidis(chord.root, chord.quality, lowMidi, highMidi);
+  const runMidis = bsMidis.length > 0 ? bsMidis : sMidis;
+
+  // Guide tones of next chord for approach targeting
+  const nextGuideMidis = nextChord
+    ? guideToneMidis(nextChord.root, nextChord.quality, lowMidi, highMidi)
+    : [];
+
   let elapsed = 0;
+  const globalBeat = ctx.beatsBeforeChord;
+
+  // Motif: play at start of every 3rd chord during opening/development
+  const shouldMotif = ctx.chordIdx % 3 === 0 && ctx.progress < 0.7 && beats >= 2;
+  if (shouldMotif && ctx.motif.length > 0) {
+    const notes = applyMotif(ctx.motif, prevMidi, runMidis, lowMidi, highMidi);
+    for (const midi of notes) {
+      if (elapsed + 0.5 > beats) break;
+      melody.push({ midi, durationBeats: 0.5 });
+      prevPrevMidi = prevMidi;
+      prevMidi = midi;
+      elapsed += 0.5;
+    }
+  }
+
   while (elapsed < beats) {
     const remaining = beats - elapsed;
-    const isLastBeat = remaining <= 1;
+    const progBeat = globalBeat + elapsed;
 
-    if (isLastBeat && nextChord && nextCMidis.length > 0 && remaining >= 1) {
-      // Approach next chord: two 8ths — scale tone + chromatic approach
-      const nextTarget = closestTo(prevMidi, nextCMidis);
-      const dir = getDirection(prevPrevMidi, prevMidi);
-      const scaleTone = clampToRange(pickScaleToneStepwise(prevMidi, sMidis, dir), lowMidi, highMidi);
-      melody.push({ midi: scaleTone, durationBeats: 0.5 });
-      prevPrevMidi = prevMidi;
-      prevMidi = scaleTone;
-
-      const approach = clampToRange(nextTarget - 1, lowMidi, highMidi);
-      melody.push({ midi: approach, durationBeats: 0.5 });
-      prevPrevMidi = prevMidi;
-      prevMidi = approach;
+    // Phrase rest: ~every 10 beats, 1-beat rest (not at start/end of phrase)
+    if (elapsed > 1 && remaining > 2 &&
+        Math.floor(progBeat) > 2 && Math.floor(progBeat) % 10 === 9) {
+      melody.push({ midi: 0, durationBeats: 1, velocity: 0 });
       elapsed += 1;
-    } else if (remaining < 1) {
-      // Fractional remainder — chord tone to fill
+      continue;
+    }
+
+    // Enclosure: at the midpoint of each chord (if room), approach a guide tone
+    const midBeat = Math.floor(beats / 2);
+    if (Math.floor(elapsed) === midBeat && elapsed === Math.floor(elapsed) &&
+        remaining >= 2 && midBeat > 0 && beats >= 4) {
+      const target = pickChordTone(prevMidi, cMidis, chord.root, chord.quality, [1, 3]);
+      const [upper, lower] = enclosureApproach(target, runMidis, lowMidi, highMidi);
+      melody.push({ midi: upper, durationBeats: 0.5 });
+      melody.push({ midi: lower, durationBeats: 0.5 });
+      melody.push({ midi: clampToRange(target, lowMidi, highMidi), durationBeats: 0.5 });
+      prevPrevMidi = lower;
+      prevMidi = clampToRange(target, lowMidi, highMidi);
+      elapsed += 1.5;
+      continue;
+    }
+
+    // Last beat: approach next chord's guide tone
+    if (remaining <= 1 && nextChord && nextCMidis.length > 0 && remaining >= 0.5) {
+      const nextTarget = nextGuideMidis.length > 0
+        ? closestTo(prevMidi, nextGuideMidis)
+        : closestTo(prevMidi, nextCMidis);
+      if (remaining >= 1) {
+        const dir = getDirection(prevPrevMidi, prevMidi);
+        const scaleTone = clampToRange(pickScaleToneStepwise(prevMidi, runMidis, dir), lowMidi, highMidi);
+        melody.push({ midi: scaleTone, durationBeats: 0.5 });
+        prevPrevMidi = prevMidi;
+        prevMidi = scaleTone;
+        const approach = clampToRange(nextTarget - 1, lowMidi, highMidi);
+        melody.push({ midi: approach, durationBeats: remaining - 0.5 });
+        prevPrevMidi = prevMidi;
+        prevMidi = approach;
+        elapsed += remaining;
+      } else {
+        const ct = closestTo(prevMidi, cMidis);
+        melody.push({ midi: clampToRange(ct, lowMidi, highMidi), durationBeats: remaining });
+        prevPrevMidi = prevMidi;
+        prevMidi = clampToRange(ct, lowMidi, highMidi);
+        elapsed += remaining;
+      }
+    } else if (remaining < 0.5) {
       const ct = closestTo(prevMidi, cMidis);
       melody.push({ midi: clampToRange(ct, lowMidi, highMidi), durationBeats: remaining });
       prevPrevMidi = prevMidi;
       prevMidi = clampToRange(ct, lowMidi, highMidi);
       elapsed += remaining;
     } else {
-      // Descending 8th-note bebop run
-      const beatPos = elapsed % 4;
-      if (beatPos < 2) {
-        // Downbeat area: chord tone 8th
-        const below = cMidis.filter((m) => m <= prevMidi);
-        const target = below.length > 0 ? below[below.length - 1] : closestTo(prevMidi, cMidis);
-        const note = clampToRange(target, lowMidi, highMidi);
-        melody.push({ midi: note, durationBeats: 0.5 });
+      // Bebop run with rhythmic variety
+      const eighthIdx = Math.round(elapsed * 2);
+
+      // Rhythmic break: occasional quarter note (~every 7 8ths, during development)
+      if (eighthIdx % 7 === 5 && remaining >= 1 && ctx.progress > 0.15) {
+        const ct = pickChordTone(prevMidi, cMidis, chord.root, chord.quality, [1, 3, 0, 2]);
+        const note = clampToRange(ct, lowMidi, highMidi);
+        melody.push({ midi: note, durationBeats: 1 });
         prevPrevMidi = prevMidi;
         prevMidi = note;
+        elapsed += 1;
       } else {
-        // Upbeat area: scale tone step descending
-        const step = pickScaleToneStepwise(prevMidi, sMidis, -1);
-        const note = clampToRange(step, lowMidi, highMidi);
-        melody.push({ midi: note, durationBeats: 0.5 });
-        prevPrevMidi = prevMidi;
-        prevMidi = note;
+        // 8th-note run using bebop scale
+        const beatPos = elapsed % 4;
+        if (beatPos < 2) {
+          // Downbeat area: descending chord/bebop-scale tone
+          const below = runMidis.filter(m => m <= prevMidi && m !== prevMidi);
+          const target = below.length > 0 ? below[below.length - 1] : closestTo(prevMidi, cMidis);
+          const note = clampToRange(target, lowMidi, highMidi);
+          melody.push({ midi: note, durationBeats: 0.5 });
+          prevPrevMidi = prevMidi;
+          prevMidi = note;
+        } else {
+          // Upbeat: bebop scale step descending
+          const step = pickScaleToneStepwise(prevMidi, runMidis, -1);
+          const note = clampToRange(step, lowMidi, highMidi);
+          melody.push({ midi: note, durationBeats: 0.5 });
+          prevPrevMidi = prevMidi;
+          prevMidi = note;
+        }
+        elapsed += 0.5;
       }
-      elapsed += 0.5;
     }
   }
   setState(prevMidi, prevPrevMidi);
 }
 
-/** Blues improv: blues scale, quarter + 8th pairs, rests for phrasing. */
+/* ═══════════════════════════════════════════════════════════
+   Blues Improvisation
+   ═══════════════════════════════════════════════════════════ */
+
+/**
+ * Blues improv: blues scale, ghost notes, call-and-response phrasing,
+ * strategic rests, emphasis on blue notes (b3, b5, b7).
+ */
 function improviseBlues(
-  melody: MelodyNote[], beats: number, cMidis: number[],
-  chord: ChordInput, nextCMidis: number[], nextChord: ChordInput | null,
-  lowMidi: number, highMidi: number, chordIdx: number,
-  prevMidi: number, prevPrevMidi: number, setState: StateUpdater,
+  melody: MelodyNote[], beats: number, chord: ChordInput,
+  cMidis: number[],
+  nextCMidis: number[], nextChord: ChordInput | null,
+  lowMidi: number, highMidi: number,
+  prevMidi: number, prevPrevMidi: number,
+  setState: StateUpdater, ctx: ImprovContext,
 ): void {
   const bluesNotes = getScaleNotes(chord.root, 'Blues');
   const bMidis: number[] = [];
@@ -709,19 +927,28 @@ function improviseBlues(
 
   let elapsed = 0;
   let beatIdx = 0;
+  const globalBeat = ctx.beatsBeforeChord;
+
+  // Call-response: record first 2 beats as "call", vary for "response"
+  const callNotes: number[] = [];
+  const callPhaseBeats = Math.min(beats / 2, 2);
 
   while (elapsed < beats) {
     const remaining = beats - elapsed;
+    const progBeat = globalBeat + elapsed;
+    const inCallPhase = elapsed < callPhaseBeats;
+    const inResponsePhase = elapsed >= callPhaseBeats && elapsed < callPhaseBeats * 2 && callNotes.length > 0;
 
-    // Rest every ~4 bars (16 beats) for phrasing — insert 1-beat rest
-    if (beatIdx > 0 && beatIdx % 14 === 0 && remaining > 2) {
+    // Phrase rest: every ~8 beats for breathing
+    if (beatIdx > 0 && remaining > 2 &&
+        Math.floor(progBeat) > 3 && Math.floor(progBeat) % 8 === 7) {
       melody.push({ midi: 0, durationBeats: 1, velocity: 0 });
       elapsed += 1;
       beatIdx++;
       continue;
     }
 
-    // Last beat: approach next chord root
+    // Last beat: chromatic approach to next chord
     if (remaining <= 1 && nextChord && nextCMidis.length > 0) {
       const nextRoot = closestTo(prevMidi, nextCMidis);
       const approach = clampToRange(nextRoot - 1, lowMidi, highMidi);
@@ -735,13 +962,45 @@ function improviseBlues(
       prevPrevMidi = prevMidi;
       prevMidi = clampToRange(ct, lowMidi, highMidi);
       elapsed += remaining;
+    } else if (inResponsePhase && callNotes.length > 0) {
+      // Response: replay call motif transposed up/down a step
+      const responseIdx = Math.floor(elapsed - callPhaseBeats);
+      if (responseIdx < callNotes.length) {
+        const shifted = callNotes[responseIdx] + (ctx.chordIdx % 2 === 0 ? 2 : -2);
+        const note = clampToRange(closestTo(shifted, bMidis), lowMidi, highMidi);
+        // Ghost note on upbeats during response
+        const vel = beatIdx % 2 === 1 ? 0.4 : undefined;
+        melody.push({ midi: note, durationBeats: 0.5, ...(vel !== undefined ? { velocity: vel } : {}) });
+        prevPrevMidi = prevMidi;
+        prevMidi = note;
+        elapsed += 0.5;
+      } else {
+        // Fill rest of response with blues scale step
+        const dir: 1 | -1 = beatIdx % 2 === 0 ? 1 : -1;
+        const note = clampToRange(pickScaleToneStepwise(prevMidi, bMidis, dir), lowMidi, highMidi);
+        melody.push({ midi: note, durationBeats: 1 });
+        prevPrevMidi = prevMidi;
+        prevMidi = note;
+        elapsed += 1;
+      }
+    } else if (beatIdx % 5 === 4 && remaining >= 1.5) {
+      // Held blue note: dotted quarter for emphasis
+      const dir: 1 | -1 = beatIdx % 2 === 0 ? 1 : -1;
+      const note = clampToRange(pickScaleToneStepwise(prevMidi, bMidis, dir), lowMidi, highMidi);
+      melody.push({ midi: note, durationBeats: 1.5 });
+      if (inCallPhase) callNotes.push(note);
+      prevPrevMidi = prevMidi;
+      prevMidi = note;
+      elapsed += 1.5;
     } else if (beatIdx % 3 === 1 && remaining >= 1) {
-      // 8th-note pair
+      // 8th-note pair with ghost note on upbeat
       const dir: 1 | -1 = beatIdx % 2 === 0 ? 1 : -1;
       const n1 = clampToRange(pickScaleToneStepwise(prevMidi, bMidis, dir), lowMidi, highMidi);
       melody.push({ midi: n1, durationBeats: 0.5 });
+      if (inCallPhase) callNotes.push(n1);
       const n2 = clampToRange(pickScaleToneStepwise(n1, bMidis, dir), lowMidi, highMidi);
-      melody.push({ midi: n2, durationBeats: 0.5 });
+      melody.push({ midi: n2, durationBeats: 0.5, velocity: 0.4 }); // ghost note
+      if (inCallPhase) callNotes.push(n2);
       prevPrevMidi = prevMidi;
       prevMidi = n2;
       elapsed += 1;
@@ -750,6 +1009,7 @@ function improviseBlues(
       const dir: 1 | -1 = beatIdx % 2 === 0 ? 1 : -1;
       const note = clampToRange(pickScaleToneStepwise(prevMidi, bMidis, dir), lowMidi, highMidi);
       melody.push({ midi: note, durationBeats: 1 });
+      if (inCallPhase) callNotes.push(note);
       prevPrevMidi = prevMidi;
       prevMidi = note;
       elapsed += 1;
@@ -759,21 +1019,55 @@ function improviseBlues(
   setState(prevMidi, prevPrevMidi);
 }
 
-/** Modal improv: wider intervals, more space, half notes and dotted quarters. */
+/* ═══════════════════════════════════════════════════════════
+   Modal Improvisation
+   ═══════════════════════════════════════════════════════════ */
+
+/**
+ * Modal improv: wide intervals (4ths/5ths), pedal tones, generous space
+ * (rests, half notes, dotted quarters), arc-shaped contour per chord.
+ */
 function improviseModal(
-  melody: MelodyNote[], beats: number, cMidis: number[], sMidis: number[],
-  lowMidi: number, highMidi: number, chordIdx: number,
-  prevMidi: number, prevPrevMidi: number, setState: StateUpdater,
+  melody: MelodyNote[], beats: number, chord: ChordInput,
+  cMidis: number[], sMidis: number[],
+  lowMidi: number, highMidi: number,
+  prevMidi: number, prevPrevMidi: number,
+  setState: StateUpdater, ctx: ImprovContext,
 ): void {
   let elapsed = 0;
   let beatIdx = 0;
-  // Ascending arc first half, descending second half
-  const ascending = chordIdx % 2 === 0;
+  const ascending = ctx.chordIdx % 2 === 0;
+  const globalBeat = ctx.beatsBeforeChord;
+
+  // Pedal tone: root of chord, used for pedal-point patterns
+  const pedalMidi = closestTo(Math.round((lowMidi + highMidi) / 2), cMidis);
+
+  // Motif statement at start of progression
+  if (ctx.chordIdx === 0 && ctx.motif.length > 0 && beats >= 2) {
+    const notes = applyMotif(ctx.motif, prevMidi, sMidis, lowMidi, highMidi);
+    for (const midi of notes) {
+      if (elapsed + 1 > beats) break;
+      melody.push({ midi, durationBeats: 1 }); // quarter notes for modal space
+      prevPrevMidi = prevMidi;
+      prevMidi = midi;
+      elapsed += 1;
+    }
+  }
 
   while (elapsed < beats) {
     const remaining = beats - elapsed;
     const halfwayThrough = elapsed >= beats / 2;
     const dir: 1 | -1 = ascending ? (halfwayThrough ? -1 : 1) : (halfwayThrough ? 1 : -1);
+
+    // Phrase rest: every ~12 beats, 2-beat rest (modal needs more space)
+    if (elapsed > 0 && remaining > 3 &&
+        Math.floor(globalBeat + elapsed) > 4 &&
+        Math.floor(globalBeat + elapsed) % 12 === 11) {
+      melody.push({ midi: 0, durationBeats: 2, velocity: 0 });
+      elapsed += 2;
+      beatIdx++;
+      continue;
+    }
 
     if (remaining <= 1) {
       // Final: resolve to chord tone
@@ -782,6 +1076,14 @@ function improviseModal(
       prevPrevMidi = prevMidi;
       prevMidi = clampToRange(resolve, lowMidi, highMidi);
       elapsed += remaining;
+    } else if (beatIdx % 7 === 5 && remaining >= 2) {
+      // Pedal point: alternate between pedal and a moving voice
+      const movingNote = pickScaleToneStepwise(prevMidi, sMidis, dir);
+      melody.push({ midi: clampToRange(pedalMidi, lowMidi, highMidi), durationBeats: 1 });
+      melody.push({ midi: clampToRange(movingNote, lowMidi, highMidi), durationBeats: 1 });
+      prevPrevMidi = clampToRange(pedalMidi, lowMidi, highMidi);
+      prevMidi = clampToRange(movingNote, lowMidi, highMidi);
+      elapsed += 2;
     } else if (beatIdx % 5 === 3 && remaining >= 2) {
       // Half note for space
       const wide = sMidis.filter((m) => {
@@ -806,8 +1108,8 @@ function improviseModal(
       // 8th-note pair ascending 3rds
       const n1 = clampToRange(pickScaleToneStepwise(prevMidi, sMidis, dir), lowMidi, highMidi);
       melody.push({ midi: n1, durationBeats: 0.5 });
-      const above = sMidis.filter((m) => (m - n1) * dir > 0);
-      const n2 = above.length >= 2 ? above[1] : above.length === 1 ? above[0] : n1;
+      const candidates = sMidis.filter((m) => (m - n1) * dir > 0);
+      const n2 = candidates.length >= 2 ? candidates[1] : candidates.length === 1 ? candidates[0] : n1;
       melody.push({ midi: clampToRange(n2, lowMidi, highMidi), durationBeats: 0.5 });
       prevPrevMidi = prevMidi;
       prevMidi = clampToRange(n2, lowMidi, highMidi);

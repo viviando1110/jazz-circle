@@ -4,6 +4,8 @@ import { useRef, useEffect, useState } from 'react';
 import { Renderer, Stave, StaveNote, Voice, Formatter, Annotation } from 'vexflow';
 import { midiToNote } from '@/lib/music/theory';
 import type { MelodyNote } from '@/lib/music/types';
+import { getCSSVar } from '@/lib/theme-colors';
+import { useTheme } from '@/hooks/useTheme';
 
 interface ChordSymbol {
   symbol: string;
@@ -46,6 +48,7 @@ export default function MelodyDisplay({
 }: MelodyDisplayProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [measuredWidth, setMeasuredWidth] = useState(800);
+  const { theme } = useTheme();
 
   // Measure container width responsively
   useEffect(() => {
@@ -84,9 +87,9 @@ export default function MelodyDisplay({
       renderer.resize(renderWidth, height);
       const context = renderer.getContext();
 
-      // Dark theme colors
-      context.setFillStyle('#f0e8dc');
-      context.setStrokeStyle('#a89e90');
+      // Theme-aware colors
+      context.setFillStyle(getCSSVar('--notation-fill', '#f0e8dc'));
+      context.setStrokeStyle(getCSSVar('--notation-stroke', '#a89e90'));
 
       const staveX = 10;
       const staveY = 40;
@@ -117,7 +120,8 @@ export default function MelodyDisplay({
 
         // Highlight current note during playback
         if (i === currentNoteIndex) {
-          staveNote.setStyle({ fillStyle: '#c8956c', strokeStyle: '#c8956c' });
+          const accent = getCSSVar('--notation-accent', '#c8956c');
+          staveNote.setStyle({ fillStyle: accent, strokeStyle: accent });
         }
 
         cumulativeBeats += mn.durationBeats;
@@ -136,7 +140,7 @@ export default function MelodyDisplay({
     } catch {
       // VexFlow rendering failed — component renders empty
     }
-  }, [melody, measuredWidth, currentNoteIndex, chordSymbols]);
+  }, [melody, measuredWidth, currentNoteIndex, chordSymbols, theme]);
 
   if (melody.length === 0) {
     return (

@@ -1,5 +1,38 @@
 # Scratchpad — Jazz Circle
 
+## 2026-02-10 — Phase 2: Light Theme + MIDI
+
+### Light Theme (complete)
+- Fixed `--cream-muted` bug — was used in 6 files but never defined
+- Added 15 semantic CSS vars: ring colors (major/minor/dim × base/hover/selected), piano keys, notation
+- Added `[data-theme="light"]` block with warm inverted palette
+- FOUC prevention: inline script in `<head>` reads localStorage → prefers-color-scheme → sets `data-theme`
+- `useTheme()` hook with MutationObserver for reactive re-renders
+- `ThemeToggle` component (sun/moon SVG) in Header (desktop + mobile)
+- Replaced 20+ hardcoded hex values across Wedge, CircleOfFifths, PianoKeyboard
+- VexFlow components use `getCSSVar()` + `useTheme()` dep array for theme-reactive rendering
+- `suppressHydrationWarning` on `<html>` for script/hydration mismatch
+
+### MIDI (complete)
+- `chord-detect.ts` — detects chord quality from MIDI notes (pitch class matching against CHORD_INTERVALS)
+- `midi-export.ts` — generates Standard MIDI File Format 0 (no deps, hand-crafted binary)
+- `useMIDI()` hook — Web MIDI API with graceful degradation (Chromium-only)
+- `MIDIStatus`, `MIDIChordDetector`, `ExportMIDIButton` components
+- `midiInputNotes` prop on PianoKeyboard (green highlighting, priority over gold)
+- Export MIDI wired into ImprovisationPlayer, LickGenerator, SongPracticeToolbar
+
+### Type Fixes During Integration
+- ❌ `Set` spread (`[...new Set()]`) requires `downlevelIteration` — used `Array.from()` instead
+- ❌ `Uint8Array` not assignable to `BlobPart` — cast `.buffer as ArrayBuffer`
+- ❌ `useMemo` after early return violates hooks rules — moved before `return null`
+
+### Stats
+- 144 static pages, 337 tests (was 294, +43 new), zero type errors
+- 6 agents in parallel (3 Wave 1, 3 Wave 2), team lead handled Wave 3 + fixes
+- Build passes, all pages SSG
+
+---
+
 ## 2026-02-10 — Phase 3: Practice Tools & Melody Generation
 
 ### Wave 1 — Foundation (complete)

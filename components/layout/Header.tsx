@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import MobileNav from '@/components/layout/MobileNav';
+import ThemeToggle from '@/components/layout/ThemeToggle';
 
 const NAV_LINKS = [
   { href: '/', label: 'Home' },
@@ -50,39 +51,47 @@ export default function Header() {
           })}
         </nav>
 
-        {/* Mobile hamburger */}
-        <button
-          type="button"
-          className="md:hidden p-2 text-[var(--cream-dim)] hover:text-[var(--cream)]"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-expanded={mobileOpen}
-          aria-controls="mobile-nav"
-          aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-        >
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+        {/* Desktop theme toggle */}
+        <div className="hidden md:block">
+          <ThemeToggle />
+        </div>
+
+        {/* Mobile controls */}
+        <div className="flex md:hidden items-center gap-1">
+          <ThemeToggle />
+          <button
+            type="button"
+            className="p-2 text-[var(--cream-dim)] hover:text-[var(--cream)]"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-nav"
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
           >
-            {mobileOpen ? (
-              <>
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </>
-            ) : (
-              <>
-                <line x1="3" y1="6" x2="21" y2="6" />
-                <line x1="3" y1="12" x2="21" y2="12" />
-                <line x1="3" y1="18" x2="21" y2="18" />
-              </>
-            )}
-          </svg>
-        </button>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              {mobileOpen ? (
+                <>
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </>
+              ) : (
+                <>
+                  <line x1="3" y1="6" x2="21" y2="6" />
+                  <line x1="3" y1="12" x2="21" y2="12" />
+                  <line x1="3" y1="18" x2="21" y2="18" />
+                </>
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
       <MobileNav

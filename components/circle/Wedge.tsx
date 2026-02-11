@@ -19,9 +19,9 @@ interface WedgeProps {
 }
 
 const RING_COLORS: Record<string, { base: string; hover: string; selected: string }> = {
-  major: { base: '#c8956c', hover: '#daa882', selected: '#e8b892' },
-  minor: { base: '#4a7fa5', hover: '#5e94ba', selected: '#72a8ce' },
-  dim:   { base: '#6a6a7a', hover: '#7e7e90', selected: '#9292a2' },
+  major: { base: 'var(--ring-major)', hover: 'var(--ring-major-hover)', selected: 'var(--ring-major-selected)' },
+  minor: { base: 'var(--ring-minor)', hover: 'var(--ring-minor-hover)', selected: 'var(--ring-minor-selected)' },
+  dim:   { base: 'var(--ring-dim)', hover: 'var(--ring-dim-hover)', selected: 'var(--ring-dim-selected)' },
 };
 
 export default function Wedge({

@@ -8,6 +8,8 @@ import { Renderer, Stave, StaveNote, Voice, Formatter, Annotation, Accidental } 
 import { chordToVexKeys } from '@/lib/music/vexflow-utils';
 import type { NoteName, ChordQuality } from '@/lib/music/types';
 import { CHROMATIC } from '@/lib/constants';
+import { getCSSVar } from '@/lib/theme-colors';
+import { useTheme } from '@/hooks/useTheme';
 
 interface LeadSheetNotationProps {
   /** Sections of the lead sheet, each with a name, label, and bars */
@@ -120,6 +122,7 @@ function createBarNotes(chords: { symbol: string; beats: number }[]) {
 export default function LeadSheetNotation({ sections }: LeadSheetNotationProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [measuredWidth, setMeasuredWidth] = useState(800);
+  const { theme } = useTheme();
 
   // Measure container width responsively
   useEffect(() => {
@@ -172,9 +175,9 @@ export default function LeadSheetNotation({ sections }: LeadSheetNotationProps) 
       renderer.resize(STAVE_WIDTH + 20, containerHeight);
       const context = renderer.getContext();
 
-      // Set colors for dark background
-      context.setFillStyle('#f0e8dc');
-      context.setStrokeStyle('#a89e90');
+      // Set colors based on current theme
+      context.setFillStyle(getCSSVar('--notation-fill', '#f0e8dc'));
+      context.setStrokeStyle(getCSSVar('--notation-stroke', '#a89e90'));
 
       let currentLine = 0;
       let currentBarInLine = 0;
@@ -243,7 +246,7 @@ export default function LeadSheetNotation({ sections }: LeadSheetNotationProps) 
     } catch {
       // VexFlow rendering failed — component renders empty
     }
-  }, [sections, measuredWidth]);
+  }, [sections, measuredWidth, theme]);
 
   return <div ref={containerRef} className="overflow-x-auto" />;
 }

@@ -124,6 +124,20 @@ export default function CircleOfFifths({
           radius={CENTER_R}
         />
       </svg>
+      <div className="flex justify-center gap-4 mt-2 text-[10px] sm:text-xs text-[var(--cream-dim)]">
+        <span className="flex items-center gap-1">
+          <span className="inline-block w-2.5 h-2.5 rounded-full" style={{ background: 'var(--ring-major)' }} />
+          Major keys
+        </span>
+        <span className="flex items-center gap-1">
+          <span className="inline-block w-2.5 h-2.5 rounded-full" style={{ background: 'var(--ring-minor)' }} />
+          Relative minors
+        </span>
+        <span className="flex items-center gap-1">
+          <span className="inline-block w-2.5 h-2.5 rounded-full" style={{ background: 'var(--ring-dim)' }} />
+          vii&oslash;7
+        </span>
+      </div>
     </div>
   );
 }

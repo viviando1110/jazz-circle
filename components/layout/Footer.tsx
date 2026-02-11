@@ -19,7 +19,7 @@ export default function Footer() {
               Contact
             </Link>
           </div>
-          <p>&copy; {new Date().getFullYear()} Lov Co. LLC. Built with Next.js.</p>
+          <p>&copy; {new Date().getFullYear()} Jazz Circle by Lov Co. LLC</p>
         </div>
       </div>
     </footer>

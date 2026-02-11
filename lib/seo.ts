@@ -20,7 +20,7 @@ function twitterCard(title: string, description: string) {
 }
 
 export function generateHomeMeta(): Metadata {
-  const title = 'Jazz Circle — Interactive Circle of Fifths for Jazz Musicians';
+  const title = 'Circle of Fifths for Jazz — Chords, Voicings & Standards | Jazz Circle';
   const description =
     'Learn jazz harmony with an interactive Circle of Fifths. Explore diatonic chords, jazz progressions, 100+ song chord charts with notation and audio playback.';
 

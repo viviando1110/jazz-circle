@@ -5,6 +5,7 @@ import { generateLick } from '@/lib/music/melody';
 import { CHROMATIC } from '@/lib/constants';
 import { useMelodyPlayback } from '@/hooks/useMelodyPlayback';
 import MelodyDisplay from './MelodyDisplay';
+import ExportMIDIButton from '@/components/midi/ExportMIDIButton';
 import type { NoteName, ChordQuality, LickStyle, MelodyNote } from '@/lib/music/types';
 
 interface LickGeneratorProps {
@@ -226,6 +227,8 @@ export default function LickGenerator({ initialRoot, initialQuality }: LickGener
             >
               Another one
             </button>
+
+            <ExportMIDIButton notes={melody} bpm={bpm} filename={`jazz-circle-lick-${root}${quality}`} />
           </>
         )}
       </div>

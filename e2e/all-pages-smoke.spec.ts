@@ -14,9 +14,9 @@ async function assertThemeApplied(page: import('@playwright/test').Page) {
   expect(bgVar).toBe(DARK_BG);
 }
 
-async function assertNavPresent(page: import('@playwright/test').Page) {
-  const nav = page.locator('nav');
-  await expect(nav).toBeVisible();
+async function assertHeaderPresent(page: import('@playwright/test').Page) {
+  // Check logo (visible on all viewports) instead of nav links (hidden on mobile)
+  await expect(page.locator('a:has-text("Jazz Circle")')).toBeVisible();
 }
 
 async function assertFooterPresent(page: import('@playwright/test').Page) {
@@ -53,7 +53,7 @@ test.describe('Smoke test: every page loads correctly', () => {
       await assertThemeApplied(page);
 
       // Navigation
-      await assertNavPresent(page);
+      await assertHeaderPresent(page);
 
       // Footer
       await assertFooterPresent(page);

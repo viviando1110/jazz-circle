@@ -18,6 +18,70 @@
   --green: #6a9f7a;
   --purple: #8a7ab5;
   --border: #2a2e40;
+  --cream-muted: #8a8070;
+
+  /* Ring colors (Circle of Fifths) */
+  --ring-major: #c8956c;
+  --ring-major-hover: #daa882;
+  --ring-major-selected: #e8b892;
+  --ring-minor: #4a7fa5;
+  --ring-minor-hover: #5e94ba;
+  --ring-minor-selected: #72a8ce;
+  --ring-dim: #6a6a7a;
+  --ring-dim-hover: #7e7e90;
+  --ring-dim-selected: #9292a2;
+
+  /* Piano key colors */
+  --piano-white: #f0e8dc;
+  --piano-white-scale: #2a2520;
+  --piano-black: #1a1a1a;
+  --piano-black-scale: #3a3535;
+
+  /* Notation (VexFlow) colors */
+  --notation-fill: #f0e8dc;
+  --notation-stroke: #a89e90;
+  --notation-accent: #c8956c;
+}
+
+[data-theme="light"] {
+  --bg: #faf6f0;
+  --surface: #f0ebe3;
+  --card: #e8e2d8;
+  --card-hi: #ddd6ca;
+  --gold: #9a6f48;
+  --gold-lt: #b8854e;
+  --amber: #a86840;
+  --cream: #1a1612;
+  --cream-dim: #5a5248;
+  --cream-muted: #7a7268;
+  --blue: #3a6a8a;
+  --blue-lt: #4d80a5;
+  --rose: #a55060;
+  --green: #4a7a58;
+  --purple: #6a5a95;
+  --border: #d0c8b8;
+
+  /* Ring colors (lighter variants for light theme) */
+  --ring-major: #a87a50;
+  --ring-major-hover: #c89060;
+  --ring-major-selected: #d8a070;
+  --ring-minor: #3a6a8a;
+  --ring-minor-hover: #4d80a5;
+  --ring-minor-selected: #6098c0;
+  --ring-dim: #8a8a98;
+  --ring-dim-hover: #7a7a8a;
+  --ring-dim-selected: #6a6a7a;
+
+  /* Piano key colors (inverted for light) */
+  --piano-white: #ffffff;
+  --piano-white-scale: #e0d8cc;
+  --piano-black: #2a2a2a;
+  --piano-black-scale: #4a4545;
+
+  /* Notation colors (darker for light bg) */
+  --notation-fill: #1a1612;
+  --notation-stroke: #5a5248;
+  --notation-accent: #9a6f48;
 }
 
 body {

@@ -2,6 +2,7 @@
 
 import { useCallback, useState } from 'react';
 import type { MusicalKey, DiatonicChord } from '@/lib/music/types';
+import { KEYS_MAJOR } from '@/lib/music/keys';
 
 export interface KeySelectionActions {
   selectedKey: MusicalKey | null;
@@ -16,7 +17,7 @@ export interface KeySelectionActions {
 }
 
 export function useKeySelection(): KeySelectionActions {
-  const [selectedKey, setSelectedKey] = useState<MusicalKey | null>(null);
+  const [selectedKey, setSelectedKey] = useState<MusicalKey | null>(KEYS_MAJOR[0]);
   const [activeChord, setActiveChord] = useState<DiatonicChord | null>(null);
   const [hoveredWedge, setHoveredWedge] = useState<string | null>(null);
   const [showExtensions, setShowExtensions] = useState(false);

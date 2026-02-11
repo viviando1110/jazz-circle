@@ -12,7 +12,7 @@ test.describe('Homepage', () => {
 
   test('shows prompt text when no key selected', async ({ page }) => {
     await expect(
-      page.getByText('Select a key from the Circle of Fifths'),
+      page.getByText('Click any key to see its diatonic 7th chords'),
     ).toBeVisible();
   });
 
@@ -37,6 +37,11 @@ test.describe('Homepage', () => {
   });
 
   test('navigation shows Songs link', async ({ page }) => {
-    await expect(page.locator('nav').getByRole('link', { name: 'Songs' })).toBeVisible();
+    // On mobile, nav links are behind hamburger — open it first
+    const hamburger = page.getByLabel('Open menu');
+    if (await hamburger.isVisible()) {
+      await hamburger.click();
+    }
+    await expect(page.getByRole('link', { name: 'Songs' }).first()).toBeVisible();
   });
 });

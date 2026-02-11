@@ -34,13 +34,13 @@ export default function HomePageClient() {
           onHoverWedge={setHoveredWedge}
         />
         <p className="text-center text-xs text-neutral-400 mt-2">
-          Select a key to explore
+          Click any key to see its diatonic 7th chords, scales, and voicings
         </p>
       </div>
 
       {/* Right column: Content */}
       <div className="flex-1 min-w-0 space-y-8">
-        {selectedKey ? (
+        {selectedKey && (
           <>
             {/* Staff notation */}
             <DiatonicStaffDisplay musicalKey={selectedKey} />
@@ -62,12 +62,6 @@ export default function HomePageClient() {
               </div>
             )}
           </>
-        ) : (
-          <div className="flex items-center justify-center h-32 lg:h-64 text-neutral-400">
-            <p className="text-center text-sm">
-              Select a key from the Circle of Fifths to see its diatonic chords displayed on staff notation.
-            </p>
-          </div>
         )}
       </div>
     </div>

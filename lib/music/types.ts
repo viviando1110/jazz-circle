@@ -260,3 +260,15 @@ export interface PracticeConfig {
   metronomeOn: boolean;
   timeSignature: [number, number]; // [beats, beatValue]
 }
+
+/* ═══════════════════════════════════════════════════════════
+   Phase 4: MIDI & Chord Detection Types
+   ═══════════════════════════════════════════════════════════ */
+
+/** Result of detecting a chord from a set of MIDI notes */
+export interface DetectedChord {
+  root: NoteName;
+  quality: ChordQuality;
+  inversion: number;
+  notes: NoteName[];
+}

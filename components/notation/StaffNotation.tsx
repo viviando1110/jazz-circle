@@ -5,6 +5,8 @@
 
 import { useRef, useEffect, useState } from 'react';
 import { Renderer, Stave, StaveNote, Voice, Formatter, Annotation } from 'vexflow';
+import { getCSSVar } from '@/lib/theme-colors';
+import { useTheme } from '@/hooks/useTheme';
 
 interface StaffNotationProps {
   /** Array of chords to render, each with symbol, keys (VexFlow format), and beats */
@@ -25,6 +27,7 @@ function beatsToDuration(beats: number): string {
 export default function StaffNotation({ chords, width: widthProp }: StaffNotationProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [measuredWidth, setMeasuredWidth] = useState(widthProp ?? 800);
+  const { theme } = useTheme();
 
   // Measure container width responsively
   useEffect(() => {
@@ -60,9 +63,9 @@ export default function StaffNotation({ chords, width: widthProp }: StaffNotatio
       renderer.resize(width, height);
       const context = renderer.getContext();
 
-      // Set colors for dark background
-      context.setFillStyle('#f0e8dc');
-      context.setStrokeStyle('#a89e90');
+      // Set colors based on current theme
+      context.setFillStyle(getCSSVar('--notation-fill', '#f0e8dc'));
+      context.setStrokeStyle(getCSSVar('--notation-stroke', '#a89e90'));
 
       // Create stave (staff)
       const staveX = 10;
@@ -102,7 +105,7 @@ export default function StaffNotation({ chords, width: widthProp }: StaffNotatio
     } catch {
       // VexFlow rendering failed — component renders empty
     }
-  }, [chords, width]);
+  }, [chords, width, theme]);
 
   return <div ref={containerRef} className="overflow-x-auto" />;
 }

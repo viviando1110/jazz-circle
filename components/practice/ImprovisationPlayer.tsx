@@ -4,6 +4,7 @@ import { useState, useCallback, useMemo } from 'react';
 import { generateImprovisation } from '@/lib/music/melody';
 import { useMelodyPlayback } from '@/hooks/useMelodyPlayback';
 import MelodyDisplay from './MelodyDisplay';
+import ExportMIDIButton from '@/components/midi/ExportMIDIButton';
 import type { NoteName, ChordQuality, LickStyle, MelodyNote } from '@/lib/music/types';
 
 interface ImprovisationChord {
@@ -146,6 +147,8 @@ export default function ImprovisationPlayer({ chords }: ImprovisationPlayerProps
             >
               Another one
             </button>
+
+            <ExportMIDIButton notes={melody} bpm={bpm} filename="jazz-circle-solo" />
           </>
         )}
       </div>

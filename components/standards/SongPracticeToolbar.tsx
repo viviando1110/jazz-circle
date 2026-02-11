@@ -1,11 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import ScaleGuide from '@/components/practice/ScaleGuide';
 import VoiceLeadingVisualizer from '@/components/practice/VoiceLeadingVisualizer';
 import LickGenerator from '@/components/practice/LickGenerator';
 import ImprovisationPlayer from '@/components/practice/ImprovisationPlayer';
-import type { NoteName, ChordQuality } from '@/lib/music/types';
+import ExportMIDIButton from '@/components/midi/ExportMIDIButton';
+import { getChordVoicing } from '@/lib/music/chords';
+import type { NoteName, ChordQuality, MelodyNote } from '@/lib/music/types';
 
 interface SongChord {
   root: NoteName;
@@ -32,6 +34,19 @@ export function SongPracticeToolbar({ chords, currentChordIndex, isPlaying }: So
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<PracticeTab>('improvise');
 
+  // Convert chord progression to MelodyNote[] for MIDI export (root notes of each chord)
+  const chordsAsMelody = useMemo<MelodyNote[]>(() =>
+    chords.map((c) => {
+      const voicing = getChordVoicing(c.root, c.quality, 4);
+      return {
+        midi: voicing.midiNotes[0],
+        durationBeats: c.durationBeats,
+        velocity: 0.7,
+      };
+    }),
+    [chords],
+  );
+
   if (chords.length === 0) return null;
 
   // Use the current playing chord, or first chord when not playing
@@ -42,7 +57,8 @@ export function SongPracticeToolbar({ chords, currentChordIndex, isPlaying }: So
 
   return (
     <div className="mt-2">
-      {/* Toggle button */}
+      {/* Toggle + Export row */}
+      <div className="flex items-center gap-2">
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         className="flex items-center gap-2 px-3 py-1.5 rounded text-sm font-medium text-[var(--cream-dim)] hover:text-[var(--cream)] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--gold)]"
@@ -65,6 +81,8 @@ export function SongPracticeToolbar({ chords, currentChordIndex, isPlaying }: So
           </span>
         )}
       </button>
+      <ExportMIDIButton notes={chordsAsMelody} bpm={120} filename="jazz-circle-chords" />
+      </div>
 
       {/* Collapsible panel */}
       {isOpen && (
