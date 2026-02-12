@@ -34,6 +34,9 @@ export const metadata: Metadata = {
   title: 'Jazz Circle of Fifths — Interactive Jazz Theory Tool',
   description:
     'Explore jazz harmony with our interactive Circle of Fifths. Learn diatonic chords, scale suggestions, chord voicings, and common jazz progressions in all 24 keys.',
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',

@@ -1,5 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.jazz-circle.com' }],
+        destination: 'https://jazz-circle.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
