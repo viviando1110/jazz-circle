@@ -140,25 +140,30 @@ export function StandardPageClient({ standard }: StandardPageClientProps) {
       />
       </div>
 
-      {/* Lead Sheet Notation */}
-      <div>
-        <h2 className="text-lg font-semibold text-neutral-100 mb-3">Notation</h2>
-        <LeadSheetNotation sections={displaySections} />
+      {/* Chord Changes Section */}
+      <div className="space-y-4">
+        <h2 className="text-xl font-semibold text-neutral-100">Chord Changes</h2>
+
+        {/* Lead Sheet Notation */}
+        <div>
+          <h3 className="text-lg font-semibold text-neutral-100 mb-3">Notation</h3>
+          <LeadSheetNotation sections={displaySections} />
+        </div>
+
+        <AdSlot slot="placeholder" format="horizontal" />
+
+        {/* Chord Chart */}
+        <ChordChart
+          sections={displaySections}
+          activeBarIndex={currentBarIndex}
+          onBarClick={(bar) => setActiveBarIndex(bar)}
+        />
       </div>
 
-      <AdSlot slot="placeholder" format="horizontal" />
-
-      {/* Chord Chart */}
-      <ChordChart
-        sections={displaySections}
-        activeBarIndex={currentBarIndex}
-        onBarClick={(bar) => setActiveBarIndex(bar)}
-      />
-
-      {/* Section Analysis (only if at least one section has analysis data) */}
+      {/* Harmonic Analysis Section (only if at least one section has analysis data) */}
       {standard.sections.some((s) => s.analysis) && (
         <div className="space-y-3">
-          <h2 className="text-lg font-semibold text-neutral-100">Section Analysis</h2>
+          <h2 className="text-xl font-semibold text-neutral-100">Harmonic Analysis</h2>
           {standard.sections.map((section) => (
             <SectionAnalysis
               key={section.name}
