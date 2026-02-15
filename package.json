@@ -14,6 +14,9 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
+    "@capacitor/cli": "^7.5.0",
+    "@capacitor/core": "^8.1.0",
+    "@capacitor/ios": "^8.1.0",
     "next": "14.2.35",
     "react": "^18",
     "react-dom": "^18",

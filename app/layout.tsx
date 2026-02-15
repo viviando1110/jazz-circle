@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Playfair_Display, DM_Sans, DM_Mono } from 'next/font/google';
 import { AudioProvider } from '@/components/audio/AudioProvider';
+import { SubscriptionProvider } from '@/components/subscription/SubscriptionProvider';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
@@ -72,9 +73,11 @@ export default function RootLayout({
         <GoogleAnalytics />
         <AdSenseScript />
         <AudioProvider>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <SubscriptionProvider>
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </SubscriptionProvider>
         </AudioProvider>
       </body>
     </html>

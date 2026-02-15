@@ -3,6 +3,8 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import type { Standard } from '@/lib/music/types';
+import { useSubscription } from '@/components/subscription/SubscriptionProvider';
+import { LockIcon } from '@/components/icons/LockIcon';
 
 interface SongsSearchProps {
   standards: Standard[];
@@ -24,6 +26,7 @@ function difficultyColor(difficulty: string): string {
 export function SongsSearch({ standards }: SongsSearchProps) {
   const [query, setQuery] = useState('');
   const [difficultyFilter, setDifficultyFilter] = useState<string>('all');
+  const { canAccessSong } = useSubscription();
 
   const filtered = useMemo(() => {
     const q = query.toLowerCase().trim();
@@ -91,38 +94,48 @@ export function SongsSearch({ standards }: SongsSearchProps) {
 
       {/* Song grid */}
       <div className="grid gap-4 sm:grid-cols-2">
-        {filtered.map((standard) => (
-          <Link
-            key={standard.slug}
-            href={`/standards/${standard.slug}`}
-            className="block rounded-lg border border-[var(--border)] bg-[var(--card)] p-5 hover:bg-[var(--card-hi)] transition-colors"
-          >
-            <div className="flex items-start justify-between gap-2 mb-2">
-              <h2 className="text-lg font-semibold text-[var(--cream)]">
-                {standard.title}
-              </h2>
-              <span
-                className={`text-xs font-medium px-2 py-0.5 rounded capitalize flex-shrink-0 ${difficultyColor(standard.difficulty)}`}
-              >
-                {standard.difficulty}
-              </span>
-            </div>
-            <p className="text-sm text-[var(--cream-dim)] mb-3">
-              {standard.composer} ({standard.year}) &middot; {standard.form} &middot;{' '}
-              {standard.totalBars} bars
-            </p>
-            <div className="flex flex-wrap gap-1.5">
-              {standard.tags.map((tag) => (
+        {filtered.map((standard) => {
+          const isLocked = !canAccessSong(standard.slug);
+          return (
+            <Link
+              key={standard.slug}
+              href={`/standards/${standard.slug}`}
+              className={`block rounded-lg border border-[var(--border)] bg-[var(--card)] p-5 hover:bg-[var(--card-hi)] transition-colors relative ${
+                isLocked ? 'opacity-60' : ''
+              }`}
+            >
+              {isLocked && (
+                <div className="absolute top-2 right-2 bg-neutral-900/80 rounded-full p-1.5">
+                  <LockIcon className="w-4 h-4 text-amber-400" />
+                </div>
+              )}
+              <div className="flex items-start justify-between gap-2 mb-2">
+                <h2 className="text-lg font-semibold text-[var(--cream)]">
+                  {standard.title}
+                </h2>
                 <span
-                  key={tag}
-                  className="text-xs px-2 py-0.5 rounded bg-[var(--surface)] text-[var(--cream-dim)]"
+                  className={`text-xs font-medium px-2 py-0.5 rounded capitalize flex-shrink-0 ${difficultyColor(standard.difficulty)}`}
                 >
-                  {tag}
+                  {standard.difficulty}
                 </span>
-              ))}
-            </div>
-          </Link>
-        ))}
+              </div>
+              <p className="text-sm text-[var(--cream-dim)] mb-3">
+                {standard.composer} ({standard.year}) &middot; {standard.form} &middot;{' '}
+                {standard.totalBars} bars
+              </p>
+              <div className="flex flex-wrap gap-1.5">
+                {standard.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs px-2 py-0.5 rounded bg-[var(--surface)] text-[var(--cream-dim)]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </Link>
+          );
+        })}
       </div>
 
       {filtered.length === 0 && (

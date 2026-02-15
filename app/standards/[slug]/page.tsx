@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { STANDARDS, getStandardBySlug } from '@/lib/music/standards';
 import { generateStandardPageMeta } from '@/lib/seo';
-import { StandardPageClient } from '@/components/standards/StandardPageClient';
+import { StandardPageContent } from '@/components/standards/StandardPageContent';
 
 interface PageProps {
   params: { slug: string };
@@ -40,7 +40,7 @@ export default function StandardPage({ params }: PageProps) {
       </header>
 
       {/* Interactive client content */}
-      <StandardPageClient standard={standard} />
+      <StandardPageContent standard={standard} />
     </main>
   );
 }
