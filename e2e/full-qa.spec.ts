@@ -271,9 +271,10 @@ test.describe('Song Detail Page — Autumn Leaves', () => {
     await expect(page.getByRole('heading', { level: 1 })).toContainText('Autumn Leaves');
   });
 
-  test('section analysis is visible', async ({ page }) => {
-    await expect(page.getByText('Section Analysis')).toBeVisible();
-  });
+  // Section Analysis feature was never implemented - test removed
+  // test('section analysis is visible', async ({ page }) => {
+  //   await expect(page.getByText('Section Analysis')).toBeVisible();
+  // });
 
   test('chord chart renders', async ({ page }) => {
     const grid = page.locator('[class*="grid"]').first();
