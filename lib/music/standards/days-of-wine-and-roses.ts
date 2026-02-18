@@ -21,6 +21,16 @@ export const DAYS_OF_WINE_AND_ROSES: Standard = {
   tags: ['standard', 'ballad', 'intermediate', 'mancini'],
   description:
     'Days of Wine and Roses is a beloved standard composed by Henry Mancini in 1962 for the film of the same name. This 32-bar AB form features smooth voice leading and elegant ii-V progressions through multiple key centers. The tune has a romantic, flowing quality and is a favorite among jazz musicians for its beautiful harmonic movement and singable melody.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Henry Mancini with lyrics by Johnny Mercer for the 1962 film of the same name, Days of Wine and Roses won the Academy Award for Best Original Song. It was quickly adopted by jazz musicians for its sophisticated harmonic movement and became a modern standard, often associated with Bill Evans\'s definitive recording.',
+  notableRecordings: [
+    'Andy Williams — (1962, Oscar-winning film version)',
+    'Bill Evans — (various recordings, considered the definitive jazz version)',
+    'Tony Bennett — (various recordings)',
+    'Oscar Peterson — (various recordings)',
+  ],
+  harmonicSummary: 'Days of Wine and Roses is a 32-bar AABA standard in F major with a notably chromatic harmonic language for a pop/film song of its era. The A section features an unusual opening that touches on Bb major before establishing F, with chromatic ii-V-I progressions adding sophistication. The bridge moves to Db major (a tritone away from the home key of G dominant area), creating striking harmonic contrast. Its combination of commercial accessibility and harmonic depth made it an instant jazz standard.',
+  metaDescription: 'Days of Wine and Roses chord changes and harmonic analysis. Henry Mancini\'s 1962 Academy Award-winning standard in F major: chromatic ii-V progressions, with notation, playback, and scale guides.',
 
   sections: [
     {

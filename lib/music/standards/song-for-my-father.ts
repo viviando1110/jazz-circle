@@ -16,6 +16,14 @@ export const SONG_FOR_MY_FATHER: Standard = {
   difficulty: 'beginner',
   tags: ['standard', 'latin', 'bossa-nova', 'soul-jazz', 'modal'],
   description: 'A Latin-tinged soul-jazz classic with a memorable bass line. Horace Silver wrote this as a tribute to his father, incorporating Cape Verdean rhythmic influences. The simple modal structure makes it accessible for beginners.',
+  style: 'Hard Bop',
+  historicalContext: 'Composed by Horace Silver and recorded for the Blue Note album of the same name in 1964, Song for My Father was dedicated to Silver\'s father, John Tavares Silver, a Cape Verdean musician. Its catchy Latin groove and simple but infectious two-chord vamp became one of the most recognizable hard bop melodies. The intro was famously sampled by Steely Dan for "Rikki Don\'t Lose That Number" (1974).',
+  notableRecordings: [
+    'Horace Silver — Song for My Father (1964)',
+    'Steely Dan — Rikki Don\'t Lose That Number (1974, sampled the intro)',
+  ],
+  harmonicSummary: 'Song for My Father is a minor-key Latin jazz standard in F minor built on a repeating two-chord vamp: Fm7→Eb7→Db7→C7→Fm7. This descending-bass vamp — moving in whole steps then a half step — creates the tune\'s hypnotic groove. The form alternates between this vamp and a more harmonically active "release" section with ii-V-i progressions. The simplicity of the harmonic foundation contrasts with the rhythmic sophistication of the Afro-Cuban feel, making it both accessible and groovy.',
+  metaDescription: 'Song for My Father chord changes and harmonic analysis. Horace Silver\'s hard bop Latin standard (1964): F minor vamp — Steely Dan sampled it, with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

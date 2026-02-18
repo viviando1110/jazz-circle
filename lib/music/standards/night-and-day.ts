@@ -21,6 +21,16 @@ export const NIGHT_AND_DAY: Standard = {
   tags: ['standard', 'cole porter', 'intermediate', 'sophisticated'],
   description:
     'Night and Day is a sophisticated Cole Porter composition from 1932 featuring chromatic harmony and unexpected modulations. This 32-bar ABAC form showcases Porter\'s masterful use of chromatic voice leading and surprising key changes. The tune is a favorite among jazz musicians for its harmonic complexity and elegant melodic construction.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Cole Porter for the 1932 Broadway musical Gay Divorce (later filmed as The Gay Divorcee), Night and Day became one of the most enduring American standards. Its unusual 48-bar form (for the full song), striking opening repeated-note melody, and sophisticated harmonic movement made it a jazz vehicle from the swing era onward. The film version with Fred Astaire and Ginger Rogers cemented its popularity.',
+  notableRecordings: [
+    'Fred Astaire — The Gay Divorcee (1934 film)',
+    'Frank Sinatra — (multiple recordings)',
+    'Ella Fitzgerald — (various recordings)',
+    'Benny Goodman — (various swing recordings)',
+  ],
+  harmonicSummary: 'Night and Day is typically played in a 32-bar AABA form (a shortened version of the full song) in Eb major. The A section opens on a striking chord (Bb7sus4 or Ab major over Eb) that creates harmonic ambiguity before resolving through ii-V-I progressions in Eb. Porter\'s harmonic language features unexpected chromatic chords and a particularly dramatic moment in the bridge. The tune\'s unusual opening harmony — hovering on a single note against changing bass notes — is one of the most recognized openings in the standard repertoire.',
+  metaDescription: 'Night and Day chord changes and harmonic analysis. Cole Porter\'s 1932 jazz standard in Eb major: distinctive one-note opening, AABA form — with notation, playback, and scale guides.',
 
   sections: [
     {

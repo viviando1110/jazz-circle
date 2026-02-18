@@ -16,6 +16,16 @@ export const GOODBYE_PORK_PIE_HAT: Standard = {
   difficulty: 'advanced',
   tags: ['standard', 'ballad', 'mingus', '1950s', 'blues'],
   description: "Charles Mingus's tribute to Lester Young. A 12-bar blues with sophisticated harmonic substitutions and a mournful melody.",
+  style: 'Post-Bop',
+  historicalContext: 'Composed by Charles Mingus in 1959 as an elegy for tenor saxophonist Lester Young, who died on March 15, 1959 — the day of the recording session. Young\'s porkpie hat was his trademark. The piece is one of the most emotionally powerful and harmonically distinctive compositions in jazz, with Mingus\'s characteristic use of unexpected chromatic harmony and blues feeling combined.',
+  notableRecordings: [
+    'Charles Mingus — Mingus Ah Um (1959)',
+    'Joni Mitchell — Mingus (1979, with lyrics)',
+    'Jeff Beck — Wired (1976)',
+    'Widely recorded — (Mingus\'s most celebrated elegy)',
+  ],
+  harmonicSummary: 'Goodbye Pork Pie Hat is a slow, mournful ballad in F major with Mingus\'s characteristic chromatic harmonic language. The form blends blues feeling with jazz harmony, featuring unexpected chromatic chord movements, parallel harmony, and extended voicings. The harmonic language avoids predictable ii-V-I patterns in favor of more chromatic, emotionally charged progressions that mirror the grieving character of the piece. Its distinctive harmonic fingerprint makes it one of the most recognizable Mingus compositions.',
+  metaDescription: 'Goodbye Pork Pie Hat chord changes and harmonic analysis. Charles Mingus\'s 1959 elegy for Lester Young: F major, chromatic blues harmony — from Mingus Ah Um, with notation and scale guides.',
   sections: [
     {
       name: 'A',

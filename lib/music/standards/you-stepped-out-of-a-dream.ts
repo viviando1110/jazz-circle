@@ -16,6 +16,16 @@ export const YOU_STEPPED_OUT_OF_A_DREAM: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'ballad', 'swing'],
   description: 'A romantic ballad with chromatically descending bass lines and rich harmonic colors. Features extended ii-V progressions and smooth voice leading.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Nacio Herb Brown with lyrics by Gus Kahn for the 1940 MGM film Ziegfeld Girl, You Stepped Out of a Dream has a flowing, dreamlike character well suited to jazz interpretation. It became a jazz standard through recordings by various jazz musicians who appreciated its elegant harmonic movement and memorable melody.',
+  notableRecordings: [
+    'Tony Martin — (1941 original film version)',
+    'John Coltrane — (various recordings)',
+    'Oscar Peterson — (various recordings)',
+    'Widely recorded — (jazz standard)',
+  ],
+  harmonicSummary: 'You Stepped Out of a Dream is a 32-bar AABA standard in C major with smooth, flowing harmonic movement. The A sections feature clear ii-V-I progressions in C major with secondary dominants adding color — the harmony moves with a dreamlike, effortless quality. The bridge provides harmonic contrast through a brief modulation before the final A resolves home. The tune\'s comfortable harmonic pacing and lyrical melody suit medium swing tempos and ballad treatments equally well.',
+  metaDescription: 'You Stepped Out of a Dream chord changes and harmonic analysis. Nacio Herb Brown\'s 1940 jazz standard in C major: AABA, flowing ii-V-I — with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

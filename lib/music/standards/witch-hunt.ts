@@ -16,6 +16,14 @@ export const WITCH_HUNT: Standard = {
   difficulty: 'advanced',
   tags: ['hard-bop', 'modal', 'modern'],
   description: 'An advanced Wayne Shorter composition with a haunting, mysterious quality. Features an unusual 36-bar form with modal sections and dramatic harmonic shifts. The composition showcases Shorter\'s gift for creating atmosphere through harmony.',
+  style: 'Post-Bop',
+  historicalContext: 'Composed by Wayne Shorter and recorded on the Miles Davis Quintet album E.S.P. (1965), Witch Hunt exemplifies the "new thing" direction of the mid-1960s Davis Quintet — open, post-bop harmonic language with a minor-key modal feel. Shorter\'s compositions for the second great Miles Davis Quintet were characterized by their dark atmosphere and ambiguous harmonic centers.',
+  notableRecordings: [
+    'Miles Davis Quintet — E.S.P. (1965)',
+    'Wayne Shorter — (various recordings)',
+  ],
+  harmonicSummary: 'Witch Hunt is a minor-key composition in C minor with Wayne Shorter\'s characteristic post-bop harmonic language — suspended chords, ambiguous tonal centers, and non-functional progressions that create atmosphere rather than direct the ear through traditional ii-V-i resolution. The form alternates between static minor chord areas and more harmonically active passages. Improvising over it requires sensitivity to color and atmosphere rather than rapid chord-scale pattern execution.',
+  metaDescription: 'Witch Hunt chord changes and harmonic analysis. Wayne Shorter\'s post-bop composition (1965): C minor, suspended modal harmony — Miles Davis Quintet E.S.P., with notation and scale guides.',
   sections: [
     {
       name: 'A',

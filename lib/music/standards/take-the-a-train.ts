@@ -21,6 +21,16 @@ export const TAKE_THE_A_TRAIN: Standard = {
   tags: ['standard', 'beginner', 'swing', 'Ellington', 'Lydian', '#IV'],
   description:
     "Duke Ellington's signature tune, notable for its use of the #IV dominant chord that gives it its distinctive Lydian flavor.",
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Billy Strayhorn in 1939 and adopted as the theme song of the Duke Ellington Orchestra, Take the A Train is one of the most recognizable jazz tunes ever written. Strayhorn wrote it after Ellington gave him subway directions to his apartment in Harlem — take the A train to Sugar Hill. It remained the Ellington band\'s signature opening theme for decades.',
+  notableRecordings: [
+    'Duke Ellington Orchestra — (1941 recording, with Billy Strayhorn on piano)',
+    'Duke Ellington Orchestra — (multiple recordings across five decades)',
+    'Ella Fitzgerald — (various recordings)',
+    'Widely covered — (jazz standard and big band staple)',
+  ],
+  harmonicSummary: 'Take the A Train is a 32-bar AABA standard in C major with a distinctive harmonic feature: the D7#11 chord in bar 2 — a Lydian Dominant sound that was harmonically forward-thinking for 1939. The progression: C→D7#11→Dm7→G7→C establishes the home key with a chromatic approach chord before the conventional ii-V-I. The bridge moves to F major before returning. The D7#11 (tritone above the root, giving a Lydian Dominant color) is the harmonic fingerprint of the tune and gives it its bright, distinctive character.',
+  metaDescription: 'Take the A Train chord changes and harmonic analysis. Billy Strayhorn\'s 1939 Ellington theme in C major: distinctive D7#11 Lydian Dominant, with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

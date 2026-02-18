@@ -142,8 +142,6 @@ export function StandardPageClient({ standard }: StandardPageClientProps) {
 
       {/* Chord Changes Section */}
       <div className="space-y-4">
-        <h2 className="text-xl font-semibold text-neutral-100">Chord Changes</h2>
-
         {/* Lead Sheet Notation */}
         <div>
           <h3 className="text-lg font-semibold text-neutral-100 mb-3">Notation</h3>
@@ -163,7 +161,7 @@ export function StandardPageClient({ standard }: StandardPageClientProps) {
       {/* Harmonic Analysis Section (only if at least one section has analysis data) */}
       {standard.sections.some((s) => s.analysis) && (
         <div className="space-y-3">
-          <h2 className="text-xl font-semibold text-neutral-100">Harmonic Analysis</h2>
+          <h3 className="text-lg font-semibold text-neutral-100">Section-by-Section Analysis</h3>
           {standard.sections.map((section) => (
             <SectionAnalysis
               key={section.name}

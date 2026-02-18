@@ -16,6 +16,16 @@ export const IF_I_SHOULD_LOSE_YOU: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'bebop', 'ballad'],
   description: 'A beautiful ballad with rich harmonic movement, popular among bebop musicians. Features chromatic descending bass lines and ii-V progressions.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Ralph Rainger with lyrics by Leo Robin for the 1935 film Rose of the Rancho, If I Should Lose You became a jazz standard through its sophisticated chord changes and sweeping melody. It is one of the more harmonically adventurous ballads from the era, making it a favorite with jazz musicians who appreciated its unusual chromatic movements.',
+  notableRecordings: [
+    'Bill Evans — (various recordings)',
+    'Joe Pass — (various recordings)',
+    'Widely recorded — (jazz ballad standard)',
+  ],
+  harmonicSummary: 'If I Should Lose You is a 32-bar AABA ballad in Bb major with notably sophisticated harmony for a 1935 film song. The A section features chromatic ii-V progressions that move through non-diatonic key areas, giving the tune an adventurous, harmonically rich character. The tune\'s unusual harmonic language — which anticipates some of the chromatic ideas that bebop musicians would later explore — has kept it in the jazz repertoire as a vehicle for sophisticated ballad playing.',
+  metaDescription: 'If I Should Lose You chord changes and harmonic analysis. Ralph Rainger\'s 1935 jazz ballad in Bb major: chromatic ii-V progressions, AABA — with notation, playback, and scale guides.',
+
   sections: [
     {
       name: 'A',

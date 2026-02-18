@@ -16,6 +16,15 @@ export const POLKA_DOTS_AND_MOONBEAMS: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'ballad', 'van-heusen', '1940s'],
   description: 'Jimmy Van Heusen ballad with a lyrical melody and sophisticated harmony. A favorite of Frank Sinatra.',
+  style: 'Ballad',
+  historicalContext: 'Composed by Jimmy Van Heusen with lyrics by Johnny Burke in 1940, Polka Dots and Moonbeams was introduced by Tommy Dorsey\'s orchestra and became closely associated with Frank Sinatra, who recorded it early in his solo career. Its gentle diatonic harmony and lush melody have made it a favorite ballad in the jazz repertoire, particularly for pianists and vocalists.',
+  notableRecordings: [
+    'Tommy Dorsey (with Frank Sinatra) — (1940)',
+    'Bill Evans — Waltz for Debby (1961)',
+    'John Coltrane — (various recordings)',
+  ],
+  harmonicSummary: 'Polka Dots and Moonbeams is an unusually diatonic jazz standard in F major, with most of its harmony staying within the key. The AABA form features a gentle ii-V-I-based A section with minimal chromatic intrusion. The bridge introduces a brief tonicization of the IV chord (Bb major) before returning home. Its relative simplicity makes it an excellent vehicle for developing a lyrical, singing approach to improvisation without the pressure of complex chord changes.',
+  metaDescription: 'Polka Dots and Moonbeams chord changes and harmonic analysis. Jimmy Van Heusen\'s 1940 ballad in F major: diatonic AABA harmony, with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

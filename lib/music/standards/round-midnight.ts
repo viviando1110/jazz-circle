@@ -16,6 +16,16 @@ export const ROUND_MIDNIGHT: Standard = {
   difficulty: 'advanced',
   tags: ['standard', 'ballad', 'monk', '1940s', 'bebop'],
   description: "Thelonious Monk's masterpiece ballad with complex chromatic harmony and unusual voice leading. One of the most recorded jazz standards.",
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Thelonious Monk around 1944 (with additional lyrics by Bernie Hanighen and Cootie Williams), Round Midnight is Monk\'s most recorded composition and the most covered jazz standard composed by an African American. Miles Davis\'s 1955 Newport performance and subsequent Columbia recording brought it global fame, and it remains an icon of jazz composition.',
+  notableRecordings: [
+    'Thelonious Monk — (multiple recordings from 1944 onwards)',
+    'Miles Davis — \'Round About Midnight (1957)',
+    'Coltrane & Monk — (1957 live recordings)',
+    'Dizzy Gillespie — (1946 recording, early version)',
+  ],
+  harmonicSummary: 'Round Midnight is a 32-bar AABA ballad in Eb minor (often notated or transposed to other keys) with Monk\'s characteristically angular, chromatic harmony. The A sections feature tritone substitutions, flat-ninth chords, and unexpected chromatic resolutions that defy predictable ii-V-I motion. The bridge provides brief tonal relief before returning to the dark, brooding minor tonality. Monk\'s idiosyncratic use of space, dissonance, and chromatic voice leading makes the harmonic language unmistakably his own.',
+  metaDescription: 'Round Midnight chord changes and harmonic analysis. Thelonious Monk\'s 1944 jazz classic: Eb minor, tritone substitutions, angular chromatic harmony — with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

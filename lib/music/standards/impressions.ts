@@ -16,6 +16,16 @@ export const IMPRESSIONS: Standard = {
   difficulty: 'intermediate',
   tags: ['modal', 'hard-bop', 'modern'],
   description: 'A modal jazz classic based on the form of "So What" from Kind of Blue. Features simple two-chord changes that allow for extensive modal improvisation. The A sections use Dorian mode, while the bridge moves up a half-step.',
+  style: 'Modal Jazz',
+  historicalContext: 'Composed by John Coltrane (with some dispute as to whether John Lewis contributed to the form), Impressions was recorded multiple times by Coltrane between 1961 and 1963. It is a direct contrafact of Miles Davis\'s "So What" — using the same AABA structure with D Dorian for the A sections and Eb Dorian for the bridge — but Coltrane\'s approach to improvisation over it was dramatically different from Davis\'s.',
+  notableRecordings: [
+    'John Coltrane — Impressions (1963)',
+    'John Coltrane — (live recordings, 1961-1965)',
+    'Compared to: Miles Davis — So What (the source tune)',
+  ],
+  harmonicSummary: 'Impressions uses the same modal structure as "So What": D Dorian for 16 bars (A section, repeated), Eb Dorian for 8 bars (bridge), and D Dorian for a final 8 bars. The Dm7→Ebm7→Dm7 movement — just two chords in 32 bars — creates the same static modal framework as So What. However, Coltrane\'s improvisational approach was far more dense and complex than Davis\'s, treating the modal canvas as an opportunity for motivic development and "sheets of sound" technique. The D Dorian mode (D E F G A B C) and Eb Dorian (Eb F Gb Ab Bb C Db) are the only scales needed.',
+  metaDescription: 'Impressions chord changes and harmonic analysis. John Coltrane\'s modal jazz contrafact on So What: D Dorian / Eb Dorian, AABA — with notation, playback, and scale guides.',
+
   sections: [
     {
       name: 'A',

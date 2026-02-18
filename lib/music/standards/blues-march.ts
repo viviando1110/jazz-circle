@@ -16,6 +16,14 @@ export const BLUES_MARCH: Standard = {
   difficulty: 'beginner',
   tags: ['standard', 'blues', 'hard-bop', 'march', 'bebop'],
   description: 'A spirited blues with a martial swing feel. Benny Golson\'s composition for Art Blakey\'s Jazz Messengers combines traditional blues changes with a march-like rhythmic character that\'s both playful and hard-driving.',
+  style: 'Hard Bop',
+  historicalContext: 'Composed by Benny Golson in 1958 for the Art Blakey & the Jazz Messengers album Moanin\', Blues March was one of Golson\'s signature pieces with the Messengers and helped define the hard bop style. Its swinging march feel — a blues played with a two-beat emphasis recalling military marching bands — became an instantly recognizable part of the hard bop repertoire.',
+  notableRecordings: [
+    'Art Blakey & the Jazz Messengers — Moanin\' (1958)',
+    'Benny Golson — (various recordings)',
+  ],
+  harmonicSummary: 'Blues March is a 12-bar blues in Bb with a march-like two-feel swing groove instead of standard 4/4 jazz swing. The chord changes follow a standard Bb blues structure — I7 (Bb7), IV7 (Eb7), V7 (F7) — with bebop-era ii-V turnarounds. The march rhythmic character transforms the familiar blues form into something distinctly energetic, and the simple harmonic structure allows soloists to focus on rhythmic invention and blues vocabulary.',
+  metaDescription: 'Blues March chord changes and harmonic analysis. Benny Golson\'s hard bop standard (1958): 12-bar Bb blues with march feel, from Art Blakey\'s Moanin\', with notation and scale guides.',
   sections: [
     {
       name: 'A',

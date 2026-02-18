@@ -16,6 +16,15 @@ export const THE_PREACHER: Standard = {
   difficulty: 'beginner',
   tags: ['standard', 'gospel', 'soul-jazz', 'funky'],
   description: 'A gospel-influenced hard bop tune with a churchy feel. One of Horace Silver\'s earliest hits, featuring a call-and-response melody that evokes Sunday morning church services.',
+  style: 'Hard Bop',
+  historicalContext: 'Composed by Horace Silver and recorded by Art Blakey & the Jazz Messengers in 1955 (and later by Silver\'s own quintet), The Preacher has a gospel-blues character that was central to the hard bop movement\'s embrace of African American church music. Its call-and-response structure and funky, shuffling groove became emblematic of the soulful side of hard bop.',
+  notableRecordings: [
+    'Art Blakey & the Jazz Messengers — (1955 recording with Horace Silver)',
+    'Horace Silver Quintet — (various recordings)',
+    'Widely recorded — (hard bop and soul jazz standard)',
+  ],
+  harmonicSummary: 'The Preacher is a 12-bar blues in F major (or Bb major in some versions) with a gospel-influenced two-feel shuffle groove. The chord changes follow a standard blues structure — I7 (F7), IV7 (Bb7), V7 (C7) — with a bebop-era ii-V turnaround in bars 11-12. The "preacher" character comes from the rhythmic feel and the blues vocabulary rather than harmonic complexity: the simple blues changes support gospel-style call-and-response improvisation and testifying phrasing over a driving shuffle.',
+  metaDescription: 'The Preacher chord changes and harmonic analysis. Horace Silver\'s gospel-blues hard bop standard (1955): F major blues shuffle — Art Blakey classic, with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

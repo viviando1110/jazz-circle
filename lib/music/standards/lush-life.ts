@@ -16,6 +16,16 @@ export const LUSH_LIFE: Standard = {
   difficulty: 'advanced',
   tags: ['standard', 'ballad', 'strayhorn', 'complex', 'chromatic'],
   description: 'A sophisticated masterpiece by Billy Strayhorn with through-composed form. Features extensive chromaticism, modulations, and some of the most challenging harmony in the jazz repertoire.',
+  style: 'Ballad',
+  historicalContext: 'Composed by Billy Strayhorn between 1933 and 1938 (mostly written when he was a teenager), Lush Life is one of the most sophisticated and harmonically complex songs in the jazz repertoire. Its unusual form (not a standard 32-bar AABA), dense chromatic harmony, and deeply personal lyric about disillusionment and loneliness made it a unique masterwork. John Coltrane\'s 1957 recording is considered the definitive jazz interpretation.',
+  notableRecordings: [
+    'Billy Strayhorn — (original recordings)',
+    'John Coltrane — Lush Life (1957, with Red Garland)',
+    'Nat King Cole — (various recordings)',
+    'Johnny Hartman — (various recordings)',
+  ],
+  harmonicSummary: 'Lush Life has an unusual form — a verse plus a 36-bar chorus — with one of the most chromatically rich harmonic progressions in the standard repertoire. The harmony moves through distant key centers via half-step and tritone relationships, with dense extended chord voicings (maj7, maj9, #11) throughout. The chorus alone passes through multiple key centers with little tonal stability, reflecting the emotional disillusionment of the lyric. It demands complete harmonic fluency and a sophisticated melodic sensibility.',
+  metaDescription: 'Lush Life chord changes and harmonic analysis. Billy Strayhorn\'s complex masterpiece (1938): unusual 36-bar form, dense chromatic harmony — Coltrane classic, with notation and scale guides.',
   sections: [
     {
       name: 'A',

@@ -21,6 +21,16 @@ export const BODY_AND_SOUL: Standard = {
   tags: ['standard', 'ballad', 'advanced', 'chromatic', 'coleman hawkins'],
   description:
     'Body and Soul is one of the most revered jazz ballads, composed by Johnny Green in 1930. Made famous by Coleman Hawkins\' 1939 recording, this 32-bar AABA form features sophisticated chromatic harmony, unexpected modulations, and rich voice leading. The tune demands harmonic maturity and is considered essential repertoire for advanced jazz musicians.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Johnny Green with lyrics by Edward Heyman, Robert Sour, and Frank Eyton in 1930, Body and Soul became one of the most recorded jazz ballads of all time. Coleman Hawkins\'s 1939 improvised recording — arguably the first extended jazz improvisation recorded on a standard, departing almost entirely from the melody — is considered one of the defining moments in jazz history.',
+  notableRecordings: [
+    'Coleman Hawkins — (1939, the landmark tenor saxophone recording)',
+    'Billie Holiday — (various recordings)',
+    'John Coltrane — (various recordings)',
+    'Stan Getz — (various recordings)',
+  ],
+  harmonicSummary: 'Body and Soul is a 32-bar AABA standard in Db major (though often played in other keys). The A sections are packed with ii-V-I progressions, secondary dominants, and chromatic passing chords, giving it one of the densest harmonic textures of any standard ballad. The bridge famously modulates to D major (a half-step up from Db) — a striking and unusual key relationship. The harmonic richness has made it a perennial vehicle for explorations in jazz harmony and improvisation.',
+  metaDescription: 'Body and Soul chord changes and harmonic analysis. Johnny Green\'s 1930 jazz ballad: Db major, bridge in D major, dense ii-V progressions — Coleman Hawkins classic, with notation and scale guides.',
 
   sections: [
     {

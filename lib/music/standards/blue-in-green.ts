@@ -16,6 +16,15 @@ export const BLUE_IN_GREEN: Standard = {
   difficulty: 'advanced',
   tags: ['modal', 'ballad', 'kind-of-blue'],
   description: 'A hauntingly beautiful ballad from Kind of Blue, featuring a 10-bar form in 3/4 time. The sparse, modal harmony and chromatic voice leading create an impressionistic soundscape. Authorship disputed between Miles Davis and Bill Evans.',
+  style: 'Modal Jazz',
+  historicalContext: 'First recorded on Kind of Blue (1959), Blue in Green is a hauntingly beautiful 10-bar ballad with a disputed composer credit — Miles Davis claimed authorship, but Bill Evans maintained he composed the tune. This credit dispute remains unresolved; the copyright is registered to Miles Davis. The piece exemplifies the impressionistic, floating harmonic quality of the Kind of Blue sessions.',
+  notableRecordings: [
+    'Miles Davis — Kind of Blue (1959)',
+    'Bill Evans — Waltz for Debby (1961)',
+    'Ahmad Jamal — (1994 recording)',
+  ],
+  harmonicSummary: 'Blue in Green has an unusual 10-bar form (not the standard 8, 12, or 32 bars) with a slow harmonic rhythm of extended chords. The harmony drifts between Bb major and G minor: Dm7→G7alt→Cmaj7→A7alt→Dm7→Db7→Cmaj7→Am7b5 D7→Gm7 Bb7→A7alt→Dm7 creating an impressionistic, tonally ambiguous atmosphere. The wide-spaced, slow-moving chords reward patient melodic development over rapid bebop lines.',
+  metaDescription: 'Blue in Green chord changes and harmonic analysis. Miles Davis/Bill Evans ballad from Kind of Blue (1959): 10-bar modal form, extended chords, with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

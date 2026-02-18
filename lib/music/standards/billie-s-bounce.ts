@@ -16,6 +16,15 @@ export const BILLIES_BOUNCE: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'bebop', 'parker', '1940s', 'blues', 'bebop-blues'],
   description: "Charlie Parker's bebop blues in F. A perfect introduction to bebop harmony with classic ii-V substitutions over the blues form.",
+  style: 'Bebop',
+  historicalContext: 'Composed by Charlie Parker and recorded at his landmark November 1945 Savoy session — one of the first bebop recordings issued commercially — Billie\'s Bounce is a straight F blues that showcases Parker\'s bebop language over the blues form. The session also included Miles Davis on trumpet and Dizzy Gillespie briefly at the piano, and produced several defining bebop recordings.',
+  notableRecordings: [
+    'Charlie Parker — Savoy Records (November 1945, with Miles Davis)',
+    'Charlie Parker — (multiple alternate takes from the same session)',
+    'Widely played — (essential bebop blues vehicle)',
+  ],
+  harmonicSummary: 'Billie\'s Bounce is a 12-bar F blues with bebop-era enhancements. The basic I7 (F7)→IV7 (Bb7) movement is embellished with a quick change to Bb7 in bar 2, a dominant 7th (F7) through bars 3-4, and a ii-V turnaround (Cm7→F7 or Gm7→C7→F7) in bars 11-12. The harmonic rhythm is one chord per bar, keeping it accessible while the bebop vocabulary over the top is demanding. It remains the first jazz blues most students learn to improvise on.',
+  metaDescription: 'Billie\'s Bounce chord changes and harmonic analysis. Charlie Parker\'s F bebop blues (1945): 12-bar blues with bebop turnaround, with notation, playback, and scale guides.',
   sections: [
     {
       name: 'Blues',

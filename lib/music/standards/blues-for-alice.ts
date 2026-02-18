@@ -16,6 +16,14 @@ export const BLUES_FOR_ALICE: Standard = {
   difficulty: 'advanced',
   tags: ['standard', 'bebop', 'parker', '1950s', 'blues', 'bebop-blues'],
   description: "Charlie Parker's advanced bebop blues with complex chromatic ii-V substitutions. A masterclass in bebop harmony over the blues form.",
+  style: 'Bebop',
+  historicalContext: 'Composed by Charlie Parker and recorded in 1951, Blues for Alice is a 12-bar F blues with a sophisticated system of chromatic substitutions that replaced the standard blues changes with a harmonically rich descending ii-V sequence. This approach — known as a "Bird blues" or "bebop blues" — became one of Parker\'s most influential harmonic innovations and is now a rite of passage for bebop musicians.',
+  notableRecordings: [
+    'Charlie Parker — (1951 recording)',
+    'Widely recorded — (definitive "Bird blues" form vehicle)',
+  ],
+  harmonicSummary: 'Blues for Alice replaces the standard F blues changes with a chromatic descending ii-V sequence starting on Fmaj7: Fmaj7 | Em7b5 A7 | Dm7 G7 | Cm7 F7 | Bbmaj7 | Bbm7 Eb7 | Am7 D7 | Abm7 Db7 | Gm7 C7 | F (turnaround). This "cycle of ii-Vs" descends through all keys chromatically back to F — the opposite of the standard blues\' simple I-IV-V. The form is a direct model of the "Bird blues" style and tests fluency in ii-V-I patterns across all 12 keys.',
+  metaDescription: 'Blues for Alice chord changes and harmonic analysis. Charlie Parker\'s bebop blues (1951): chromatic ii-V sequence through all keys, F major, with notation, playback, and scale guides.',
   sections: [
     {
       name: 'Blues',

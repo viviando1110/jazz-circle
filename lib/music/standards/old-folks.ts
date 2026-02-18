@@ -16,6 +16,15 @@ export const OLD_FOLKS: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'ballad', 'introspective'],
   description: 'A deeply expressive ballad with rich harmonic content. Features chromatic voice leading and sophisticated reharmonization opportunities.',
+  style: 'Ballad',
+  historicalContext: 'Composed by Willard Robison with lyrics by Dedette Lee Hill in 1938, Old Folks is a wistful, nostalgic ballad that has been recorded by many jazz musicians as a vehicle for lyrical, introspective improvisation. Its unhurried harmonic movement and gentle, folk-like melody give it a timeless, pastoral quality.',
+  notableRecordings: [
+    'Frank Sinatra — (various recordings)',
+    'Miles Davis — (various recordings)',
+    'Bill Evans — (various recordings)',
+  ],
+  harmonicSummary: 'Old Folks is a 32-bar ballad in F major with a gentle, flowing harmonic language. The A sections feature diatonic ii-V-I progressions in F with secondary dominants adding warmth. The bridge provides harmonic contrast before the final A returns home. The tune\'s unhurried harmonic rhythm — with long note values on each chord — rewards patient, melodic improvisation and a singing tone quality. It is well-suited to trio or duo settings.',
+  metaDescription: 'Old Folks chord changes and harmonic analysis. Willard Robison\'s 1938 jazz ballad in F major: gentle ii-V-I progressions, AABA form — with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

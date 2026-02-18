@@ -165,6 +165,16 @@ export interface Standard {
   tags: string[];
   description: string;
   sections: StandardSection[];
+  /** e.g., "Modal Jazz", "Bebop", "Bossa Nova" */
+  style?: string;
+  /** 2-3 sentence overall harmonic analysis */
+  harmonicSummary?: string;
+  /** 2-3 sentences: composer, year, significance, source harmony */
+  historicalContext?: string;
+  /** e.g., ["Miles Davis — Kind of Blue (1959)"] */
+  notableRecordings?: string[];
+  /** Custom per-song SEO description (overrides generic) */
+  metaDescription?: string;
 }
 
 /* ═══════════════════════════════════════════════════════════

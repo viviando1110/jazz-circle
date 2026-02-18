@@ -16,6 +16,16 @@ export const I_REMEMBER_YOU: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'ballad', 'schertzinger', '1940s'],
   description: 'Classic ballad from the 1940s with a memorable melody. Features smooth harmonic progressions and is a favorite for ballad interpretation.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Victor Schertzinger with lyrics by Johnny Mercer for the 1942 film The Fleet\'s In, I Remember You became popular through Bing Crosby\'s recording and later was embraced by jazz musicians as a vehicle for bebop improvisation. Its brisk tempo, diatonic F major harmony, and clean AABA form made it a staple of jazz jam sessions and a test of bebop fluency.',
+  notableRecordings: [
+    'Charlie Parker — (various recordings)',
+    'Clifford Brown — (various recordings)',
+    'Frank Sinatra — (1960s recordings)',
+    'Art Pepper — (1950s recordings)',
+  ],
+  harmonicSummary: 'I Remember You is a straightforward jazz standard in F major built on a 32-bar AABA form. The A section features clean ii-V-I progressions in F major with some secondary dominants for color. The bridge tonicizes the IV (Bb major) and submediant (D minor) before returning home. At medium-up to fast tempos, the tune becomes a demanding bebop vehicle that tests the ability to navigate ii-V-I progressions cleanly and connect phrases across the form.',
+  metaDescription: 'I Remember You chord changes and harmonic analysis. Victor Schertzinger\'s 1942 jazz standard in F major: AABA bebop vehicle with ii-V-I progressions, notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

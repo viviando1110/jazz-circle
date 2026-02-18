@@ -16,6 +16,15 @@ export const WATERMELON_MAN: Standard = {
   difficulty: 'beginner',
   tags: ['standard', 'blues', 'funk', 'soul-jazz', 'groove'],
   description: 'A funky 16-bar blues with a memorable bass line. One of Herbie Hancock\'s most popular compositions, featuring a simple but infectious groove that made it a hit in both jazz and pop circles.',
+  style: 'Hard Bop',
+  historicalContext: 'Composed by Herbie Hancock and recorded on his Blue Note debut Takin\' Off (1962), Watermelon Man became a surprise hit when Mongo Santamaría recorded a Latin version that reached the pop charts in 1963. Hancock himself recorded a drastically different, African-influenced version on his groundbreaking fusion album Head Hunters (1973), one of the best-selling jazz albums of all time.',
+  notableRecordings: [
+    'Herbie Hancock — Takin\' Off (1962)',
+    'Mongo Santamaría — (1963, Latin pop crossover version)',
+    'Herbie Hancock — Head Hunters (1973, African funk version)',
+  ],
+  harmonicSummary: 'Watermelon Man is a 16-bar blues in F major (or C major in some arrangements) with a funky, gospel-blues feel. The changes follow a standard blues structure — I7 (F7), IV7 (Bb7), V7 (C7) — with a two-feel or funky 4/4 groove. The simplicity of the blues changes contrasts with the sophistication of Hancock\'s rhythmic approach and the blues vocabulary he brings to improvisation. The Head Hunters version adds a repeating 16th-note mbira (thumb piano) intro figure and a groove-focused fusion approach.',
+  metaDescription: 'Watermelon Man chord changes and harmonic analysis. Herbie Hancock\'s funk blues standard (1962): F major blues groove — from the jazz and Head Hunters fusion versions, with notation and scale guides.',
   sections: [
     {
       name: 'A',

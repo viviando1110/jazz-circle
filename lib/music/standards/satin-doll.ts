@@ -21,6 +21,15 @@ export const SATIN_DOLL: Standard = {
   tags: ['standard', 'swing', 'beginner', 'duke ellington'],
   description:
     'Satin Doll is a classic Duke Ellington composition from 1953 featuring sophisticated yet accessible harmony. The tune is built on parallel ii-V progressions in the A sections, making it ideal for practicing voice leading and ii-V patterns. The bridge shifts to the IV and bVI key areas, providing harmonic variety. This is a must-know standard for any jazz musician.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Duke Ellington and Billy Strayhorn in 1953 (with lyrics later added by Johnny Mercer), Satin Doll became the closing theme for the Ellington orchestra and one of the most recognized jazz standards. Its sophisticated but accessible harmonic movement and swinging character made it a universal crowd-pleaser and jazz education staple.',
+  notableRecordings: [
+    'Duke Ellington Orchestra — (1953 original and multiple recordings)',
+    'Ella Fitzgerald & Duke Ellington — (various recordings)',
+    'Widely covered — (jazz standard and big band staple)',
+  ],
+  harmonicSummary: 'Satin Doll is a 32-bar AABA standard in C major built on a chain of ii-V progressions that cycle through the circle of fifths. The A section features: Dm7→G7 (ii-V in C), Em7→A7 (ii-V in D), Am7→D7 (ii-V in G), then Abm7→Db7 (chromatic ii-V a tritone away) before resolving Cmaj7. This alternation of diatonic and chromatic ii-V pairs — cycling through C, D, G, and the tritone Db — gives the tune its sophisticated but ear-friendly harmonic movement. The bridge touches G major before the final A returns home.',
+  metaDescription: 'Satin Doll chord changes and harmonic analysis. Ellington/Strayhorn 1953 jazz standard in C major: ii-V cycle of fifths with chromatic pivot — with notation, playback, and scale guides.',
 
   sections: [
     {

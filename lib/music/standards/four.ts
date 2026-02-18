@@ -21,6 +21,16 @@ export const FOUR: Standard = {
   tags: ['standard', 'bebop', 'intermediate', 'miles davis', 'rhythm changes'],
   description:
     'Four is a bebop composition by Miles Davis from 1954, based on the chord changes of I Got Rhythm. This 32-bar AABA form features the classic "rhythm changes" progression with added chromatic passing chords and bebop alterations. The tune is a staple of the jazz repertoire and demonstrates how bebop musicians transformed standard progressions with additional harmonic sophistication.',
+  style: 'Bebop',
+  historicalContext: 'Composed by Miles Davis (though often attributed to Eddie Vinson, a dispute that remains unresolved) and recorded in 1954, Four is a brisk bebop vehicle in Eb major with a swinging, melodically inventive theme. It became a staple of the hard bop repertoire and is one of the most commonly called tunes at jazz jam sessions.',
+  notableRecordings: [
+    'Miles Davis — (1954 recording)',
+    'Sonny Rollins — (various recordings)',
+    'Bill Evans — (various recordings)',
+    'Widely played — (jam session standard)',
+  ],
+  harmonicSummary: 'Four is a 32-bar AABA standard in Eb major with clean, bebop-friendly harmonic movement. The A section features clear ii-V-I progressions in Eb with some chromatic passing chords (a brief move to Ab major). The bridge moves to a contrasting key center (Eb minor / Db major area) before the final A returns home. At medium-up to fast tempos, Four rewards clean bebop lines and smooth navigation of the ii-V-I cycles. Its manageable harmonic changes make it a good stepping stone from basic changes to more complex bebop.',
+  metaDescription: 'Four chord changes and harmonic analysis. Miles Davis\'s bebop standard (1954): Eb major, AABA form, clean ii-V-I progressions — jam session staple, with notation and scale guides.',
 
   sections: [
     {

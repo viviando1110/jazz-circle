@@ -16,6 +16,16 @@ export const SOPHISTICATED_LADY: Standard = {
   difficulty: 'advanced',
   tags: ['standard', 'ellington', 'ballad', 'complex', 'chromatic'],
   description: 'An Ellington masterpiece with sophisticated chromatic harmony. Features extensive reharmonization and complex voice leading.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Duke Ellington in 1933 (with lyrics later added by Mitchell Parish and Irving Mills), Sophisticated Lady was one of the signature compositions of the Ellington orchestra. Ellington reportedly wrote it as a tribute to three women teachers from his childhood. Its chromatic, harmonically adventurous character and sweeping romantic quality made it a jazz standard beloved by musicians and audiences alike.',
+  notableRecordings: [
+    'Duke Ellington Orchestra — (1933 original)',
+    'John Coltrane — (various recordings)',
+    'Oscar Peterson — (various recordings)',
+    'Widely recorded — (Ellington jazz standard)',
+  ],
+  harmonicSummary: 'Sophisticated Lady is a 32-bar AABA standard in Ab major (sometimes Db major) with one of the most chromatically rich A sections in the Ellington catalog. The A section features unexpected half-step voice movements, tritone substitutions, and a chromatic descending bass line that give the tune its distinctive "sophisticated" character. The bridge provides harmonic contrast before the final A returns home. The density of chromatic chord movement makes it more challenging than typical swing-era standards.',
+  metaDescription: 'Sophisticated Lady chord changes and harmonic analysis. Duke Ellington\'s 1933 jazz standard: Ab major, chromatic descending bass, tritone substitutions — with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

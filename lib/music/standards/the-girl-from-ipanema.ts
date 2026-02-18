@@ -16,6 +16,15 @@ export const THE_GIRL_FROM_IPANEMA: Standard = {
   difficulty: 'beginner',
   tags: ['standard', 'bossa-nova', 'jobim', '1960s', 'latin'],
   description: 'Iconic bossa nova by Antonio Carlos Jobim. Features the characteristic Brazilian harmonic movement and syncopated rhythm pattern.',
+  style: 'Bossa Nova',
+  historicalContext: 'Composed by Antônio Carlos Jobim with Portuguese lyrics by Vinícius de Moraes in 1962 (English lyrics by Norman Gimbel), The Girl from Ipanema became the second most recorded song in history after Yesterday. Stan Getz and Astrud Gilberto\'s 1964 recording won the Grammy for Record of the Year and became the defining bossa nova recording for international audiences. The tune was inspired by a young woman named Helô Pinheiro who walked past a bar where Jobim and de Moraes were sitting in Ipanema, Rio de Janeiro.',
+  notableRecordings: [
+    'Stan Getz & Astrud Gilberto — Getz/Gilberto (1964, Grammy winner)',
+    'Antônio Carlos Jobim & Vinícius de Moraes — (original Portuguese version)',
+    'Frank Sinatra & Antônio Carlos Jobim — Francis Albert Sinatra & Antônio Carlos Jobim (1967)',
+  ],
+  harmonicSummary: 'The Girl from Ipanema is a 32-bar AABA standard with two distinct key areas: F major (A section) and Gb major (bridge). The A section is firmly in F major with a I→IV7 progression (Fmaj7→G7→Gm7→Gb7→Fmaj7). The bridge moves to Gb major (a half-step above F) — a striking parallel modulation — with Gbmaj7→B7→F#m7→D7→Gm7→Eb7 before returning to F. The Gb major bridge (a tritone away from the home dominant) and the chromatic ii-V-I return to F are the harmonic highlights.',
+  metaDescription: 'The Girl from Ipanema chord changes and harmonic analysis. Jobim\'s bossa nova classic (1962): F major with Gb major bridge — the Grammy-winning Getz/Gilberto recording, with notation and scale guides.',
   sections: [
     {
       name: 'A',

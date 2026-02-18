@@ -16,6 +16,17 @@ export const MY_FUNNY_VALENTINE: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'ballad', 'rodgers-hart', '1930s'],
   description: 'Classic ballad with a haunting melody in minor. Features chromatic descending bass lines and sophisticated harmonic movement.',
+  style: 'Ballad',
+  historicalContext: 'Composed by Richard Rodgers with lyrics by Lorenz Hart for the 1937 Broadway musical Babes in Arms, My Funny Valentine became one of the most recorded jazz standards ever. Its descending chromatic bass line in the opening and the deeply expressive character have attracted virtually every major jazz musician. Miles Davis\'s recordings — particularly the live 1964 version — set the benchmark for jazz ballad interpretation.',
+  notableRecordings: [
+    'Lorenz Hart / Mitzi Green — (1937 original Broadway)',
+    'Miles Davis — My Funny Valentine (1964, live at Philharmonic Hall)',
+    'Chet Baker — (multiple recordings, associated with the tune)',
+    'Bill Evans — (various recordings)',
+  ],
+  harmonicSummary: 'My Funny Valentine is a 34-bar AABA ballad in C minor (the unusually long form adds 2 bars in the final A). The defining harmonic feature is the descending chromatic bass line in bars 1-4: Cm→Cm/B→Cm/Bb→Cm/A — the same technique as How Insensitive. The A sections alternate between C minor and Eb major areas via smooth voice leading, while the bridge moves to Ab major before the final return. This chromatic bass descent, combined with the rich harmonic complexity throughout, makes it an enduring vehicle for emotional ballad playing.',
+  metaDescription: 'My Funny Valentine chord changes and harmonic analysis. Rodgers/Hart 1937 ballad in C minor: descending chromatic bass line — Miles Davis & Chet Baker classic, with notation and scale guides.',
+
   sections: [
     {
       name: 'A',

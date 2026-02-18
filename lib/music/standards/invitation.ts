@@ -16,6 +16,15 @@ export const INVITATION: Standard = {
   difficulty: 'advanced',
   tags: ['standard', 'latin', 'ballad'],
   description: 'A sophisticated Latin-jazz standard with complex chromatic harmony and dramatic melodic contours. Features rich minor tonality and challenging voice leading.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Bronislau Kaper with lyrics by Paul Francis Webster for the 1952 film Invitation, the tune became a jazz standard through its unusual dark minor tonality and sophisticated harmonic language. Its brooding character and angular melody — quite different from typical Broadway or Hollywood standards — attracted many jazz musicians.',
+  notableRecordings: [
+    'Chet Baker — (various recordings)',
+    'Rahsaan Roland Kirk — (various recordings)',
+    'Widely recorded — (jazz standard with distinctive minor character)',
+  ],
+  harmonicSummary: 'Invitation is a minor-key standard (typically in C minor) with a complex, harmonically rich structure. The tune moves through the minor key with ii-V-i progressions (Dm7b5→G7→Cm) and several chromatic detours to related major key areas. The harmonic language is denser than typical American standards of the era, featuring unexpected chromatic chords that give it a more modern, even cinematic character. Its dark tonality and sophisticated changes reward careful harmonic analysis.',
+  metaDescription: 'Invitation chord changes and harmonic analysis. Bronislau Kaper\'s 1952 jazz standard in C minor: minor ii-V-i progressions, chromatic harmony, with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

@@ -16,6 +16,14 @@ export const THE_SIDEWINDER: Standard = {
   difficulty: 'beginner',
   tags: ['standard', 'soul-jazz', 'groove', 'funk', 'boogaloo'],
   description: 'A funky boogaloo tune that became a surprise hit. Lee Morgan\'s infectious groove and simple blues-based changes made this one of Blue Note\'s biggest commercial successes, crossing over to R&B radio.',
+  style: 'Hard Bop',
+  historicalContext: 'Composed by trumpeter Lee Morgan and recorded for his landmark Blue Note album of the same name in 1963, The Sidewinder was a surprise commercial hit that crossed over to mainstream audiences. Its funky boogaloo rhythm — a fusion of jazz with soul and Latin dance music — made it one of the most commercially successful hard bop recordings and helped inspire the soul jazz movement.',
+  notableRecordings: [
+    'Lee Morgan — The Sidewinder (1963)',
+    'Widely covered — (soul jazz standard)',
+  ],
+  harmonicSummary: 'The Sidewinder is a 24-bar blues in Eb major (with an unusual 6-bar extension on the IV chord) played with a funky boogaloo groove that combines jazz swing with a Latin two-bar clave pattern. The extended 24-bar form — where the IV chord (Ab7) is held for 6 bars instead of the usual 2 — gives the tune its distinctive, drawn-out feel. The simple I7→IV7→V7 blues changes support the groove-oriented, call-and-response improvisational style that made the boogaloo rhythm so infectious.',
+  metaDescription: 'The Sidewinder chord changes and harmonic analysis. Lee Morgan\'s funky hard bop hit (1963): 24-bar Eb blues with boogaloo groove — from the Blue Note classic, with notation and scale guides.',
   sections: [
     {
       name: 'A',

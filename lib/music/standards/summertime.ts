@@ -21,6 +21,16 @@ export const SUMMERTIME: Standard = {
   tags: ['standard', 'ballad', 'beginner', 'minor key', 'gershwin'],
   description:
     'Summertime is one of the most recorded jazz standards, composed by George Gershwin for the opera Porgy and Bess in 1935. This 16-bar tune features a simple yet beautiful minor key progression with bluesy inflections. The melody is hauntingly lyrical, and the harmony is accessible for beginners while allowing for sophisticated harmonic substitutions at advanced levels.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by George Gershwin for his 1935 folk opera Porgy and Bess (with lyrics by DuBose Heyward), Summertime is one of the most performed songs in the history of Western music. Its haunting A minor melody over a simple but hypnotic ii-V-i progression has attracted jazz, blues, soul, and pop artists across nearly a century. Ella Fitzgerald and Louis Armstrong\'s recording and Janis Joplin\'s rock version are particularly famous.',
+  notableRecordings: [
+    'Ella Fitzgerald & Louis Armstrong — Porgy and Bess (1957)',
+    'Miles Davis — Porgy and Bess (1958, arr. Gil Evans)',
+    'Janis Joplin — Cheap Thrills (1968)',
+    'John Coltrane — (various recordings)',
+  ],
+  harmonicSummary: 'Summertime is based on a repeating two-chord vamp alternating between Am6 (or Am7) and E7 — essentially a minor i→V7 oscillation. The harmonic simplicity is the point: the two-chord modal vamp in A minor invites melodic invention over a static harmonic canvas. More harmonically developed jazz arrangements often add a bridge with additional chord movement (to C major and back), but the core of the tune is always the hypnotic minor vamp. The A minor pentatonic and A Dorian scales are the primary improvisation tools.',
+  metaDescription: 'Summertime chord changes and harmonic analysis. George Gershwin\'s 1935 classic: A minor two-chord vamp (Am→E7) from Porgy and Bess — with notation, playback, and scale guides.',
 
   sections: [
     {

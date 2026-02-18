@@ -21,6 +21,15 @@ export const BLUE_BOSSA: Standard = {
   tags: ['standard', 'beginner', 'bossa nova', 'minor key', 'ii-V-I'],
   description:
     'Blue Bossa is a beginner-friendly bossa nova standard composed by Kenny Dorham in 1963. This 16-bar tune is an excellent introduction to jazz harmony, featuring a clear ii-V-i progression in the home key and a beautiful modulation to the relative major (Db) in the bridge. The straightforward harmonic structure and moderate tempo make it ideal for developing jazz vocabulary in minor keys while exploring the characteristic bossa nova rhythm.',
+  style: 'Bossa Nova',
+  historicalContext: 'Composed by trumpeter Kenny Dorham and first recorded on Joe Henderson\'s debut Blue Note album Page One (1963), Blue Bossa combines a bossa nova groove with a striking modulation from C minor to Db major — two keys a semitone apart. Its concise 16-bar form and elegant key change have made it one of the most popular teaching pieces in jazz education.',
+  notableRecordings: [
+    'Joe Henderson — Page One (1963, with Kenny Dorham on trumpet)',
+    'Kenny Dorham — (various recordings)',
+    'Widely studied — (essential jazz education standard)',
+  ],
+  harmonicSummary: 'Blue Bossa is a 16-bar tune in two key centers: C minor (bars 1-8) and Db major (bars 9-12), returning to C minor via a ii-V turnaround (bars 13-16). The C minor section features a minor ii-V-i (Dm7b5→G7→Cm7). The Db major section uses a major ii-V-I (Ebm7→Ab7→Dbmaj7) before Dm7b5→G7 leads home. The half-step modulation between C minor and Db major — two closely related but distinctly colored key areas — is the tune\'s defining harmonic challenge and teaching point.',
+  metaDescription: 'Blue Bossa chord changes and harmonic analysis. Kenny Dorham\'s bossa nova standard (1963): C minor to Db major modulation, 16 bars, with notation, playback, and scale guides.',
 
   sections: [
     {

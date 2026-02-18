@@ -16,6 +16,14 @@ export const CEORA: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'latin', 'bossa-nova', 'modal'],
   description: 'A beautiful bossa nova with a flowing melody and modal harmony. Lee Morgan\'s composition features a sophisticated blend of Latin rhythms and modern jazz harmony, creating an accessible yet challenging piece.',
+  style: 'Hard Bop',
+  historicalContext: 'Composed by trumpeter Lee Morgan and recorded on his Blue Note album Cornbread (1965), Ceora is a lush, slow ballad with a bossa nova-influenced feel. Named after Morgan\'s companion Ceora, it stands out in his catalog for its tender, lyrical character — a contrast to the hard-driving bebop and hard bop for which Morgan is better known.',
+  notableRecordings: [
+    'Lee Morgan — Cornbread (1965)',
+    'Widely recorded — (popular jazz ballad)',
+  ],
+  harmonicSummary: 'Ceora is an AABA standard in Ab major with a gentle bossa nova feel. The A sections feature warm major ii-V-I progressions with extended voicings (Bbm7→Eb7→Abmaj7) and some chromatic passing chords that give the tune its lush character. The bridge moves through contrasting harmonic territory before returning home. Its relatively straightforward harmonic language and song-like quality make it accessible while rewarding nuanced, lyrical playing.',
+  metaDescription: 'Ceora chord changes and harmonic analysis. Lee Morgan\'s jazz ballad (1965): Ab major, AABA form, bossa nova feel, from Cornbread — with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

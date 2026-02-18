@@ -21,6 +21,15 @@ export const SO_WHAT: Standard = {
   tags: ['standard', 'beginner', 'modal jazz', 'minor key', 'Miles Davis'],
   description:
     'The defining modal jazz composition from Miles Davis\' landmark 1959 album Kind of Blue. So What revolutionized jazz by abandoning traditional chord progressions in favor of static modal harmony, using only two chords across 32 bars. This simplicity forces musicians to focus on melodic invention, phrasing, and rhythmic development rather than navigating complex changes. The tune\'s iconic bassline and relaxed swing feel made it one of the most influential recordings in jazz history.',
+  style: 'Modal Jazz',
+  historicalContext: 'Composed by Miles Davis and first recorded for the landmark album Kind of Blue (1959), So What pioneered modal jazz improvisation. Rather than rapid chord changes, the tune uses static modal harmony — two chords across 32 bars — forcing soloists to create interest through melodic development rather than chord navigation. It remains one of the best-selling jazz albums of all time.',
+  notableRecordings: [
+    'Miles Davis — Kind of Blue (1959)',
+    'Bill Evans Trio — Waltz for Debby (live at Village Vanguard, 1961)',
+    'John Coltrane — A Love Supreme (influence)',
+  ],
+  harmonicSummary: 'So What uses only two chords across its 32-bar AABA form: 16 bars of D Dorian (A section, repeated), 8 bars of Eb Dorian (bridge, a half-step up), and a return to D Dorian (final A). The half-step modulation in the bridge is the tune\'s sole harmonic event. This modal framework — derived from Miles Davis\'s interest in George Russell\'s Lydian Chromatic Concept — freed soloists from functional harmony and opened a new era of jazz improvisation.',
+  metaDescription: 'So What chord changes and harmonic analysis. Miles Davis\'s modal jazz masterpiece from Kind of Blue (1959): D Dorian / Eb Dorian, AABA form, with scale guides and practice tips.',
   sections: [
     {
       name: 'A',

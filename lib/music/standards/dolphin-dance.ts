@@ -16,6 +16,15 @@ export const DOLPHIN_DANCE: Standard = {
   difficulty: 'advanced',
   tags: ['standard', 'modal', 'complex-harmony', 'through-composed'],
   description: 'A harmonically sophisticated composition with flowing, through-composed form. Features complex chord progressions and chromatic movement that challenge improvisers while maintaining a lyrical, dance-like quality.',
+  style: 'Post-Bop',
+  historicalContext: 'Composed by Herbie Hancock for his Blue Note album Maiden Voyage (1965), Dolphin Dance is one of the most harmonically sophisticated pieces in the jazz repertoire. All four chords are suspended dominant chords (7sus4) that avoid traditional resolution, creating an open, floating harmonic environment that influenced a generation of jazz composers and pianists.',
+  notableRecordings: [
+    'Herbie Hancock — Maiden Voyage (1965)',
+    'Bill Evans — (various recordings)',
+    'Widely recorded — (jazz piano standard)',
+  ],
+  harmonicSummary: 'Dolphin Dance is a 32-bar composition built on four suspended dominant chords (all with the 4th replacing the 3rd): Eb7sus4, Db7sus4, Dm7sus4 (or Dm7), and a final resolution chord. The sus4 voicings avoid the leading tone of traditional dominant chords, creating an ambiguous, floating tonal feeling rather than the pull of conventional V7→I resolution. This harmonic openness — combined with a complex rhythmic structure — makes Dolphin Dance one of the most rewarding and challenging pieces to improvise over, requiring melodic invention rather than chord-scale patterns.',
+  metaDescription: 'Dolphin Dance chord changes and harmonic analysis. Herbie Hancock\'s post-bop masterpiece (1965): suspended dominant chords, floating harmony — from Maiden Voyage, with notation and scale guides.',
   sections: [
     {
       name: 'A',

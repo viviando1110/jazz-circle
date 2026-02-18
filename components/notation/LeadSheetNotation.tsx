@@ -159,16 +159,24 @@ export default function LeadSheetNotation({ sections }: LeadSheetNotationProps) 
       const SECTION_GAP = 30; // extra vertical space before each new section label
       const SECTION_LABEL_OFFSET = -10; // label above the stave
 
-      // Calculate total height needed (account for section gaps)
-      let totalBars = 0;
-      let sectionBreaks = 0;
-      for (let si = 0; si < sections.length; si++) {
-        totalBars += sections[si].bars.length;
-        // Count line breaks at section boundaries (except first section)
-        if (si > 0) sectionBreaks++;
+      // Simulate rendering to calculate exact height (mirrors rendering logic below)
+      let simLine = 0;
+      let simBarInLine = 0;
+      let simGapAccum = 0;
+      let simFirst = true;
+      for (const section of sections) {
+        if (!simFirst) {
+          if (simBarInLine !== 0) { simBarInLine = 0; simLine++; }
+          simGapAccum += SECTION_GAP;
+        }
+        simFirst = false;
+        for (let b = 0; b < section.bars.length; b++) {
+          simBarInLine++;
+          if (simBarInLine >= BARS_PER_LINE) { simBarInLine = 0; simLine++; }
+        }
       }
-      const totalLines = Math.ceil(totalBars / BARS_PER_LINE) + sectionBreaks;
-      const containerHeight = MARGIN_TOP + totalLines * STAVE_HEIGHT + sectionBreaks * SECTION_GAP + 40;
+      const totalLines = simLine + (simBarInLine > 0 ? 1 : 0);
+      const containerHeight = MARGIN_TOP + totalLines * STAVE_HEIGHT + simGapAccum + 40;
 
       // Create VexFlow renderer (SVG mode)
       const renderer = new Renderer(container, Renderer.Backends.SVG);

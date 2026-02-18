@@ -21,6 +21,16 @@ export const HOW_HIGH_THE_MOON: Standard = {
   tags: ['standard', 'bebop', 'intermediate', 'fast tempo'],
   description:
     'How High the Moon is a popular bebop standard composed by Morgan Lewis in 1940. This 32-bar AB form is characterized by rapid chord changes and frequent ii-V progressions, making it a favorite for bebop improvisers. The tune moves through multiple key centers, challenging players to navigate harmonic complexity at fast tempos.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Morgan Lewis with lyrics by Nancy Hamilton for the 1940 Broadway revue Two for the Show, How High the Moon became a bebop vehicle after Charlie Parker and Dizzy Gillespie recorded "Ornithology" (1946) on its chord changes — making it one of the most famous contrafacts in jazz. The tune\'s rapid ii-V-I progressions across multiple keys made it an ideal bebop workout.',
+  notableRecordings: [
+    'Benny Goodman — (1940 original recording)',
+    'Les Paul & Mary Ford — (1951 multi-track recording)',
+    'Charlie Parker — Ornithology (1946, contrafact on these changes)',
+    'Ella Fitzgerald — (various scat recordings)',
+  ],
+  harmonicSummary: 'How High the Moon is a 32-bar AABA standard in G major with a bridge that modulates to Bb major before returning home. The A section establishes G major with clean ii-V-I motion (Am7→D7→Gmaj7→Ebm7 Ab7→Dbmaj7→Am7 D7→G). The bridge moves from Bb major through F major, C major, and G major via ii-V-I cycles. These rapid modulations — particularly the Db major section within the A — make it one of the harmonically busiest standards and a classic bebop vehicle.',
+  metaDescription: 'How High the Moon chord changes and harmonic analysis. Morgan Lewis 1940 standard: G major with Db modulation — basis for Parker\'s Ornithology, with notation, playback, and scale guides.',
 
   sections: [
     {

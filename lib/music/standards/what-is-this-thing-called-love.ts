@@ -16,6 +16,16 @@ export const WHAT_IS_THIS_THING_CALLED_LOVE: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'bebop', 'up-tempo'],
   description: 'A classic Cole Porter tune with a minor tonality and dramatic harmonic shifts. The A sections move through cycle of fifths progressions, while the bridge provides harmonic relief.',
+  style: 'Jazz Standard',
+  historicalContext: 'Written by Cole Porter for the 1929 Broadway musical Wake Up and Dream, What Is This Thing Called Love has become one of the most harmonically adventurous standards in the jazz repertoire. Its unusual chord movement — starting on IV before moving through b7 to I — inspired numerous contrafacts, most famously "Hot House" by Tadd Dameron (1945), a bebop staple that uses its changes at high speed.',
+  notableRecordings: [
+    'Charlie Parker — Bird and Diz (1950)',
+    'Clifford Brown & Max Roach — (various recordings)',
+    'Bill Evans — (various recordings)',
+    'Oscar Peterson — (various recordings)',
+  ],
+  harmonicSummary: 'What Is This Thing Called Love uses an unusual harmonic structure in C major. It opens on a IV chord (F7) rather than the tonic, creating immediate harmonic ambiguity. The tune then moves through Db7 (a tritone substitution or flat-VII dominant) to Cmaj7, establishing the key. The bridge cycles through related key centers using ii-V progressions. This non-functional opening makes the tune harmonically richer and more challenging than standard ii-V-I tunes.',
+  metaDescription: 'What Is This Thing Called Love chord changes and harmonic analysis. Cole Porter\'s 1929 jazz standard: unusual IV→♭VII→I opening, basis for bebop contrafact Hot House, with notation and scale guides.',
   sections: [
     {
       name: 'A',

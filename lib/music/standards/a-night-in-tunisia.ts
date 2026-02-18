@@ -16,6 +16,16 @@ export const A_NIGHT_IN_TUNISIA: Standard = {
   difficulty: 'advanced',
   tags: ['standard', 'bebop', 'gillespie', '1940s', 'latin', 'afro-cuban'],
   description: "Dizzy Gillespie's bebop classic with Afro-Cuban influences. Features the distinctive half-step harmonic movement and a challenging bebop bridge.",
+  style: 'Bebop',
+  historicalContext: 'Composed by Dizzy Gillespie around 1942, A Night in Tunisia blends bebop harmony with Afro-Cuban rhythmic sensibility. Its exotic Eb7→Dm vamp creates a quasi-Lydian Dominant color over a D minor tonal center, unlike anything in American jazz at the time. The tune became one of the defining compositions of the bebop era and a perennial jam session staple.',
+  notableRecordings: [
+    'Dizzy Gillespie — (multiple recordings from 1942 onwards)',
+    'Charlie Parker — Bird and Diz (1950)',
+    'Art Blakey & the Jazz Messengers — (various recordings)',
+    'Dizzy Gillespie Big Band — (1940s-50s recordings)',
+  ],
+  harmonicSummary: 'A Night in Tunisia opens with a vamp alternating Eb7 and Dm — the Eb7 acts as a tritone substitute for A7, the dominant of D minor, creating a Lydian Dominant sound. The A section develops this Dm tonality with Latin rhythmic feel, while the bridge navigates a series of ii-V progressions in F major. The famous written-out "break" before the last A is one of the most dramatic moments in the bebop repertoire, requiring a cadenza-style solo line over the static harmony.',
+  metaDescription: 'A Night in Tunisia chord changes and harmonic analysis. Dizzy Gillespie\'s bebop classic (1942): Eb7→Dm vamp, Afro-Cuban rhythms, with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

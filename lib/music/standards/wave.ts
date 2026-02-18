@@ -16,6 +16,16 @@ export const WAVE: Standard = {
   difficulty: 'intermediate',
   tags: ['bossa-nova', 'latin', 'ballad'],
   description: 'One of Jobim\'s most sophisticated compositions, featuring rich chromatic harmony and lush chord voicings. The flowing melodic line evokes ocean waves, complemented by complex harmonic movement.',
+  style: 'Bossa Nova',
+  historicalContext: 'Composed by Antônio Carlos Jobim in 1967, Wave is a mature bossa nova composition that shows Jobim\'s harmonic sophistication at its peak. Its leisurely tempo, rich extended chords, and sophisticated chromatic movement represent the refinement of bossa nova from its late-1950s origins into the more harmonically complex style of Jobim\'s late 1960s work.',
+  notableRecordings: [
+    'Antônio Carlos Jobim — Wave (1967)',
+    'Stan Getz — (various recordings)',
+    'Oscar Peterson — (various recordings)',
+    'Widely recorded — (bossa nova standard)',
+  ],
+  harmonicSummary: 'Wave is a bossa nova standard in D major (or sometimes C major) with Jobim\'s characteristically sophisticated chromatic harmony. The form alternates between major-key sections with lush extended chords (maj9, maj13) and chromatic ii-V pairs that tonicize neighboring key areas briefly before returning. The harmonic language features the Lydian Dominant sound (raised 4th on dominant chords) and chromatic approach chords that give Jobim\'s late work its distinctive shimmer. The bossa nova rhythmic feel and leisurely harmonic pace suit a warm, unhurried improvisational approach.',
+  metaDescription: 'Wave chord changes and harmonic analysis. Antônio Carlos Jobim\'s mature bossa nova (1967): D major, rich extended chords, Lydian Dominant — with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

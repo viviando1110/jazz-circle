@@ -21,6 +21,16 @@ export const STELLA_BY_STARLIGHT: Standard = {
   tags: ['standard', 'advanced', 'ii-V-I', 'key modulation', 'through-composed'],
   description:
     'One of the most harmonically sophisticated standards in the jazz repertoire. Through-composed with constantly shifting key centers, Stella by Starlight is a masterclass in ii-V-I resolution chains and chromatic harmonic movement. The tune never repeats a section, making it a unique challenge for improvisers.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Victor Young for the 1944 Paramount film The Uninvited, Stella by Starlight became one of the most recorded jazz standards of all time after Miles Davis included it on his 1958 album Jazz Track. Bill Evans\'s version further cemented its status. Its complex, wandering harmonic structure — moving through many key centers without an obvious tonal anchor — has fascinated jazz musicians for decades.',
+  notableRecordings: [
+    'Victor Young — The Uninvited (1944 film score)',
+    'Miles Davis — Jazz Track (1958)',
+    'Bill Evans — (various recordings)',
+    'John Coltrane — (various recordings)',
+  ],
+  harmonicSummary: 'Stella by Starlight is a 32-bar AABA standard in Bb major with one of the most harmonically wandering A sections in the jazz repertoire. The A section moves through Bb major, D minor, and other key areas without settling — creating a sense of harmonic ambiguity that mirrors the starlight imagery. The tune uses ii-V-I progressions in multiple keys, tritone substitutions, and unexpected chromatic chords. The final resolution to Bb major provides satisfaction after considerable harmonic adventure. It is one of the most studied standards for harmonic analysis.',
+  metaDescription: 'Stella by Starlight chord changes and harmonic analysis. Victor Young\'s 1944 jazz standard: Bb major, harmonically wandering ii-V-I — Miles Davis classic, with notation and scale guides.',
   sections: [
     {
       name: 'A',

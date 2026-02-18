@@ -16,6 +16,15 @@ export const KILLER_JOE: Standard = {
   difficulty: 'beginner',
   tags: ['standard', 'groove', 'soul-jazz', 'vamp', 'funk'],
   description: 'A funky, groove-oriented tune with a catchy bass line. Benny Golson\'s composition for Quincy Jones became a soul-jazz staple, featuring a simple harmonic structure that lets the rhythm section shine.',
+  style: 'Hard Bop',
+  historicalContext: 'Composed by Benny Golson in 1959, Killer Joe was originally written for a Broadway show that was never produced. Art Blakey & the Jazz Messengers adopted it, and it became associated with the earthy, funky side of hard bop. Its relaxed, laid-back groove and catchy blues-tinged melody made it accessible to audiences beyond the jazz world.',
+  notableRecordings: [
+    'Art Blakey & the Jazz Messengers — (various recordings)',
+    'Benny Golson — (various recordings)',
+    'Quincy Jones — Walking in Space (1969)',
+  ],
+  harmonicSummary: 'Killer Joe is a slow, funky blues-influenced standard in Bb major with a two-feel groove. The harmony is simple and bluesy — essentially a I-IV-I-V-I blues feel with jazz voicings — creating a hypnotic, repetitive groove that invites blues-inflected improvisation. The simplicity of the chord changes contrasts with the sophistication of the rhythmic feel, placing the musical emphasis on time, groove, and blues expression rather than harmonic navigation.',
+  metaDescription: 'Killer Joe chord changes and harmonic analysis. Benny Golson\'s funky hard bop standard (1959): Bb major, blues-based groove — Art Blakey classic, with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

@@ -21,6 +21,16 @@ export const I_GOT_RHYTHM: Standard = {
   tags: ['standard', 'rhythm changes', 'beginner', 'gershwin', 'bebop'],
   description:
     'I Got Rhythm is a foundational jazz standard composed by George Gershwin in 1930. The chord progression, known as "rhythm changes," is one of the most important harmonic frameworks in jazz, serving as the basis for countless bebop compositions. This 32-bar AABA form is essential for any jazz musician and provides the foundation for learning bebop language and improvisation.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by George Gershwin with lyrics by Ira Gershwin for the 1930 Broadway musical Girl Crazy, I Got Rhythm\'s chord changes became the most widely used harmonic template in jazz history — known simply as "Rhythm changes." Hundreds of bebop tunes are contrafacts built on its AABA progression in Bb major, from "Anthropology" to "Oleo" to "Moose the Mooche."',
+  notableRecordings: [
+    'Ethel Merman — Girl Crazy (1930, original Broadway)',
+    'Louis Armstrong — (1931 recording)',
+    'Charlie Parker — (various contrafacts on these changes)',
+    'Thelonious Monk — (various recordings)',
+  ],
+  harmonicSummary: 'I Got Rhythm defines the "Rhythm changes" form: a 32-bar AABA in Bb major. The A section is a I-vi-ii-V turnaround (Bbmaj7→Gm7→Cm7→F7) with a chromatic I-I7-IV-#IVdim-I elaboration in bars 5-8. The bridge (B section) cycles through four dominant 7th chords a fifth apart: D7→G7→C7→F7 (two bars each), moving through secondary dominants. The A section\'s simple but infectious turnaround and the bridge\'s cycling dominants became the harmonic foundation for the entire bebop repertoire.',
+  metaDescription: 'I Got Rhythm chord changes and harmonic analysis. Gershwin\'s 1930 standard: "Rhythm changes" — the most imitated jazz harmonic template, Bb major AABA, with notation and scale guides.',
 
   sections: [
     {

@@ -16,6 +16,15 @@ export const JOY_SPRING: Standard = {
   difficulty: 'advanced',
   tags: ['standard', 'bebop', 'clifford-brown', '1950s', 'hard-bop'],
   description: "Clifford Brown's bebop composition with challenging chromaticism and rapid chord changes. A favorite among advanced players for its harmonic sophistication.",
+  style: 'Hard Bop',
+  historicalContext: 'Composed by trumpeter Clifford Brown in 1954 and recorded on the album Clifford Brown and Max Roach, Joy Spring is one of Brown\'s most celebrated compositions. Its lyrical, bop-inflected melody and sophisticated harmonic movement — cycling through several key centers — became immediately popular and established it as a hard bop standard.',
+  notableRecordings: [
+    'Clifford Brown & Max Roach — Clifford Brown and Max Roach (1954)',
+    'Art Blakey & the Jazz Messengers — (various recordings)',
+    'Widely recorded — (hard bop standard)',
+  ],
+  harmonicSummary: 'Joy Spring is a 32-bar AABA standard in F major with sophisticated harmonic movement characteristic of Clifford Brown\'s compositional style. The A section features ii-V-I progressions that visit multiple key centers (F major, Ab major, Db major) through chromatic ii-V transitions. The bridge provides harmonic contrast before the final A resolves. The tune\'s flowing harmonic rhythm and singable melody make it a rewarding vehicle for bebop improvisation, demanding fluency in ii-V-I patterns across multiple keys.',
+  metaDescription: 'Joy Spring chord changes and harmonic analysis. Clifford Brown\'s hard bop standard (1954): F major, multi-key ii-V progressions, AABA — with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

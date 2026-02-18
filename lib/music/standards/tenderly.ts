@@ -21,6 +21,16 @@ export const TENDERLY: Standard = {
   tags: ['standard', 'ballad', 'intermediate', 'romantic'],
   description:
     'Tenderly is a beautiful ballad composed by Walter Gross in 1946 with lyrics by Jack Lawrence. This 32-bar AABA form features lush harmony and gentle modulations, making it a favorite for romantic performances. The tune showcases smooth voice leading and elegant chord progressions, requiring sensitive phrasing and emotional depth. It has been recorded by countless jazz artists and remains a essential ballad in the jazz repertoire.',
+  style: 'Ballad',
+  historicalContext: 'Composed by Walter Gross with lyrics by Jack Lawrence in 1946, Tenderly became a jazz standard and pop ballad through recordings by Rosemary Clooney and Sarah Vaughan. Its warm, diatonic harmonic language and gently lilting 3/4 feel give it an old-fashioned, intimate charm that has kept it in the repertoire for over seventy years.',
+  notableRecordings: [
+    'Rosemary Clooney — (1952, one of the definitive pop versions)',
+    'Sarah Vaughan — (various recordings)',
+    'Charlie Parker — (various recordings)',
+    'Widely recorded — (jazz ballad standard)',
+  ],
+  harmonicSummary: 'Tenderly is a 32-bar AABA ballad in Eb major played in 3/4 waltz time. The A sections feature warm, diatonic ii-V-I progressions in Eb with some secondary dominants adding color — the harmony is lush without being complex. The bridge provides harmonic contrast through a brief modulation before the final A returns home. The waltz feel and comfortable harmonic language make it a good vehicle for practicing lyrical, singing jazz improvisation and developing a natural sense of phrase in 3/4.',
+  metaDescription: 'Tenderly chord changes and harmonic analysis. Walter Gross\'s 1946 jazz waltz ballad in Eb major: 3/4 time, diatonic ii-V-I, AABA — with notation, playback, and scale guides.',
 
   sections: [
     {

@@ -16,6 +16,16 @@ export const MY_FAVORITE_THINGS: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'modal', 'waltz', 'minor'],
   description: 'A modal jazz waltz from The Sound of Music. Features alternating Em and E major sections with a Cmaj7-D7-G progression in the bridge.',
+  style: 'Post-Bop',
+  historicalContext: 'Composed by Richard Rodgers with lyrics by Oscar Hammerstein II for the 1959 Broadway musical The Sound of Music, My Favorite Things was transformed from a charming children\'s song into a landmark jazz piece by John Coltrane\'s soprano saxophone recording in 1960. Coltrane\'s version — treating the minor and major sections as modal vamps — became one of the best-selling jazz recordings of the 1960s.',
+  notableRecordings: [
+    'John Coltrane — My Favorite Things (1960, soprano saxophone)',
+    'The Sound of Music — (1959 original Broadway)',
+    'McCoy Tyner — (various recordings)',
+  ],
+  harmonicSummary: 'In Coltrane\'s jazz interpretation, My Favorite Things alternates between E minor (the verse) and E major (the chorus) — treated as modal vamps rather than song form. The E minor section uses E Dorian mode, while the E major section uses E major (Ionian). Coltrane extended each section into long modal improvisations, often 10-20 minutes in concert, treating each chord as a modal area to explore at length. The tune\'s simple waltz feel (3/4) and tonic/relative major alternation created an ideal framework for this modal approach.',
+  metaDescription: 'My Favorite Things chord changes and harmonic analysis. Rodgers/Hammerstein 1959 standard — Coltrane\'s modal soprano sax transformation: E minor / E major vamps, with notation and scale guides.',
+
   sections: [
     {
       name: 'A',

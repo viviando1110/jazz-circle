@@ -21,6 +21,16 @@ export const JUST_FRIENDS: Standard = {
   tags: ['standard', 'swing', 'intermediate', 'ii-V-I'],
   description:
     'Just Friends is a beautiful standard composed by John Klenner in 1931 featuring smooth voice leading and classic ii-V-I progressions. This 32-bar AB form is ideal for intermediate players working on connecting chord changes and developing melodic ideas through key centers. The tune has a lyrical, flowing quality that rewards sensitive phrasing.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by John Klenner with lyrics by Sam M. Lewis in 1931, Just Friends became a jazz standard through Charlie Parker\'s 1949 recording with strings — one of the first jazz with strings sessions and a landmark in Parker\'s career. The tune\'s smooth harmonic movement and accessible melody have kept it in the jazz repertoire for nearly a century.',
+  notableRecordings: [
+    'Charlie Parker — Charlie Parker with Strings (1949)',
+    'Chet Baker — (various recordings)',
+    'John Coltrane — (various recordings)',
+    'Widely recorded — (jazz standard)',
+  ],
+  harmonicSummary: 'Just Friends is a 32-bar AABA standard in G major with smooth, flowing harmonic movement. The A sections feature ii-V-I progressions in G major with secondary dominants moving through the relative minor area (E minor). The bridge moves to a contrasting key center (C major area) before the final A returns home. Its comfortable harmonic structure and vocal-friendly character make it equally popular with singers and instrumentalists.',
+  metaDescription: 'Just Friends chord changes and harmonic analysis. Klenner/Lewis 1931 jazz standard in G major: AABA, ii-V-I — Charlie Parker with Strings classic, with notation and scale guides.',
 
   sections: [
     {

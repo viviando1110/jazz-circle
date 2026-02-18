@@ -16,6 +16,16 @@ export const YESTERDAYS: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'ballad', 'minor', 'show-tune', 'nostalgic'],
   description: 'A wistful minor ballad from the musical "Roberta". Jerome Kern\'s composition features sophisticated harmonic movement and a melancholic quality that has made it a favorite among jazz musicians for reflective interpretations.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Jerome Kern with lyrics by Otto Harbach for the 1933 Broadway musical Roberta, Yesterdays is one of Kern\'s most harmonically sophisticated compositions. Its unusual ABAC form in D minor — featuring an extended verse section and a densely chromatic harmonic progression unusual for 1933 — attracted jazz musicians who appreciated its harmonic depth.',
+  notableRecordings: [
+    'Irene Dunne — (1935 film version of Roberta)',
+    'Charlie Parker — (various recordings)',
+    'Bill Evans — (various recordings)',
+    'Widely recorded — (jazz standard)',
+  ],
+  harmonicSummary: 'Yesterdays is a 32-bar ABAC standard in D minor with a chromatic, harmonically rich A section. The opening phrase descends through chromatic voice leading — Dm→A7/C#→A7/C→A7b9 — creating a dramatic, falling harmonic motion. The tune moves through minor ii-V-i progressions (Em7b5→A7→Dm) with chromatic approach chords. The C section provides harmonic contrast and a satisfying final resolution. Kern\'s 1933 harmonic language — anticipating some bebop harmonic ideas — has made Yesterdays feel perennially modern.',
+  metaDescription: 'Yesterdays chord changes and harmonic analysis. Jerome Kern\'s 1933 jazz standard in D minor: chromatic descending harmony, ABAC form — with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

@@ -16,6 +16,16 @@ export const IN_A_MELLOW_TONE: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'swing', 'ellington', '1930s'],
   description: 'Duke Ellington swing tune with a laid-back groove. Features straightforward harmony perfect for developing swing feel.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Duke Ellington in 1939 (with lyrics later added by Milt Gabler), In a Mellow Tone is a relaxed, swinging Ellington piece built on the chord changes of "Rose Room" — making it a contrafact. It was a signature piece for the Ellington orchestra and became a jazz standard in its own right, beloved for its easy swing feel and warm harmonic character.',
+  notableRecordings: [
+    'Duke Ellington Orchestra — (1940 and multiple recordings)',
+    'Count Basie — (various recordings)',
+    'Widely recorded — (swing era standard)',
+  ],
+  harmonicSummary: 'In a Mellow Tone is a 32-bar AABA standard built on the changes of "Rose Room" in Ab major. The A section features the relaxed cycle-of-fifths chord movement typical of swing-era harmony: major 6th chords and dominant 7ths moving through the circle in a comfortable, flowing manner. The bridge provides harmonic contrast before the final A resolves home. Its accessibility and swinging feel make it ideal for practicing bebop and swing vocabulary in a comfortable harmonic environment.',
+  metaDescription: 'In a Mellow Tone chord changes and harmonic analysis. Duke Ellington\'s 1939 swing standard: Ab major, Rose Room contrafact, AABA — with notation, playback, and scale guides.',
+
   sections: [
     {
       name: 'A',

@@ -16,6 +16,15 @@ export const OLEO: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'bebop', 'rollins', '1950s', 'rhythm-changes'],
   description: "Sonny Rollins's bebop composition over rhythm changes. Features a memorable melody and is a favorite among jazz musicians for blowing sessions.",
+  style: 'Bebop',
+  historicalContext: 'Composed by Sonny Rollins and recorded in 1954 on the Miles Davis album Bags\' Groove, Oleo is a bebop contrafact built on the chord changes of George Gershwin\'s "I Got Rhythm" — making it a "Rhythm changes" tune in Bb major. Rollins\'s melodic invention over this ubiquitous form helped establish him as one of the foremost post-bop saxophonists.',
+  notableRecordings: [
+    'Miles Davis — Bags\' Groove (1954, with Sonny Rollins)',
+    'Sonny Rollins — (various recordings)',
+    'Widely played — (Rhythm changes vehicle)',
+  ],
+  harmonicSummary: 'Oleo uses the standard Rhythm changes form in Bb major: a 32-bar AABA with the I-vi-ii-V turnaround (Bbmaj7→Gm7→Cm7→F7) in the A sections and the cycling dominant 7th bridge (D7→G7→C7→F7). Like all Rhythm changes tunes, the A section\'s four-bar turnaround pattern and the bridge\'s four-dominant-chord cycle are the core harmonic features. At up-tempo, Oleo tests fluency in rapid ii-V-I and turnaround vocabulary. Its catchy, angular bebop melody makes it a favorite vehicle for demonstrating bebop style.',
+  metaDescription: 'Oleo chord changes and harmonic analysis. Sonny Rollins\'s bebop Rhythm changes contrafact (1954): Bb major, I-vi-ii-V turnaround — with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

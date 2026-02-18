@@ -16,6 +16,14 @@ export const GIANT_STEPS: Standard = {
   difficulty: 'advanced',
   tags: ['hard-bop', 'bebop', 'modern'],
   description: 'Perhaps the most challenging composition in the jazz repertoire. Features rapid modulations through three tonal centers (B, G, Eb) using the "Coltrane changes" pattern. A landmark composition that revolutionized jazz harmony.',
+  style: 'Post-Bop',
+  historicalContext: 'Composed by John Coltrane and recorded in 1959 for the album Giant Steps (released 1960), this landmark piece introduced what became known as "Coltrane changes" — a system of cycling major thirds that divided the octave into three equal parts. It represented a complete break from traditional jazz harmony and remains one of the most studied and discussed compositions in jazz.',
+  notableRecordings: [
+    'John Coltrane — Giant Steps (1960)',
+    'Widely studied — (the most analyzed composition in jazz harmony)',
+  ],
+  harmonicSummary: 'Giant Steps cycles through three key centers a major third apart: B major, G major, and Eb major — each a major third (4 semitones) away from the next. These three keys divide the octave into equal thirds, creating a symmetrical harmonic system. The changes move at two chords per bar in a 16-bar form, cycling B major→D7→G major→Bb7→Eb major→Am7 D7→G major, etc. At the original fast tempo (≈ 286 BPM), navigating these key centers demands complete fluency in ii-V-I patterns in B, G, and Eb simultaneously.',
+  metaDescription: 'Giant Steps chord changes and harmonic analysis. John Coltrane\'s 1959 masterpiece: "Coltrane changes" — three key centers a major third apart (B, G, Eb), with notation and scale guides.',
   sections: [
     {
       name: 'A',

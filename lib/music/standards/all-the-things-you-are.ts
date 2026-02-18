@@ -20,6 +20,17 @@ export const ALL_THE_THINGS_YOU_ARE: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'intermediate', 'ii-V-I', 'key modulation', 'Jerome Kern'],
   description: 'One of the most harmonically rich standards in the jazz repertoire, famous for its sophisticated journey through multiple key centers. The tune modulates through four different keys (Ab, C, Eb, G, E) before returning home, making it an excellent study piece for understanding key modulation and ii-V-I progressions in various tonalities.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Jerome Kern with lyrics by Oscar Hammerstein II for the 1939 Broadway musical Very Warm for May, All the Things You Are is widely considered one of the most harmonically sophisticated standards in the jazz repertoire. Its unusual 36-bar form and movement through three distinct key centers (Ab major, C major, and Eb major) challenged and delighted jazz improvisers from bebop onwards.',
+  notableRecordings: [
+    'Charlie Parker — (recorded multiple times)',
+    'Bill Evans — Portrait in Jazz (1959)',
+    'John Coltrane — (various recordings)',
+    'Sonny Rollins — (various recordings)',
+    'Clifford Brown & Max Roach — Study in Brown (1955)',
+  ],
+  harmonicSummary: 'All the Things You Are has a 36-bar AABA form (with a 4-bar coda) that cycles through three key centers. The A section establishes Ab major through a vi-ii-V-I progression (Fm7→Bbm7→Eb7→Abmaj7→Dbmaj7→G7), then the second A tonicizes C major (Cm7→Fm7→Bb7→Ebmaj7→Abmaj7→D7). The bridge resolves to G major (Gmaj7→Am7→D7) before the final A returns to Ab major. This multi-tonic structure — cycling through Ab, C, and Eb — requires improvisation across three different harmonic areas within a single chorus.',
+  metaDescription: 'All the Things You Are chord changes and harmonic analysis. Jerome Kern\'s 1939 jazz standard: 36-bar form cycling through Ab major, C major, and Eb major key centers, with notation and scale guides.',
   sections: [
     {
       name: 'A1',

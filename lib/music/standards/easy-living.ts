@@ -16,6 +16,15 @@ export const EASY_LIVING: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'ballad', 'romantic'],
   description: 'A sophisticated ballad with lush harmonic movement. Features chromatic bass lines and rich ii-V progressions.',
+  style: 'Ballad',
+  historicalContext: 'Composed by Ralph Rainger with lyrics by Leo Robin for the 1937 Paramount film Easy Living, the song became a jazz ballad standard through recordings by Billie Holiday and others. Its lush, song-like quality and accessible harmonic language made it a natural fit for jazz interpretation across multiple eras.',
+  notableRecordings: [
+    'Billie Holiday — (various recordings)',
+    'Erroll Garner — (various recordings)',
+    'Teddi King — (1954 recording)',
+  ],
+  harmonicSummary: 'Easy Living is a 32-bar AABA ballad in Bb major with a comfortable, song-like harmonic language. The A sections move through Bb major with diatonic ii-V-I progressions, secondary dominants adding color without complexity. The bridge offers harmonic contrast before returning home. Its gentle, symmetrical harmonic movement and natural melodic flow make it a good vehicle for developing a relaxed, singing approach to jazz improvisation and ballad playing.',
+  metaDescription: 'Easy Living chord changes and harmonic analysis. Ralph Rainger\'s 1937 jazz ballad in Bb major: diatonic ii-V-I, AABA form, with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

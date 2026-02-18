@@ -5,7 +5,7 @@ import type { Standard } from '@/lib/music/types';
 export const DONNA_LEE: Standard = {
   title: 'Donna Lee',
   slug: 'donna-lee',
-  composer: 'Charlie Parker',
+  composer: 'Miles Davis',
   year: 1947,
   form: 'AB',
   defaultKey: 'Ab major',
@@ -21,6 +21,15 @@ export const DONNA_LEE: Standard = {
   tags: ['standard', 'bebop', 'advanced', 'charlie parker', 'fast tempo'],
   description:
     'Donna Lee is a bebop masterpiece composed by Charlie Parker in 1947, based on the chord changes of Indiana (Back Home Again in Indiana). This 32-bar AB form features extremely fast-moving eighth-note lines and challenging harmonic rhythm. The melody itself is an exercise in bebop language, making this tune essential study material for advanced bebop musicians.',
+  style: 'Bebop',
+  historicalContext: 'Recorded by the Charlie Parker Quintet in May 1947, Donna Lee is a bebop contrafact built on the chord changes of "Back Home Again in Indiana" (commonly known as "Indiana"). Composition credit is disputed — attributed to Miles Davis in his autobiography, though the tune was registered under Charlie Parker\'s name. Its rapid, syncopated bebop lines over the Indiana changes at blistering tempos have made it a definitive test piece for jazz improvisers.',
+  notableRecordings: [
+    'Charlie Parker Quintet — (recorded May 1947, with Miles Davis)',
+    'Jaco Pastorius — Jaco Pastorius (1976, solo bass arrangement)',
+    'Clifford Brown — (various recordings)',
+  ],
+  harmonicSummary: 'Donna Lee follows the 32-bar AB form of Indiana (Back Home Again in Indiana), moving through Ab major with several chromatic ii-V substitutions. The A section establishes Ab major with a I-VI-ii-V pattern and chromatic passing chords; the B section navigates a series of rapid ii-V-I progressions through multiple key centers before resolving back to Ab. The fast harmonic rhythm (often one chord per bar) at typical bebop tempos (220+ BPM) demands solid knowledge of ii-V-I patterns in all keys.',
+  metaDescription: 'Donna Lee chord changes and harmonic analysis. Classic bebop contrafact on Indiana (1947): Ab major, rapid ii-V-I progressions, with notation, playback, and scale guides.',
 
   sections: [
     {

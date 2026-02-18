@@ -16,6 +16,16 @@ export const DESAFINADO: Standard = {
   difficulty: 'intermediate',
   tags: ['bossa-nova', 'latin', 'standard'],
   description: 'One of the most iconic bossa nova compositions, featuring sophisticated harmonic movement and chromatic voice leading. The title means "out of tune," adding irony to this harmonically rich piece.',
+  style: 'Bossa Nova',
+  historicalContext: 'Composed by Antônio Carlos Jobim with lyrics by Newton Mendonça in 1959, Desafinado (meaning "Out of Tune" or "Slightly Out of Tune") was a playful riposte to critics who dismissed bossa nova singers as off-key. Its sophisticated harmonic language — featuring chromatic sidesteps and unexpected key changes — intentionally reflects the "detuned" concept while demonstrating advanced harmonic thinking.',
+  notableRecordings: [
+    'João Gilberto — (1959 original recording)',
+    'Stan Getz & João Gilberto — Getz/Gilberto (1964)',
+    'Astrud Gilberto — (various recordings)',
+    'Widely covered — (bossa nova repertoire cornerstone)',
+  ],
+  harmonicSummary: 'Desafinado is built on a series of chromatic key shifts that reflect its "out of tune" title. The tune begins in F major but makes surprising sidesteps to Gb major, Ab major, and other remote key centers via chromatic ii-V progressions — each shift sounding simultaneously unexpected and smooth. These modulations are characteristic of Jobim\'s harmonic sophistication, where distant keys are reached through chromatic voice leading that makes the surprising sound inevitable. Mastery of the form requires comfort with ii-V-I patterns in multiple key centers.',
+  metaDescription: 'Desafinado chord changes and harmonic analysis. Jobim\'s bossa nova classic (1959): chromatic key shifts through F, Gb, Ab major — with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

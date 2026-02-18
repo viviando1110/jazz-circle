@@ -16,6 +16,16 @@ export const HOW_INSENSITIVE: Standard = {
   difficulty: 'beginner',
   tags: ['bossa-nova', 'latin', 'ballad'],
   description: 'Originally "Insensatez" in Portuguese, this melancholic bossa nova ballad features a beautiful minor tonality with gentle harmonic movement. A perfect introduction to bossa nova for beginners.',
+  style: 'Bossa Nova',
+  historicalContext: 'Composed by Antônio Carlos Jobim with Portuguese lyrics by Vinícius de Moraes ("Insensatez"), the English version "How Insensitive" became one of the most recorded bossa nova ballads. Stan Getz and Astrud Gilberto\'s version on Getz/Gilberto (1964) gave it international prominence, and it remains a cornerstone of the bossa nova repertoire.',
+  notableRecordings: [
+    'Stan Getz & Astrud Gilberto — Getz/Gilberto (1964)',
+    'Antônio Carlos Jobim — (various recordings)',
+    'Widely covered — (bossa nova ballad standard)',
+  ],
+  harmonicSummary: 'How Insensitive is a bossa nova ballad in D minor with a descending chromatic bass line that is its most distinctive harmonic feature. The A section descends: Dm→Dm/C#→Dm/C→Dm/B→Bbmaj7 — a half-step chromatic walk-down that creates a lamenting, falling quality. The harmony then moves through related minor and major areas. This descending bass line technique was a hallmark of Jobim\'s writing and became influential in subsequent bossa nova and jazz composition.',
+  metaDescription: 'How Insensitive chord changes and harmonic analysis. Jobim\'s bossa nova ballad: D minor with descending chromatic bass line — from Getz/Gilberto, with notation, playback, and scale guides.',
+
   sections: [
     {
       name: 'A',

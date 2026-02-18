@@ -21,6 +21,16 @@ export const MISTY: Standard = {
   tags: ['standard', 'ballad', 'beginner', 'romantic'],
   description:
     'Misty is a beautiful ballad composed by Erroll Garner in 1954. This AABA form features lush, romantic harmony with a mix of major and minor ii-V progressions. The melody is stepwise and lyrical, making it accessible for beginners while offering harmonic sophistication. The bridge provides contrast with a shift to the IV key area.',
+  style: 'Ballad',
+  historicalContext: 'Composed by pianist Erroll Garner in 1954 (with lyrics later added by Johnny Burke), Misty is one of the most beloved jazz ballads ever written. Garner composed the melody while flying over the Pacific Ocean, reportedly inspired by the clouds below. Johnny Mathis\'s vocal recording (1959) made it a pop hit, but the Erroll Garner piano version remains the jazz touchstone.',
+  notableRecordings: [
+    'Erroll Garner — (1954, the original piano version)',
+    'Johnny Mathis — (1959, pop hit)',
+    'Charlie Parker — (various recordings)',
+    'Sarah Vaughan — (various recordings)',
+  ],
+  harmonicSummary: 'Misty is a 32-bar AABA ballad in Eb major with rich, lush harmony characteristic of Erroll Garner\'s orchestral piano style. The A section begins on a I chord (Ebmaj7) and moves through an expressive chain of secondary dominants and ii-V-I progressions that give it a sweeping, romantic quality. The bridge moves to the subdominant area (Ab major) before the final A returns home. The wide arc of the harmonic movement — from warmth to drama and back — mirrors the melodic shape of the tune.',
+  metaDescription: 'Misty chord changes and harmonic analysis. Erroll Garner\'s 1954 jazz ballad in Eb major: lush secondary dominants, AABA form — with notation, playback, and scale guides.',
 
   sections: [
     {

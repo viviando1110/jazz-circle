@@ -16,6 +16,16 @@ export const NICAS_DREAM: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'bebop', 'hard-bop', 'minor'],
   description: 'A hard bop classic written for Pannonica de Koenigswarter, the jazz patroness. Features a memorable minor melody with sophisticated chord changes and a driving bebop rhythm.',
+  style: 'Hard Bop',
+  historicalContext: 'Composed by Horace Silver in 1956 and recorded by the Horace Silver Quintet, Nica\'s Dream was dedicated to jazz patron Pannonica "Nica" de Koenigswarter, a baroness who was a close friend and supporter of many jazz musicians including Thelonious Monk and Charlie Parker. It became one of Silver\'s most popular compositions and a hard bop standard.',
+  notableRecordings: [
+    'Horace Silver Quintet — (1956 recording)',
+    'Art Blakey & the Jazz Messengers — (various recordings)',
+    'Widely recorded — (hard bop standard)',
+  ],
+  harmonicSummary: 'Nica\'s Dream is a Latin-tinged hard bop tune in Bb minor built on a driving vamp that alternates between Bbm7 and Eb7, establishing a minor blues feel with a Latin clave rhythm. The form moves between this vamp section and a more harmonically active bridge with ii-V-I progressions in related key areas. The combination of Latin rhythm, minor blues tonality, and bebop harmonic language represents Silver\'s distinctive fusion of jazz tradition with Afro-Cuban influence.',
+  metaDescription: 'Nica\'s Dream chord changes and harmonic analysis. Horace Silver\'s hard bop Latin standard (1956): Bb minor, Latin groove — dedicated to jazz patron Nica, with notation and scale guides.',
+
   sections: [
     {
       name: 'A',

@@ -16,6 +16,15 @@ export const ORNITHOLOGY: Standard = {
   difficulty: 'advanced',
   tags: ['standard', 'bebop', 'parker', '1940s', 'contrafact'],
   description: "Charlie Parker's bebop contrafact over \"How High the Moon\". One of the most iconic bebop compositions with a virtuosic melody line.",
+  style: 'Bebop',
+  historicalContext: 'Composed by Charlie Parker (with some credit attributed to Benny Harris) and recorded in 1946, Ornithology is a bebop contrafact built on the chord changes of Morgan Lewis\'s "How High the Moon" (1940). The title refers to the study of birds ("Bird" being Parker\'s nickname). Along with Ko-Ko and Donna Lee, it is one of the most celebrated bebop compositions of the 1940s.',
+  notableRecordings: [
+    'Charlie Parker — (1946 recording)',
+    'Charlie Parker — (multiple alternate takes)',
+    'Widely played — (bebop standard)',
+  ],
+  harmonicSummary: 'Ornithology uses the 32-bar AABA changes of How High the Moon in G major. The A section moves through G major with a striking temporary modulation to Db major (a tritone away) via chromatic ii-V-I motion, before returning to G. The bridge moves from Bb major through the cycle. Like all bebop contrafacts, the original melody is replaced by a new, faster bebop head that outlines the chord changes with greater complexity than the original song. At up-tempo (200+ BPM), navigating the G-to-Db key shift demands complete ii-V-I fluency.',
+  metaDescription: 'Ornithology chord changes and harmonic analysis. Charlie Parker\'s bebop contrafact on How High the Moon (1946): G major, Db modulation — with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

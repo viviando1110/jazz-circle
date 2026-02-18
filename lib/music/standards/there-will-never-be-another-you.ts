@@ -21,7 +21,16 @@ export const THERE_WILL_NEVER_BE_ANOTHER_YOU: Standard = {
   tags: ['standard', 'swing', 'intermediate', 'ii-V-I'],
   description:
     'There Will Never Be Another You is a popular standard composed by Harry Warren in 1942. This 32-bar AB form features clear ii-V-I progressions and modulations, making it excellent for practicing bebop vocabulary and jazz improvisation. The tune moves through several key centers, providing opportunities to practice playing over key changes.',
-
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Harry Warren with lyrics by Mack Gordon for the 1942 film Iceland, There Will Never Be Another You became a jazz standard through its clean harmonic movement and bebop-friendly changes. It is one of the most called tunes at jazz jam sessions for its accessible but musically interesting ii-V-I progressions in Eb major.',
+  notableRecordings: [
+    'Sammy Kaye — (1942 original film version)',
+    'John Coltrane — (various recordings)',
+    'Bill Evans — (various recordings)',
+    'Widely played — (essential jam session standard)',
+  ],
+  harmonicSummary: 'There Will Never Be Another You is a 32-bar ABAC standard in Eb major with clean, elegant harmonic movement. The A sections feature clear ii-V-I progressions in Eb (Fm7→Bb7→Ebmaj7) and its relative minor area, while the B and C sections provide harmonic variety. The ABAC form (as opposed to AABA) gives the tune a slightly different structural flavor. Its comfortable harmonic pacing and memorable melody make it one of the most played standards at jam sessions.',
+  metaDescription: 'There Will Never Be Another You chord changes and harmonic analysis. Harry Warren\'s 1942 jazz standard in Eb major: ABAC form, clean ii-V-I — essential jam session tune, with notation and scale guides.',
   sections: [
     {
       name: 'A',

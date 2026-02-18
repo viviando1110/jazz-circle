@@ -16,6 +16,16 @@ export const MOANIN: Standard = {
   difficulty: 'beginner',
   tags: ['standard', 'gospel', 'soul-jazz', 'hard-bop', 'minor'],
   description: 'A gospel-infused hard bop anthem with one of jazz\'s most recognizable riffs. Bobby Timmons\' composition for Art Blakey\'s Jazz Messengers epitomizes the soul-jazz movement with its churchy feel and infectious groove.',
+  style: 'Hard Bop',
+  historicalContext: 'Composed by pianist Bobby Timmons for Art Blakey & the Jazz Messengers, Moanin\' was recorded in 1958 on the album of the same name. Timmons\'s gospel and blues-drenched composition became one of the definitive statements of hard bop\'s soul and funk influences. Charles Mingus also had a well-known piece called "Moanin\'" (an earlier, separate composition) — the Timmons version is the hard bop standard.',
+  notableRecordings: [
+    'Art Blakey & the Jazz Messengers — Moanin\' (1958)',
+    'Bobby Timmons — (various recordings)',
+    'Widely covered — (hard bop soul jazz staple)',
+  ],
+  harmonicSummary: 'Moanin\' (Timmons) is a blues-rooted hard bop tune in F major with a gospel-inflected character. The melody is built around a call-and-response motif, and the chord changes combine standard blues motion (I7, IV7, V7 in F) with bebop jazz vocabulary. The "call" of the theme uses blues chromatic inflection, while the "response" is more harmonically elaborate. The soul and groove of the piece come from the blues foundation, while the jazz harmony adds sophistication. It is commonly played at medium-up swing tempos.',
+  metaDescription: 'Moanin\' chord changes and harmonic analysis. Bobby Timmons\'s gospel-blues hard bop standard (1958): F major, call-and-response — Art Blakey classic, with notation and scale guides.',
+
   sections: [
     {
       name: 'A',

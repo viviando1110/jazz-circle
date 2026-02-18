@@ -20,6 +20,16 @@ export const AUTUMN_LEAVES: Standard = {
   tags: ['standard', 'beginner', 'ii-V-I', 'minor key', 'circle of fourths'],
   description:
     'The quintessential jazz standard for beginners. Autumn Leaves cycles through a complete ii-V-I in the relative major and then ii-V-i in the relative minor, making it the perfect vehicle for practicing the most important jazz progression in both major and minor contexts.',
+  style: 'Jazz Standard',
+  historicalContext: 'Originally composed by Joseph Kosma as "Les feuilles mortes" for the 1946 French film Les Portes de la nuit, with lyrics by Jacques Prévert. The English adaptation by Johnny Mercer gave it the title Autumn Leaves. It became one of the most recorded jazz standards ever, prized by students and masters alike for its elegant cycling through ii-V-I progressions in both a major and its relative minor key.',
+  notableRecordings: [
+    'Cannonball Adderley — Somethin\' Else (1958)',
+    'Bill Evans — Portrait in Jazz (1959)',
+    'Miles Davis — Miles Davis Plays for Lovers (1956)',
+    'Keith Jarrett — Standards, Vol. 1 (1983)',
+  ],
+  harmonicSummary: 'Autumn Leaves cycles through a complete ii-V-I in Bb major (Cm7→F7→Bbmaj7→Ebmaj7) and then a ii-V-i in G minor (Am7b5→D7→Gm7), making it the textbook vehicle for learning these two foundational progressions side by side. The tune moves through the circle of fourths continuously, with the relative major (Bb) and relative minor (Gm) sharing all the same diatonic chords. The final section adds a chromatic chain of ii-Vs (Gm7→C7→Fm7→Bb7→Ebmaj7) before resolving home.',
+  metaDescription: 'Autumn Leaves chord changes and harmonic analysis. Joseph Kosma\'s classic jazz standard: ii-V-I in Bb major and ii-V-i in G minor, with notation, playback, and scale guides.',
 
   sections: [
     // Section A (bars 1-8)

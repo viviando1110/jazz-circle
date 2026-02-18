@@ -16,6 +16,15 @@ export const BUT_BEAUTIFUL: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'ballad', 'romantic'],
   description: 'A classic ballad with sophisticated harmony. Features chromatic movement and effective use of secondary dominants.',
+  style: 'Ballad',
+  historicalContext: 'Composed by Jimmy Van Heusen with lyrics by Johnny Burke in 1947 for the film Road to Rio, But Beautiful became a favorite ballad of Frank Sinatra and has since been adopted by jazz musicians as a vehicle for lush, introspective improvisation. Its gentle, flowing harmonic language and expressive lyric quality suit both vocal and instrumental performance.',
+  notableRecordings: [
+    'Frank Sinatra — (1957 and other recordings)',
+    'Bill Evans — (various recordings)',
+    'Ahmad Jamal — (various recordings)',
+  ],
+  harmonicSummary: 'But Beautiful is a 32-bar ballad in G major with a richly chromatic harmonic language. The A sections move through extended ii-V-I progressions with smooth voice leading, while secondary dominants add color without disrupting the lyrical flow. The bridge provides harmonic contrast before the final A resolves home. Its relatively slow harmonic rhythm and expressive character make it ideal for developing a singing, legato approach to jazz improvisation.',
+  metaDescription: 'But Beautiful chord changes and harmonic analysis. Jimmy Van Heusen\'s 1947 jazz ballad in G major: lush ii-V progressions, AABA form, with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

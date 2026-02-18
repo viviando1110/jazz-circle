@@ -16,6 +16,15 @@ export const ONE_NOTE_SAMBA: Standard = {
   difficulty: 'intermediate',
   tags: ['bossa-nova', 'latin', 'standard'],
   description: 'Also known as "Samba de Uma Nota So," this playful Jobim composition features a repeated melody note over shifting harmonies. The A section demonstrates the bossa nova technique of constant melodic repetition with harmonic variation.',
+  style: 'Bossa Nova',
+  historicalContext: 'Composed by Antônio Carlos Jobim in 1959 (originally titled "Samba de Uma Nota Só"), One Note Samba is a cornerstone of the bossa nova and Brazilian jazz repertoire. Jobim\'s genius in this tune is the contrast between the static, repeated melody (hovering on a single pitch) and the richly chromatic harmonies moving beneath it — a compositional technique that influenced generations of jazz composers.',
+  notableRecordings: [
+    'Stan Getz & João Gilberto — Getz/Gilberto (1963)',
+    'Antônio Carlos Jobim — The Composer of Desafinado Plays (1963)',
+    'Ella Fitzgerald — Ella Abraça Jobim (1981)',
+  ],
+  harmonicSummary: 'One Note Samba features a static melody over chromatic harmonic movement, creating tension between the surface simplicity and underlying complexity. The harmony moves through a descending chromatic sequence of ii-V pairs: Bbm7→Eb7→Abmaj7, then Am7→D7→Gmaj7, then Abm7→Db7→Gbmaj7, before returning to Bb major through a ii-V-I. This chromatic descending cycle of major ii-V-Is (a half-step apart) is the tune\'s defining harmonic feature and a great vehicle for practicing ii-V patterns through non-diatonic key centers.',
+  metaDescription: 'One Note Samba chord changes and harmonic analysis. Jobim\'s bossa nova classic (1959): chromatic ii-V sequence through three key centers, with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

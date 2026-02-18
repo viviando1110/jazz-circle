@@ -16,6 +16,16 @@ export const STARDUST: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'ballad', 'classic', 'romantic'],
   description: 'One of the most recorded songs in history. Features beautiful melody and timeless harmonic progression with rich ii-V movement.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Hoagy Carmichael in 1927 (initially as an instrumental, with lyrics added by Mitchell Parish in 1929), Stardust became one of the most recorded songs in history. Its unusual song structure — a long, elaborate verse plus a 32-bar chorus with an unexpected key relationship — and its sweeping, romantic melody attracted jazz musicians from the swing era onward. It is widely considered one of the greatest American songs ever written.',
+  notableRecordings: [
+    'Hoagy Carmichael — (1929 original recording)',
+    'Nat King Cole — (1957 recording, one of the most beloved versions)',
+    'Louis Armstrong — (1931 recording)',
+    'Willie Nelson — Stardust (1978 album)',
+  ],
+  harmonicSummary: 'Stardust is typically played in Bb major (the chorus key) with a long verse in F major preceding it. The 32-bar AABA chorus features a rich harmonic language: the A section opens on Bb major but quickly tonicizes G minor and C major through secondary dominants before returning home. The bridge moves to F major territory. The chromatic passing chords and extended voicings (maj9, 13) give the tune its lush, nostalgic character. The unusually long melodic phrases require careful breath control and harmonic awareness.',
+  metaDescription: 'Stardust chord changes and harmonic analysis. Hoagy Carmichael\'s 1927 classic in Bb major: one of the most recorded songs ever, lush ii-V-I — with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

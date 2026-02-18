@@ -21,6 +21,16 @@ export const HAVE_YOU_MET_MISS_JONES: Standard = {
   tags: ['standard', 'swing', 'intermediate', 'rodgers and hart'],
   description:
     'Have You Met Miss Jones? is a sophisticated standard by Rodgers and Hart from 1937 featuring unexpected harmonic surprises. This 32-bar AABA form is notable for its bridge, which contains one of the most dramatic key shifts in the standard repertoire—a sudden jump up a major third. The tune requires smooth navigation of distant modulations and is beloved by jazz musicians for its harmonic adventure.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Richard Rodgers with lyrics by Lorenz Hart for the 1937 Broadway musical I\'d Rather Be Right, Have You Met Miss Jones? is notable for its unusually adventurous bridge, which predates Giant Steps by over 20 years in cycling through key centers a major third apart. The bridge\'s cycle of major thirds was far ahead of its time harmonically.',
+  notableRecordings: [
+    'Fats Waller — (1937 recording)',
+    'Bill Evans — (various recordings)',
+    'Oscar Peterson — (various recordings)',
+    'Widely covered — (jazz standard)',
+  ],
+  harmonicSummary: 'Have You Met Miss Jones is a 32-bar AABA standard in F major. The A sections are in F major with standard ii-V-I progressions. The remarkable 8-bar bridge cycles through three key centers a major third apart — Bb major→Db major→A major→F major — a system that John Coltrane would later formalize as "Coltrane changes" in Giant Steps (1960). This forward-thinking bridge makes the tune historically significant and harmonically challenging, as the key changes move by major thirds rather than the more common fifth motion.',
+  metaDescription: 'Have You Met Miss Jones chord changes and harmonic analysis. Rodgers/Hart 1937 standard: F major, bridge cycles major thirds (Bb→Db→A→F) — pre-figuring Coltrane changes, with notation and scale guides.',
 
   sections: [
     {

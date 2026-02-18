@@ -21,6 +21,16 @@ export const ON_GREEN_DOLPHIN_STREET: Standard = {
   tags: ['standard', 'latin', 'intermediate', 'bossa nova'],
   description:
     'On Green Dolphin Street is a latin jazz standard composed by Bronislau Kaper in 1947 for the film Green Dolphin Street. This 32-bar ABAB form features a distinctive A section with descending chromatic movement and a contrasting B section with ii-V progressions. Often played as a bossa nova, this tune is essential repertoire for understanding latin jazz harmony.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Bronislau Kaper with lyrics by Ned Washington for the 1947 MGM film Green Dolphin Street, the tune was largely forgotten until Miles Davis recorded it in 1958 on Jazz Track. That recording — with Bill Evans on piano — transformed it into a jazz standard. John Coltrane also recorded it, further cementing its place in the repertoire.',
+  notableRecordings: [
+    'Miles Davis — Jazz Track (1958, with Bill Evans)',
+    'John Coltrane — (various recordings)',
+    'Bill Evans — (various trio recordings)',
+    'Widely recorded — (jazz standard from 1958 onward)',
+  ],
+  harmonicSummary: 'On Green Dolphin Street is a 32-bar AABA standard in C major with a distinctive first A section that pivots between C major and Db major (a half-step modulation) before settling into C. This half-step key pivot in bars 1-8 is the tune\'s defining harmonic feature — the same relationship as Blue Bossa but within a longer form. The second A section stays in C major. The bridge moves to Eb major before the final A returns home. This combination of a half-step pivot and conventional ii-V-I makes it harmonically distinctive.',
+  metaDescription: 'On Green Dolphin Street chord changes and harmonic analysis. Bronislau Kaper\'s 1947 standard: C major with Db modulation — Miles Davis & Coltrane classic, with notation and scale guides.',
 
   sections: [
     {

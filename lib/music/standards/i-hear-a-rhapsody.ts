@@ -16,6 +16,16 @@ export const I_HEAR_A_RHAPSODY: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'swing', 'bebop'],
   description: 'A bebop favorite with flowing harmonic movement. Features classic ii-V progressions and chromaticism.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by George Fragos, Jack Baker, and Dick Gasparre in 1940, I Hear a Rhapsody became a jazz standard through recordings by Glenn Miller and Jimmy Dorsey. Its sweeping, rhapsodic melody and appealing harmonic progressions made it a favorite of jazz musicians through the swing and bebop eras.',
+  notableRecordings: [
+    'Jimmy Dorsey — (1941 recording)',
+    'Bud Powell — (various recordings)',
+    'Bill Evans — (various recordings)',
+  ],
+  harmonicSummary: 'I Hear a Rhapsody is a 32-bar AABA standard typically in C major with warm, singable harmonic progressions. The A section features clear ii-V-I motion in C with some secondary dominant color, while the bridge moves to a contrasting tonal area before returning home. The tune\'s straightforward harmonic language and memorable melody make it a good vehicle for swing-era and bebop vocabulary, and it is often played at medium swing tempos.',
+  metaDescription: 'I Hear a Rhapsody chord changes and harmonic analysis. Fragos/Baker/Gasparre 1940 jazz standard in C major: AABA form, ii-V-I progressions, with notation, playback, and scale guides.',
+
   sections: [
     {
       name: 'A',

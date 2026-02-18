@@ -59,6 +59,53 @@ export default function HomePage() {
           <Link href="/key/eb-major" className="text-[var(--gold)] hover:underline">Eb Major</Link>
         </p>
       </section>
+
+      {/* Popular Standards */}
+      <section className="mt-8 space-y-4 text-sm text-[var(--cream-dim)] max-w-2xl mx-auto">
+        <h2 className="text-lg font-semibold text-[var(--cream)]">
+          Popular Jazz Standards
+        </h2>
+        <p>
+          Explore chord changes and harmonic analysis for the most-studied jazz standards:
+        </p>
+        <ul className="space-y-1">
+          <li>
+            <Link href="/standards/so-what" className="text-[var(--gold)] hover:underline">
+              So What
+            </Link>{' '}— Miles Davis
+          </li>
+          <li>
+            <Link href="/standards/autumn-leaves" className="text-[var(--gold)] hover:underline">
+              Autumn Leaves
+            </Link>{' '}— Joseph Kosma
+          </li>
+          <li>
+            <Link href="/standards/donna-lee" className="text-[var(--gold)] hover:underline">
+              Donna Lee
+            </Link>{' '}— Miles Davis
+          </li>
+          <li>
+            <Link href="/standards/anthropology" className="text-[var(--gold)] hover:underline">
+              Anthropology
+            </Link>{' '}— Charlie Parker &amp; Dizzy Gillespie
+          </li>
+          <li>
+            <Link href="/standards/all-the-things-you-are" className="text-[var(--gold)] hover:underline">
+              All the Things You Are
+            </Link>{' '}— Jerome Kern
+          </li>
+          <li>
+            <Link href="/standards/what-is-this-thing-called-love" className="text-[var(--gold)] hover:underline">
+              What Is This Thing Called Love
+            </Link>{' '}— Cole Porter
+          </li>
+        </ul>
+        <p>
+          <Link href="/standards" className="text-[var(--gold)] hover:underline">
+            Browse all 107 jazz standards →
+          </Link>
+        </p>
+      </section>
     </div>
   );
 }

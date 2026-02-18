@@ -16,6 +16,16 @@ export const THE_SHADOW_OF_YOUR_SMILE: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'ballad', 'minor', 'bossa'],
   description: 'A haunting bossa nova ballad from The Sandpiper. Features beautiful chromatic voice leading and a memorable descending bass line.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Johnny Mandel with lyrics by Paul Francis Webster for the 1965 film The Sandpiper, The Shadow of Your Smile won the Academy Award for Best Original Song. It was quickly adopted by jazz musicians for its sophisticated harmonic language and was voted the Song of the Year by ASCAP in 1965. Tony Bennett and Andy Williams recorded popular versions.',
+  notableRecordings: [
+    'Tony Bennett — (1965 recording)',
+    'Andy Williams — (1965 recording)',
+    'Bill Evans — (various recordings)',
+    'Widely recorded — (Oscar-winning jazz standard)',
+  ],
+  harmonicSummary: 'The Shadow of Your Smile is a 32-bar AABA standard in E minor with a notably sophisticated harmonic language for a film song. The A section is in E minor, featuring minor ii-V-i progressions (F#m7b5→B7→Em) alongside chromatic passing chords that give the tune its wistful, searching quality. The bridge moves to G major (the relative major) before the final A returns to E minor. The interplay between E minor and G major gives the tune its bittersweet character.',
+  metaDescription: 'The Shadow of Your Smile chord changes and harmonic analysis. Johnny Mandel\'s 1965 Oscar-winning standard in E minor: minor ii-V-i, G major bridge — with notation and scale guides.',
   sections: [
     {
       name: 'A',

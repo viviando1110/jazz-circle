@@ -16,6 +16,16 @@ export const WHEN_I_FALL_IN_LOVE: Standard = {
   difficulty: 'beginner',
   tags: ['standard', 'ballad', 'young', '1950s'],
   description: 'Beautiful romantic ballad by Victor Young. Features smooth voice leading and is a perfect introduction to ballad playing.',
+  style: 'Ballad',
+  historicalContext: 'Composed by Victor Young with lyrics by Edward Heyman for the 1952 film One Minute to Zero, When I Fall in Love became a beloved romantic standard through recordings by Doris Day, Nat King Cole, and later Chet Baker. It was further popularized by the 1993 film Sleepless in Seattle (Céline Dion and Clive Griffin\'s version). Its simple, heartfelt character has kept it in the jazz and pop repertoire.',
+  notableRecordings: [
+    'Nat King Cole — (1956 recording)',
+    'Doris Day — (1952 original film version)',
+    'Chet Baker — (various recordings)',
+    'Widely recorded — (romantic jazz ballad standard)',
+  ],
+  harmonicSummary: 'When I Fall in Love is a 32-bar AABA ballad in Eb major with a warm, accessible harmonic language. The A sections feature clean, diatonic ii-V-I progressions in Eb with some secondary dominants adding gentle color. The bridge moves to a contrasting tonal area (Bb major or related keys) before the final A returns home. The tune\'s straightforward harmonic movement and lyrical melody make it one of the most approachable jazz ballads for developing a singing, sustained improvisational style.',
+  metaDescription: 'When I Fall in Love chord changes and harmonic analysis. Victor Young\'s 1952 jazz ballad in Eb major: AABA, warm ii-V-I progressions — Nat Cole & Chet Baker classic, with notation and scale guides.',
   sections: [
     {
       name: 'A',

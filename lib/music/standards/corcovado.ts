@@ -16,6 +16,15 @@ export const CORCOVADO: Standard = {
   difficulty: 'beginner',
   tags: ['bossa-nova', 'latin', 'ballad'],
   description: 'Also known as "Quiet Nights of Quiet Stars," this gentle bossa nova ballad features simple, elegant harmonic progressions. Perfect for beginners learning jazz harmony and bossa nova feel.',
+  style: 'Bossa Nova',
+  historicalContext: 'Composed by Antônio Carlos Jobim and published in 1960 (also known in English as "Quiet Nights of Quiet Stars"), Corcovado takes its name from the famous Rio de Janeiro mountain surmounted by the Christ the Redeemer statue. Stan Getz and Astrud Gilberto\'s recording on Getz/Gilberto (1964) brought it to international audiences alongside "The Girl from Ipanema."',
+  notableRecordings: [
+    'Stan Getz & Astrud Gilberto — Getz/Gilberto (1964)',
+    'Antônio Carlos Jobim — (various recordings)',
+    'Widely recorded — (bossa nova ballad standard)',
+  ],
+  harmonicSummary: 'Corcovado is a bossa nova ballad in C major with flowing, lush harmony characteristic of Jobim\'s writing. The tune moves through major ii-V-I progressions with chromatic approach chords and extended sonorities (maj7, maj9). Jobim\'s harmonic language features unexpected chromatic ii-Vs that tonicize chords briefly before resolving — creating the characteristic "surprising but inevitable" feeling of his best work. The gentle bossa nova groove and lyrical melody reward a singing, unhurried approach.',
+  metaDescription: 'Corcovado chord changes and harmonic analysis. Jobim\'s bossa nova ballad (1960): C major, chromatic ii-V progressions, from Getz/Gilberto — with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

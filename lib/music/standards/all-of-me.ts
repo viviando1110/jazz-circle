@@ -21,6 +21,16 @@ export const ALL_OF_ME: Standard = {
   tags: ['standard', 'swing', 'beginner', 'classic'],
   description:
     'All of Me is a classic American standard from 1931 composed by Gerald Marks and Seymour Simons. This 32-bar ABAC form features simple, memorable changes that are perfect for beginners learning jazz. The tune includes basic ii-V progressions and a brief modulation to the relative minor, making it ideal for developing fundamental jazz vocabulary.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Gerald Marks with lyrics by Seymour Simons in 1931, All of Me was popularized through recordings by Ruth Etting, Paul Whiteman, and Louis Armstrong. Its diatonic-with-secondary-dominants harmonic language and memorable melody made it a perennial jazz standard across all eras, from the swing period through bebop and into contemporary jazz.',
+  notableRecordings: [
+    'Louis Armstrong — (1932 recording)',
+    'Billie Holiday — (1941 recording)',
+    'Frank Sinatra — (multiple recordings)',
+    'Willie Nelson — Stardust (1978)',
+  ],
+  harmonicSummary: 'All of Me is a 32-bar AABA standard in C major built on a chain of secondary dominants. The A section cycles: Cmaj7→E7 (secondary dominant to Am)→A7 (secondary dominant to Dm)→Dm7→E7→Am7→D7→Dm7→G7→C. Each secondary dominant temporarily tonicizes the following chord, creating a bright, forward-moving harmonic momentum characteristic of the era. The bridge briefly tonicizes F major before the final A resolves home.',
+  metaDescription: 'All of Me chord changes and harmonic analysis. Marks/Simons 1931 jazz standard in C major: secondary dominant chain, AABA form, with notation, playback, and scale guides.',
 
   sections: [
     {

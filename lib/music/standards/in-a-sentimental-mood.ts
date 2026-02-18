@@ -16,6 +16,15 @@ export const IN_A_SENTIMENTAL_MOOD: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'ballad', 'ellington', '1930s'],
   description: 'Duke Ellington ballad known for its lush harmonies and chromatic movement. Features sophisticated voice leading and romantic chord progressions.',
+  style: 'Ballad',
+  historicalContext: 'Composed by Duke Ellington in 1935, originally as a piano piece for a masquerade party in Atlanta, In a Sentimental Mood became one of his most beloved ballads. John Coltrane and Duke Ellington\'s 1962 duet recording — with Ellington on piano and Coltrane on tenor saxophone — is considered one of the most perfectly matched pairings in jazz history.',
+  notableRecordings: [
+    'Duke Ellington — (1935 original)',
+    'John Coltrane & Duke Ellington — Duke Ellington & John Coltrane (1962)',
+    'McCoy Tyner — (various recordings)',
+  ],
+  harmonicSummary: 'In a Sentimental Mood is a 32-bar AABA ballad in F major with a warm, deeply lyrical character. The A sections move through F major with rich extended chords (maj7, maj9) and smooth secondary dominants. The bridge provides harmonic contrast — moving to Db major (a tritone from the home dominant) — before the final A brings a tender resolution. Ellington\'s use of colorful extended voicings and unhurried harmonic rhythm give the tune its signature mood of wistful reflection.',
+  metaDescription: 'In a Sentimental Mood chord changes and harmonic analysis. Duke Ellington\'s 1935 ballad: F major, Db major bridge — immortalized by Coltrane/Ellington duo, with notation and scale guides.',
   sections: [
     {
       name: 'A',

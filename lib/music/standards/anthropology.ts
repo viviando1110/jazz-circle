@@ -16,6 +16,16 @@ export const ANTHROPOLOGY: Standard = {
   difficulty: 'advanced',
   tags: ['standard', 'bebop', 'parker', '1940s', 'rhythm-changes'],
   description: "Charlie Parker's bebop contrafact over rhythm changes. Features fast-paced bebop lines and challenging chromaticism. Built on the chord progression of \"I Got Rhythm\".",
+  style: 'Bebop',
+  historicalContext: 'Composed by Charlie Parker and Dizzy Gillespie in 1946, Anthropology is a bebop contrafact built on the chord changes of George Gershwin\'s "I Got Rhythm" (commonly called "Rhythm changes"). It was one of the defining compositions of the bebop era, featuring Parker\'s characteristically complex melodic lines over the rapid harmonic movement of the Rhythm changes form.',
+  notableRecordings: [
+    'Charlie Parker & Dizzy Gillespie — (recorded 1946)',
+    'Dizzy Gillespie — Shaw \'Nuff (1945)',
+    'Sonny Rollins — (multiple recordings)',
+    'Thelonious Monk — (various recordings)',
+  ],
+  harmonicSummary: 'Anthropology uses the classic 32-bar AABA Rhythm changes form in Bb major. The A section features a I-vi-ii-V turnaround (Bbmaj7→Gm7→Cm7→F7) with a chromatic II-V-I elaboration, cycling through the circle of fifths. The bridge (B section) is a chain of dominant 7th chords moving around the circle of fifths: D7→G7→C7→F7, each lasting two bars, before returning to the A section. Mastery of this form is a rite of passage in bebop.',
+  metaDescription: 'Anthropology chord changes and harmonic analysis. Charlie Parker & Dizzy Gillespie\'s bebop contrafact on Rhythm changes (1946): Bb major, AABA form, with notation and scale guides.',
   sections: [
     {
       name: 'A',

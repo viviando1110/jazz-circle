@@ -21,6 +21,16 @@ export const CONFIRMATION: Standard = {
   tags: ['standard', 'bebop', 'advanced', 'charlie parker', 'fast tempo'],
   description:
     'Confirmation is a quintessential bebop composition by Charlie Parker from 1946. This 32-bar AABA form features rapid chord changes, chromatic movement, and the intricate melodic lines characteristic of Parker\'s genius. The tune is a rite of passage for bebop musicians and demands technical precision, harmonic understanding, and the ability to navigate complex changes at high speeds.',
+  style: 'Bebop',
+  historicalContext: 'Composed by Charlie Parker in the mid-1940s and recorded in 1946, Confirmation is widely considered Parker\'s compositional masterpiece — a 32-bar bebop tune whose melody perfectly outlines its sophisticated chord changes at high speed. Unlike many bebop tunes, it has a genuinely original chord progression rather than a contrafact, making it a cornerstone of the bebop repertoire.',
+  notableRecordings: [
+    'Charlie Parker — (1946 recording)',
+    'Charlie Parker — (multiple recordings and alternate takes)',
+    'Bill Evans — (various recordings)',
+    'Widely studied — (considered Parker\'s finest composition)',
+  ],
+  harmonicSummary: 'Confirmation is a 32-bar AABA standard in F major with one of the most harmonically inventive chord progressions in bebop. The A section alone passes through F major, C minor, Bb major, and Eb major via smooth chromatic ii-V progressions. The tune modulates through multiple key centers within each A section, requiring fluid movement across ii-V-I patterns in F, Bb, and Eb. At bebop tempos, the melody itself teaches the changes — Parker\'s lines outline each chord with extraordinary precision.',
+  metaDescription: 'Confirmation chord changes and harmonic analysis. Charlie Parker\'s bebop masterpiece (1946): F major, multi-key ii-V progressions, AABA — considered his finest composition, with notation and scale guides.',
 
   sections: [
     {

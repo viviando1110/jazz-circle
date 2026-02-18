@@ -16,6 +16,15 @@ export const DARN_THAT_DREAM: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'ballad', 'romantic'],
   description: 'A beautiful ballad with rich harmonic movement. Features chromatic bass lines and effective use of altered dominants.',
+  style: 'Ballad',
+  historicalContext: 'Composed by Jimmy Van Heusen with lyrics by Eddie DeLange for the 1939 Broadway musical Swingin\' the Dream, Darn That Dream became a favorite jazz ballad through Tommy Dorsey\'s 1939 recording. Its lush, extended chord vocabulary and dreamy atmosphere made it a natural vehicle for introspective ballad playing.',
+  notableRecordings: [
+    'Tommy Dorsey — (1939, original recording)',
+    'Miles Davis — (various recordings)',
+    'Bill Evans — (various recordings)',
+  ],
+  harmonicSummary: 'Darn That Dream is a 32-bar AABA ballad in G major with rich extended harmony. The A sections feature a lush chain of ii-V-I progressions with added 9ths, 11ths, and 13ths, giving the tune its dreamy, impressionistic character. Secondary dominants add color throughout. The bridge moves to D major territory before returning home. The slow harmonic rhythm and extended voicings make it an ideal vehicle for chord melody playing and developing a lush, orchestral piano style.',
+  metaDescription: 'Darn That Dream chord changes and harmonic analysis. Jimmy Van Heusen\'s 1939 jazz ballad in G major: lush extended ii-V progressions, AABA form, with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

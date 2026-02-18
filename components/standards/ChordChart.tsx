@@ -15,7 +15,7 @@ export function ChordChart({ sections, activeBarIndex, onBarClick }: ChordChartP
         <div key={section.name}>
           {/* Section header */}
           <div className="mb-2 flex items-center gap-2">
-            <span className="inline-flex h-7 w-7 items-center justify-center rounded bg-amber-500/20 text-sm font-bold text-amber-400">
+            <span className="inline-flex h-7 min-w-[1.75rem] items-center justify-center rounded bg-amber-500/20 px-1.5 text-sm font-bold text-amber-400">
               {section.name}
             </span>
             <span className="text-sm text-neutral-400">{section.label}</span>

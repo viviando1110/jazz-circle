@@ -16,6 +16,15 @@ export const MAIDEN_VOYAGE: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'modal', 'sus-chords', 'quartal-harmony'],
   description: 'A modal jazz masterpiece built on sus chords and quartal harmony. The haunting, open sound evokes the ocean and became one of the defining compositions of 1960s modal jazz.',
+  style: 'Post-Bop',
+  historicalContext: 'Composed by Herbie Hancock as the title track of his 1965 Blue Note album Maiden Voyage, the tune is built entirely on suspended dominant chords (7sus4) that avoid the traditional resolution of jazz harmony. The album\'s oceanic theme — suggested by its cover art and dreamy atmosphere — influenced a generation of jazz musicians and is considered a landmark of 1960s jazz.',
+  notableRecordings: [
+    'Herbie Hancock — Maiden Voyage (1965)',
+    'Herbie Hancock — (various live recordings)',
+    'Widely covered — (jazz piano standard)',
+  ],
+  harmonicSummary: 'Maiden Voyage is a 16-bar form built on four suspended dominant chords (7sus4): D7sus4→F7sus4→Eb7sus4→Ab7sus4 (each lasting 4 bars). The sus4 voicings replace the 3rd with the 4th, avoiding the traditional leading-tone pull of dominant chords and creating a floating, unresolved quality. There is no tonic chord — the tune never "lands." Improvisers use the Dorian or Mixolydian modes over each chord, treating each vamp as a modal area. The oceanic harmonic atmosphere is entirely created through these four suspended colors.',
+  metaDescription: 'Maiden Voyage chord changes and harmonic analysis. Herbie Hancock\'s post-bop classic (1965): four suspended 7sus4 chords, floating modal harmony — with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

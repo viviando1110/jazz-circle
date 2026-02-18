@@ -20,6 +20,16 @@ export const FLY_ME_TO_THE_MOON: Standard = {
   difficulty: 'beginner',
   tags: ['standard', 'beginner', 'swing', 'ii-V-I', 'circle of fourths'],
   description: 'A timeless swing standard that beautifully demonstrates the circle of fourths motion through diatonic chords.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Bart Howard in 1954 (originally titled "In Other Words"), Fly Me to the Moon became an iconic jazz standard through Frank Sinatra\'s 1964 arrangement by Quincy Jones, which set it in a brisk swing feel. Its clean cycle-of-fifths harmonic movement and sing-able melody made it a staple of jazz singers and instrumentalists alike.',
+  notableRecordings: [
+    'Frank Sinatra — It Might as Well Be Swing (1964, arr. Quincy Jones)',
+    'Tony Bennett — (various recordings)',
+    'Joe Harnell — (1962 bossa nova version)',
+    'Widely covered — (jazz standards repertoire)',
+  ],
+  harmonicSummary: 'Fly Me to the Moon is a 32-bar AABA standard in C major built almost entirely on a cycle of descending fifths (ii-V motion). The A section is a chain of ii-V-I progressions cycling through A minor, D minor, G7, and C major — a perfect textbook cycle of fifths in C. The bridge briefly moves to F major before returning. This predictable but satisfying harmonic motion makes it an ideal vehicle for practicing ii-V-I patterns in a musical context.',
+  metaDescription: 'Fly Me to the Moon chord changes and harmonic analysis. Bart Howard\'s 1954 swing standard in C major: cycle-of-fifths ii-V-I chain, AABA — Sinatra classic, with notation and scale guides.',
   sections: [
     {
       name: 'A',

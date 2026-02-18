@@ -16,6 +16,15 @@ export const WHISPER_NOT: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'bebop', 'hard-bop', 'minor', 'ballad'],
   description: 'A lyrical minor composition with elegant harmonic movement. Benny Golson\'s beautiful melody works as both an up-tempo swinger and a haunting ballad, featuring sophisticated chord progressions that inspire creative improvisation.',
+  style: 'Hard Bop',
+  historicalContext: 'Composed by Benny Golson and first recorded by the Art Blakey & the Jazz Messengers in 1956, Whisper Not is a minor-key hard bop standard. Like Along Came Betty and Blues March, it became associated with Golson\'s work with Blakey and helped define the hard bop compositional aesthetic of the mid-to-late 1950s.',
+  notableRecordings: [
+    'Art Blakey & the Jazz Messengers — (1956 recording)',
+    'Ella Fitzgerald — (1966 vocal recording)',
+    'Benny Golson — (various recordings)',
+  ],
+  harmonicSummary: 'Whisper Not is a minor-key AABA standard (typically in Bb minor or related keys) with hard bop harmonic vocabulary. The A sections feature minor ii-V-i progressions with chromatic passing chords that give the tune a brooding, introspective quality. The bridge provides harmonic contrast through a major key area before the final A returns to the minor tonality. Golson\'s characteristic long melodic phrases and sophisticated harmonic movement make it a rewarding vehicle for developing minor-key jazz improvisation.',
+  metaDescription: 'Whisper Not chord changes and harmonic analysis. Benny Golson\'s hard bop standard (1956): minor key, ii-V-i progressions — Art Blakey classic, with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

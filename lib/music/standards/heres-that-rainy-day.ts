@@ -16,6 +16,17 @@ export const HERES_THAT_RAINY_DAY: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'ballad', 'show-tune', 'romantic', 'sophisticated'],
   description: 'A sophisticated ballad with chromatic harmonic movement. Jimmy Van Heusen\'s composition features unexpected modulations and rich chord progressions that challenge and reward improvisers with its emotional depth.',
+  style: 'Ballad',
+  historicalContext: 'Composed by Jimmy Van Heusen with lyrics by Johnny Burke for the 1953 Broadway musical Carnival in Flanders, Here\'s That Rainy Day became a jazz standard through recordings by Frank Sinatra and many others. Its melancholy lyric and lush, chromatic harmonic movement — which includes a striking modulation midway through — have made it a favorite ballad vehicle.',
+  notableRecordings: [
+    'Frank Sinatra — (various recordings)',
+    'Bill Evans — (various recordings)',
+    'Tony Bennett — (various recordings)',
+    'Widely recorded — (jazz ballad standard)',
+  ],
+  harmonicSummary: 'Here\'s That Rainy Day is a 32-bar ABAC-form ballad in G major with richly chromatic harmony. The tune features a striking modulation to Bb major in the B section — a chromatic third relationship (G to Bb) that creates a surprising harmonic color shift. Lush ii-V-I progressions and smooth chromatic voice leading throughout give the tune its warm, melancholy character. The harmonic sophistication is typical of Van Heusen\'s best writing.',
+  metaDescription: 'Here\'s That Rainy Day chord changes and harmonic analysis. Jimmy Van Heusen\'s 1953 jazz ballad: G major, Bb major modulation, lush ii-V progressions, with notation, playback, and scale guides.',
+
   sections: [
     {
       name: 'A',

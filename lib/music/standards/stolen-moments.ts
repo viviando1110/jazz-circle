@@ -16,6 +16,14 @@ export const STOLEN_MOMENTS: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'blues', 'minor-blues', 'modal', 'soul-jazz'],
   description: 'A hauntingly beautiful minor blues with modal elements. Oliver Nelson\'s masterpiece features a sophisticated harmonic approach that moves beyond traditional blues changes while maintaining the form\'s emotional core.',
+  style: 'Post-Bop',
+  historicalContext: 'Composed by Oliver Nelson and recorded on his landmark album Blues and the Abstract Truth (Blue Note, 1961), Stolen Moments is a minor-key modal composition that blends blues feeling with jazz harmony. The album\'s all-star lineup — including Freddie Hubbard, Eric Dolphy, and Bill Evans — produced one of the most celebrated jazz recordings of the 1960s.',
+  notableRecordings: [
+    'Oliver Nelson — Blues and the Abstract Truth (1961)',
+    'Widely recorded — (modal jazz standard)',
+  ],
+  harmonicSummary: 'Stolen Moments is a slow, brooding minor-key composition in C minor with a modal, blues-inflected character. The A sections are built on a sustained Cm pedal with shifting upper-voice harmonies — creating the characteristic "stolen moment" feeling of suspended time. The tune\'s harmonic language blends modal jazz (static minor chord areas) with blues feeling (bent notes, minor pentatonic coloring). The bridge provides harmonic contrast before returning to the dark, introspective C minor atmosphere.',
+  metaDescription: 'Stolen Moments chord changes and harmonic analysis. Oliver Nelson\'s modal post-bop classic (1961): C minor, blues-inflected harmony — from Blues and the Abstract Truth, with notation and scale guides.',
   sections: [
     {
       name: 'A',

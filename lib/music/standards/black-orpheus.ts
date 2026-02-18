@@ -16,6 +16,16 @@ export const BLACK_ORPHEUS: Standard = {
   difficulty: 'beginner',
   tags: ['bossa-nova', 'latin', 'ballad'],
   description: 'Also known as "Manha de Carnaval," this beautiful bossa nova standard features straightforward harmonic progressions perfect for beginners. The minor tonality and Latin feel make it a jazz essential.',
+  style: 'Bossa Nova',
+  historicalContext: 'Composed by Luiz Bonfá for the 1959 Brazilian film Orfeu Negro (Black Orpheus), the tune — also known as "Manhã de Carnaval" — became an international symbol of the bossa nova movement. The film won the Palme d\'Or at Cannes and an Academy Award for Best Foreign Language Film, bringing Brazilian music to worldwide attention and helping spark the global bossa nova craze of the early 1960s.',
+  notableRecordings: [
+    'Luiz Bonfá — Orfeu Negro soundtrack (1959)',
+    'Stan Getz — (various recordings)',
+    'Astrud Gilberto — (various recordings)',
+    'Widely covered — (one of the most recorded bossa nova standards)',
+  ],
+  harmonicSummary: 'Black Orpheus (Manhã de Carnaval) is typically played in A minor and features lyrical, flowing bossa nova harmony. The tune moves between A minor and its relative major (C), using diatonic ii-V-i progressions (Bm7b5→E7→Am and Dm7→G7→Cmaj7) with gentle forward motion. The sparse harmonic rhythm and the elegant bossa nova groove give soloists space to phrase melodically. Its accessibility and beauty have made it one of the most frequently performed bossa nova pieces in jazz.',
+  metaDescription: 'Black Orpheus chord changes and harmonic analysis. Luiz Bonfá\'s bossa nova classic from Orfeu Negro (1959): A minor, bossa nova groove, with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

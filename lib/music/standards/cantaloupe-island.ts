@@ -16,6 +16,15 @@ export const CANTALOUPE_ISLAND: Standard = {
   difficulty: 'beginner',
   tags: ['modal', 'funk', 'hancock', 'groove', 'beginner-friendly'],
   description: 'A funky modal tune by Herbie Hancock. Features a simple 16-bar form with a strong groove and minimal harmonic movement.',
+  style: 'Hard Bop',
+  historicalContext: 'Composed by Herbie Hancock and first recorded on his Blue Note album Empyrean Isles (1964), Cantaloupe Island is a funky, modal-tinged hard bop piece built on a repeated vamp. Its hypnotic Fm7 groove achieved mainstream recognition decades later when the British acid jazz group US3 sampled it for their 1993 hip-hop hit "Cantaloop (Flip Fantasia)".',
+  notableRecordings: [
+    'Herbie Hancock — Empyrean Isles (1964)',
+    'US3 — Cantaloop (Flip Fantasia) (1993, sample-based)',
+    'Herbie Hancock — (various live recordings)',
+  ],
+  harmonicSummary: 'Cantaloupe Island is a three-section vamp tune built on three repeated two-bar modal grooves: Fm7 (F Dorian), Db7 (Lydian Dominant), and Dm7 (D Dorian). Rather than conventional chord progressions, each section is a static vamp on a single chord with a funky rhythmic feel. The tune has almost no harmonic motion in the traditional sense — soloists improvise over each modal area using the appropriate scale (Dorian over the m7 chords, Lydian Dominant over Db7).',
+  metaDescription: 'Cantaloupe Island chord changes and harmonic analysis. Herbie Hancock\'s modal hard bop vamp (1964): Fm7, Db7, Dm7 modal sections, from Empyrean Isles, with notation and scale guides.',
   sections: [
     {
       name: 'A',

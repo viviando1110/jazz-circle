@@ -21,6 +21,16 @@ export const CHEROKEE: Standard = {
   tags: ['standard', 'bebop', 'advanced', 'fast tempo', 'charlie parker'],
   description:
     'Cherokee is a challenging bebop standard composed by Ray Noble in 1938 and famously recorded by Charlie Parker. This 64-bar AABA form features rapid chord changes, particularly in the bridge which moves through multiple key centers in quick succession. The tune is a rite of passage for bebop musicians and demands technical fluency and harmonic sophistication.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by British bandleader Ray Noble in 1938, Cherokee became a bebop proving ground after Charlie Parker used it as the basis for "Ko-Ko" (1945), one of the landmark recordings of the bebop era. Its extremely fast chord changes in the bridge — cycling through remote key centers at a rapid pace — make it one of the most demanding standards in the jazz repertoire at up-tempo.',
+  notableRecordings: [
+    'Charlie Parker — Ko-Ko (1945, contrafact on Cherokee changes)',
+    'Charlie Barnet — (1939, original swing version)',
+    'Clifford Brown — (various recordings)',
+    'Bud Powell — (various recordings)',
+  ],
+  harmonicSummary: 'Cherokee is a 64-bar standard (AABA with 16-bar sections) in Bb major. The A sections are in Bb major with typical ii-V-I motion. The 16-bar bridge is the challenge: it starts in B major (a half-step above Bb), then moves to Bb major via Bb major, then to Ab major, then to Gb major — cycling through four keys a major third apart in an early precursor to Coltrane\'s Giant Steps concept. At bebop tempos (250+ BPM), the bridge demands instant harmonic fluency across remote key centers.',
+  metaDescription: 'Cherokee chord changes and harmonic analysis. Ray Noble\'s 1938 standard: 64-bar form, demanding bridge through B, Bb, Ab, Gb keys — bebop proving ground, with notation and scale guides.',
 
   sections: [
     {

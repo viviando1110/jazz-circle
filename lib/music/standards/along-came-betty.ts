@@ -16,6 +16,15 @@ export const ALONG_CAME_BETTY: Standard = {
   difficulty: 'advanced',
   tags: ['standard', 'bebop', 'hard-bop', 'complex-changes'],
   description: 'A sophisticated hard bop composition with intricate chord changes. Benny Golson\'s tribute to Betty Carter features a challenging harmonic progression that moves through multiple tonal centers, testing improvisers\' skills.',
+  style: 'Hard Bop',
+  historicalContext: 'Composed by Benny Golson in 1958 for the Art Blakey & the Jazz Messengers album Moanin\', Along Came Betty was written as a tribute to Betty Golson (the composer\'s wife). Its sweeping melodic arc and sophisticated multi-key harmonic movement became hallmarks of Golson\'s compositional style and made it one of the most celebrated hard bop standards.',
+  notableRecordings: [
+    'Art Blakey & the Jazz Messengers — Moanin\' (1958)',
+    'Benny Golson — (various recordings)',
+    'Hank Mobley — (various 1960s recordings)',
+  ],
+  harmonicSummary: 'Along Came Betty is a 32-bar AABA standard in Bb major that moves fluidly through multiple key centers via chromatic ii-V progressions. The A section begins in Bb and navigates through chromatic ii-V pairs to reach F major and back, creating a sense of harmonic journey. The bridge introduces contrasting material before the final A resolves. The tune\'s flowing harmonic rhythm and expressive melodic contour demand smooth voice leading across key centers — a hallmark of Golson\'s writing.',
+  metaDescription: 'Along Came Betty chord changes and harmonic analysis. Benny Golson\'s hard bop standard (1958): multi-key ii-V progressions, AABA form, with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

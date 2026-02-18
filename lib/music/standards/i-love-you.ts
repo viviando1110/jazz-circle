@@ -16,6 +16,16 @@ export const I_LOVE_YOU: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'porter', 'romantic'],
   description: 'A Cole Porter classic with elegant harmonic progression. Features distinctive chromatic movement and secondary dominants.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Cole Porter for the 1943 Broadway musical Mexican Hayride, I Love You has a somewhat unusual AABA structure and harmonic language typical of Porter\'s sophisticated approach. Despite sharing a title with many other songs, this Porter composition is identified by its specific chord changes and has become a jazz standard in its own right.',
+  notableRecordings: [
+    'Bing Crosby — (1944 recording)',
+    'Charlie Parker — (various recordings)',
+    'Bud Powell — (various recordings)',
+  ],
+  harmonicSummary: 'I Love You (Cole Porter) is a 32-bar AABA standard in F major with Porter\'s characteristic harmonic sophistication. The A section moves through F major with secondary dominants and chromatic passing chords, creating forward harmonic momentum. The bridge provides contrast through a different key area before the final A resolves home. The tune\'s clean harmonic structure and swing feel make it a versatile vehicle for jazz improvisation at medium to fast tempos.',
+  metaDescription: 'I Love You chord changes and harmonic analysis. Cole Porter\'s 1943 jazz standard in F major: AABA form, secondary dominants, with notation, playback, and scale guides.',
+
   sections: [
     {
       name: 'A',

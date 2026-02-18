@@ -58,7 +58,8 @@ export function generateKeyPageMeta(key: MusicalKey): Metadata {
 
 export function generateStandardPageMeta(standard: Standard): Metadata {
   const title = `${standard.title} Chord Changes — Jazz Circle`;
-  const description = `${standard.title} chord changes and harmonic analysis. Learn the chord progression, ${standard.form} form, and jazz improvisation tips for this ${standard.composer} composition (${standard.year}). Includes notation, playback, and scale guides.`;
+  const description = standard.metaDescription ??
+    `${standard.title} chord changes and harmonic analysis. Learn the chord progression, ${standard.form} form, and jazz improvisation tips for this ${standard.composer} composition (${standard.year}). Includes notation, playback, and scale guides.`;
 
   return {
     title: `${standard.title} — Jazz Chord Changes & Harmonic Analysis`,

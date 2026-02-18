@@ -16,6 +16,15 @@ export const SPRING_IS_HERE: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'ballad', 'rodgers'],
   description: 'A bittersweet ballad by Rodgers and Hart. Features beautiful chromatic movement and rich harmonic color.',
+  style: 'Ballad',
+  historicalContext: 'Composed by Richard Rodgers with lyrics by Lorenz Hart for the 1938 Broadway musical I Married an Angel, Spring Is Here is a poignant ballad whose bittersweet lyric — about unrequited love despite the arrival of spring — suits its gentle, flowing harmonic language. It has been recorded by many jazz singers and instrumentalists as a vehicle for lyrical introspection.',
+  notableRecordings: [
+    'Chet Baker — (various recordings)',
+    'Bill Evans — (various recordings)',
+    'Miles Davis — (various recordings)',
+  ],
+  harmonicSummary: 'Spring Is Here is a 32-bar AABA ballad in F major with warm, diatonic harmonic movement. The A sections feature clean ii-V-I progressions in F with secondary dominants adding gentle color — E7 briefly tonicizing Am, A7 briefly tonicizing Dm. The bridge moves to a contrasting tonal area before the final A returns home. The tune\'s unhurried harmonic rhythm and lyrical quality make it ideal for developing a singing, breath-based approach to jazz improvisation.',
+  metaDescription: 'Spring Is Here chord changes and harmonic analysis. Rodgers/Hart 1938 jazz ballad in F major: AABA, gentle ii-V-I progressions — with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

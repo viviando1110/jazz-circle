@@ -16,6 +16,15 @@ export const EVERYTHING_HAPPENS_TO_ME: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'ballad', 'romantic'],
   description: 'A melancholic ballad made famous by Frank Sinatra. Features smooth voice leading and romantic harmonic progressions.',
+  style: 'Ballad',
+  historicalContext: 'Composed by Matt Dennis with lyrics by Tom Adair in 1940, Everything Happens to Me became associated with Frank Sinatra\'s early recordings with Tommy Dorsey. The song\'s self-deprecating lyric and wistful harmonic language — which includes some surprisingly sophisticated chromatic movement for a popular song — gave it lasting appeal in the jazz ballad repertoire.',
+  notableRecordings: [
+    'Frank Sinatra with Tommy Dorsey — (1941 recording)',
+    'Chet Baker — (various recordings)',
+    'Bill Evans — (various recordings)',
+  ],
+  harmonicSummary: 'Everything Happens to Me is a 32-bar AABA ballad in Bb major with a chromatically rich harmonic language unusual for a popular song of its era. The A section features a chain of ii-V progressions that pass through related and chromatic key areas — the chords don\'t simply stay in Bb but venture to G major and other areas via smooth voice leading. The bridge provides contrast before the final A resolves home. This harmonic sophistication makes it a rewarding vehicle for exploring chord substitutions.',
+  metaDescription: 'Everything Happens to Me chord changes and harmonic analysis. Matt Dennis\'s 1940 jazz ballad: Bb major, chromatic ii-V progressions, AABA — Sinatra standard, with notation and scale guides.',
   sections: [
     {
       name: 'A',

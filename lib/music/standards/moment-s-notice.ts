@@ -16,6 +16,15 @@ export const MOMENT_S_NOTICE: Standard = {
   difficulty: 'advanced',
   tags: ['hard-bop', 'bebop', 'modern'],
   description: 'A challenging Coltrane composition featuring rapid key changes through the cycle of fifths. The tune moves through multiple tonal centers, requiring advanced harmonic understanding and technical facility.',
+  style: 'Post-Bop',
+  historicalContext: 'Composed by John Coltrane and recorded on his landmark Blue Note album Blue Train (1957), Moment\'s Notice is one of Coltrane\'s most sophisticated compositions. Its complex, rapidly moving chord changes — featuring ii-V-I progressions in multiple keys moving at a pace of two chords per bar — showcased the harmonic complexity Coltrane was developing before his later modal period.',
+  notableRecordings: [
+    'John Coltrane — Blue Train (1957)',
+    'Widely studied — (Coltrane composition requiring harmonic fluency)',
+  ],
+  harmonicSummary: 'Moment\'s Notice is a 32-bar composition (typically AABA) in F major with rapidly shifting ii-V-I progressions that move through multiple key centers at two chords per bar. The A section cycles through ii-V-I patterns in Eb, Db, F, and Db major in quick succession. The harmonic movement is denser than any standard of its era, requiring complete fluency in ii-V-I patterns in all keys. It foreshadowed the harmonic density of Giant Steps (1960) and remains one of the most challenging bebop/post-bop heads to navigate.',
+  metaDescription: 'Moment\'s Notice chord changes and harmonic analysis. John Coltrane\'s post-bop composition (1957): rapid ii-V-I in multiple keys — from Blue Train, with notation, playback, and scale guides.',
+
   sections: [
     {
       name: 'A',

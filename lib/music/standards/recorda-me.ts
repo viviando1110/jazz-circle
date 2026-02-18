@@ -16,6 +16,14 @@ export const RECORDA_ME: Standard = {
   difficulty: 'intermediate',
   tags: ['hard-bop', 'modal', 'modern'],
   description: 'A classic Joe Henderson composition combining bossa nova feel with hard bop harmony. Features a 16-bar A section with modal minor tonality and an 8-bar contrasting B section.',
+  style: 'Hard Bop',
+  historicalContext: 'Composed by Joe Henderson and recorded on his debut Blue Note album Page One (1963) alongside Blue Bossa, Recorda-Me (meaning "Remember Me" in Portuguese) has a Latin bossa nova feel and became a standard in the hard bop and Latin jazz repertoire. Along with Blue Bossa and Ceora, it represents the Latin-influenced strand of 1960s Blue Note hard bop.',
+  notableRecordings: [
+    'Joe Henderson — Page One (1963)',
+    'Widely recorded — (Latin jazz standard)',
+  ],
+  harmonicSummary: 'Recorda-Me is a minor-key Latin jazz standard (typically in A minor) with a bossa nova groove. The form moves through minor ii-V-i progressions (Bm7b5→E7→Am) and related major area harmony, with a gentle Latin rhythmic feel throughout. The harmonic language is straightforward compared to some post-bop pieces, focusing instead on the rhythmic interaction between the jazz feel and the Latin clave. Its accessible changes and appealing groove make it a popular choice for jazz sessions with a Latin flavor.',
+  metaDescription: 'Recorda-Me chord changes and harmonic analysis. Joe Henderson\'s Latin jazz standard (1963): A minor, bossa nova groove — from Page One, with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

@@ -16,6 +16,17 @@ export const MY_ROMANCE: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'ballad', 'rodgers-hart', '1930s'],
   description: 'Classic Rodgers and Hart ballad with beautiful voice leading. A favorite for ballad playing with sophisticated harmonic movement.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Richard Rodgers with lyrics by Lorenz Hart for the 1935 Broadway musical Jumbo, My Romance is one of the most recorded Rodgers and Hart songs in jazz. Its gentle, lilting character and clean harmonic language make it popular with both singers and pianists. Bill Evans\'s solo piano version is considered the definitive jazz interpretation.',
+  notableRecordings: [
+    'Jimmy Durante — (1935 original Broadway)',
+    'Bill Evans — Waltz for Debby (1961)',
+    'Tony Bennett — (various recordings)',
+    'Widely recorded — (jazz standard)',
+  ],
+  harmonicSummary: 'My Romance is a 32-bar AABA standard in C major with accessible, song-like harmonic movement. The A sections feature clean ii-V-I progressions in C with diatonic secondary dominants, creating a flowing, symmetrical harmonic rhythm. The bridge briefly tonicizes the subdominant (F major) before the final A resolves home. Its predictable but satisfying harmonic movement and lush melody make it an ideal vehicle for lyrical improvisation and chord melody playing.',
+  metaDescription: 'My Romance chord changes and harmonic analysis. Rodgers/Hart 1935 jazz standard in C major: clean ii-V-I, AABA form — Bill Evans piano classic, with notation, playback, and scale guides.',
+
   sections: [
     {
       name: 'A',

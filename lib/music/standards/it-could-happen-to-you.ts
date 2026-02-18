@@ -16,6 +16,15 @@ export const IT_COULD_HAPPEN_TO_YOU: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'swing', 'uptempo'],
   description: 'A swinging standard with straightforward harmony. Great for practicing ii-V-I progressions and melodic development.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Jimmy Van Heusen with lyrics by Johnny Burke for the 1944 film And the Angels Sing, It Could Happen to You became a jazz standard through its accessible harmonic language and memorable melody. It is frequently associated with Chet Baker, whose relaxed, lyrical rendition remains a touchstone interpretation.',
+  notableRecordings: [
+    'Bing Crosby — (1944 original film version)',
+    'Chet Baker — (various recordings, considered definitive)',
+    'Diana Krall — When I Look in Your Eyes (1999)',
+  ],
+  harmonicSummary: 'It Could Happen to You is a 32-bar AABA standard in Eb major with a warm, accessible harmonic language. The A sections feature clean ii-V-I progressions in Eb with secondary dominants adding gentle color. The bridge moves to a contrasting key area before the final A returns home. Its comfortable harmonic movement and lyrical melody make it an excellent vehicle for developing a singing, relaxed approach to jazz improvisation, particularly in a ballad or medium swing context.',
+  metaDescription: 'It Could Happen to You chord changes and harmonic analysis. Jimmy Van Heusen\'s 1944 jazz standard in Eb major: AABA, clean ii-V-I — Chet Baker classic, with notation and scale guides.',
   sections: [
     {
       name: 'A',

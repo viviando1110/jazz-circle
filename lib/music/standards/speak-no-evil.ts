@@ -16,6 +16,15 @@ export const SPEAK_NO_EVIL: Standard = {
   difficulty: 'advanced',
   tags: ['hard-bop', 'modal', 'modern'],
   description: 'A challenging Wayne Shorter composition with unconventional harmonic progressions and a dark, mysterious quality. Features modal sections mixed with chromatic movement, requiring advanced harmonic understanding.',
+  style: 'Post-Bop',
+  historicalContext: 'Composed by Wayne Shorter and recorded on his 1964 Blue Note album of the same name, Speak No Evil represents Shorter\'s mature compositional voice — a dark, modal post-bop sound that blends minor key tonality with unexpected harmonic colors. It became one of his most celebrated compositions and a touchstone of the 1960s Blue Note aesthetic.',
+  notableRecordings: [
+    'Wayne Shorter — Speak No Evil (1964)',
+    'Herbie Hancock — (various recordings)',
+    'Widely recorded — (post-bop standard)',
+  ],
+  harmonicSummary: 'Speak No Evil is a minor-key composition (typically in D minor) with Wayne Shorter\'s characteristic use of suspended chords, modal harmony, and non-functional chord progressions. Rather than conventional ii-V-i resolutions, Shorter uses chords that drift and hover, creating an ominous, dark atmosphere. The form moves through related minor key areas with chromatic sidesteps. The harmonic language requires less chord-scale thinking and more an awareness of color and atmosphere — each chord is a tonal environment to inhabit rather than navigate.',
+  metaDescription: 'Speak No Evil chord changes and harmonic analysis. Wayne Shorter\'s post-bop composition (1964): D minor, suspended modal harmony — from the Blue Note classic, with notation and scale guides.',
   sections: [
     {
       name: 'A',

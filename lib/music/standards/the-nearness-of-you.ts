@@ -16,6 +16,16 @@ export const THE_NEARNESS_OF_YOU: Standard = {
   difficulty: 'beginner',
   tags: ['standard', 'ballad', 'romantic', 'swing-era', 'popular'],
   description: 'A timeless romantic ballad from the Great American Songbook. Hoagy Carmichael\'s warm melody and accessible chord changes make this an ideal introduction to jazz ballads while offering depth for sophisticated interpretation.',
+  style: 'Ballad',
+  historicalContext: 'Composed by Hoagy Carmichael with lyrics by Ned Washington in 1938 for the film Romance in the Dark, The Nearness of You became a popular jazz ballad standard. Norah Jones\'s 2002 Grammy-winning debut album Come Away with Me brought it to a new generation of listeners, demonstrating the timelessness of this gentle, romantic song.',
+  notableRecordings: [
+    'Glenn Miller — (1940 recording)',
+    'Norah Jones — Come Away with Me (2002)',
+    'Ella Fitzgerald — (various recordings)',
+    'Sarah Vaughan — (various recordings)',
+  ],
+  harmonicSummary: 'The Nearness of You is a 32-bar AABA ballad in F major with warm, accessible harmonic language. The A sections feature smooth ii-V-I progressions in F with gentle secondary dominants (E7→Am, A7→Dm) creating a forward-moving, romantic harmonic momentum. The bridge briefly tonicizes Bb major before the final A returns home. The tune\'s comfortable harmonic flow and lush melody make it one of the most welcoming jazz ballads for developing a lyrical improvisational style.',
+  metaDescription: 'The Nearness of You chord changes and harmonic analysis. Hoagy Carmichael\'s 1938 jazz ballad in F major: AABA, gentle secondary dominants — with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

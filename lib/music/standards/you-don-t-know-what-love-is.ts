@@ -16,6 +16,16 @@ export const YOU_DON_T_KNOW_WHAT_LOVE_IS: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'ballad', 'minor', 'dramatic'],
   description: 'A deeply expressive minor key ballad. Features dramatic harmonic shifts and is a favorite for improvisation.',
+  style: 'Ballad',
+  historicalContext: 'Composed by Don Raye and Gene DePaul for the 1941 film Keep \'Em Flying, You Don\'t Know What Love Is became one of the most emotionally resonant jazz ballads. Its dark, brooding F minor tonality and deeply expressive melodic line attracted some of the most celebrated jazz musicians. Coltrane\'s recording is considered one of the definitive ballad performances in jazz.',
+  notableRecordings: [
+    'John Coltrane — Coltrane (1957)',
+    'Billie Holiday — (various recordings)',
+    'Miles Davis — (various recordings)',
+    'Bill Evans — (various recordings)',
+  ],
+  harmonicSummary: 'You Don\'t Know What Love Is is a 32-bar AABA ballad in F minor with a harmonically rich minor-key language. The A sections feature minor ii-V-i progressions (Gm7b5→C7→Fm) with chromatic passing chords and extended voicings that give the tune its deeply emotional character. The bridge moves to the relative major (Ab) before the final A returns to the dark F minor tonality. The slow harmonic rhythm and dense, expressively voiced chords reward patient, deeply felt ballad playing.',
+  metaDescription: 'You Don\'t Know What Love Is chord changes and harmonic analysis. Raye/DePaul 1941 jazz ballad in F minor: minor ii-V-i — Coltrane & Billie Holiday classic, with notation and scale guides.',
   sections: [
     {
       name: 'A',

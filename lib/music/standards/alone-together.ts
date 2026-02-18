@@ -16,6 +16,16 @@ export const ALONE_TOGETHER: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'minor', 'swing'],
   description: 'A minor key standard with sophisticated harmonic movement. Features chromatic ii-V progressions and dramatic melodic contour.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Arthur Schwartz with lyrics by Howard Dietz for the 1932 Broadway revue Flying Colors, Alone Together has become a beloved jazz standard, particularly in the bebop and post-bop eras. Its dark, introspective character in D minor and rich harmonic vocabulary made it a favorite vehicle for improvisers seeking emotional depth.',
+  notableRecordings: [
+    'Chet Baker — (various recordings)',
+    'Bill Evans — (various recordings)',
+    'Stan Getz — (various recordings)',
+    'Art Farmer & Jim Hall — (1960s recordings)',
+  ],
+  harmonicSummary: 'Alone Together is a minor key standard in D minor that makes extensive use of minor ii-V-i progressions (Em7b5→A7→Dm) and chromatic harmonic motion. The form moves through several related key centers, using ii-V progressions to tonicize different chord areas. The tune\'s harmonic richness comes from the interplay between the home key of D minor and excursions to its relative major (F) and subdominant minor (Gm), connected by smooth voice-leading ii-V progressions.',
+  metaDescription: 'Alone Together chord changes and harmonic analysis. Arthur Schwartz\'s 1932 jazz standard in D minor: minor ii-V-i progressions, with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

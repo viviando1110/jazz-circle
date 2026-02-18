@@ -16,6 +16,15 @@ export const WELL_YOU_NEEDNT: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'bebop', 'monk', '1940s', 'hard-bop'],
   description: "Thelonious Monk's composition with a distinctive angular melody and straightforward harmony. A bebop classic with Monk's characteristic wit.",
+  style: 'Bebop',
+  historicalContext: 'Composed by Thelonious Monk around 1944 and recorded in 1947, Well You Needn\'t (also known as "It\'s Over Now") is one of Monk\'s most angular and harmonically idiosyncratic compositions. Its lurching, syncopated melody and unexpected harmonic movement reflect Monk\'s unique compositional personality — music that sounds "wrong" but is perfectly logical on its own terms.',
+  notableRecordings: [
+    'Thelonious Monk — (1947 recording)',
+    'Thelonious Monk Quartet — (multiple studio and live recordings)',
+    'Miles Davis — (various recordings)',
+  ],
+  harmonicSummary: 'Well You Needn\'t is a 32-bar AABA composition in F major (or Bb, in some versions) with Monk\'s characteristic angular harmony. The A section alternates between the home key and a chord a half-step up — F→F#→F — creating the "wrong note" feel that is Monk\'s signature. The bridge moves through contrasting harmonic territory with unexpected chord choices before the final A returns home. Monk\'s use of half-step dissonance, tritone relationships, and rhythmic displacement creates a harmonic language that rewards careful listening and analysis.',
+  metaDescription: 'Well You Needn\'t chord changes and harmonic analysis. Thelonious Monk\'s angular bebop composition (1944): F major with half-step dissonance — with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',

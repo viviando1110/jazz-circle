@@ -16,6 +16,15 @@ export const LIKE_SOMEONE_IN_LOVE: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'ballad', 'van-heusen', '1940s'],
   description: 'Jimmy Van Heusen ballad with a memorable melody. Features interesting harmonic turns and is beloved by vocalists and instrumentalists.',
+  style: 'Ballad',
+  historicalContext: 'Composed by Jimmy Van Heusen with lyrics by Johnny Burke for the 1944 film Belle of the Yukon, Like Someone in Love became a beloved jazz ballad. It is particularly associated with Chet Baker, whose tender interpretations captured the tune\'s dreamy, floating quality. Bill Evans also recorded it beautifully, emphasizing its harmonic lushness.',
+  notableRecordings: [
+    'Bing Crosby — (1944 original)',
+    'Chet Baker — (various recordings, considered the definitive jazz version)',
+    'Bill Evans — (various recordings)',
+  ],
+  harmonicSummary: 'Like Someone in Love is a 32-bar AABA ballad typically in F major with warm, chromatic harmony. The A sections drift through F major with extended chords and secondary dominants that create a floating, dreamy quality. A key feature is the unexpected chromatic chord movement in the A section that resolves unexpectedly — giving the tune its slightly dizzy, in-love quality. The bridge provides contrast before returning home. Its lush, impressionistic character suits piano solo and trio settings particularly well.',
+  metaDescription: 'Like Someone in Love chord changes and harmonic analysis. Jimmy Van Heusen\'s 1944 jazz ballad: F major, floating chromatic harmony — Chet Baker classic, with notation and scale guides.',
   sections: [
     {
       name: 'A',

@@ -16,6 +16,16 @@ export const PRELUDE_TO_A_KISS: Standard = {
   difficulty: 'intermediate',
   tags: ['standard', 'ellington', 'ballad', 'romantic'],
   description: 'An Ellington masterpiece with lush chromatic harmony. Features sophisticated reharmonization and beautiful voice leading.',
+  style: 'Jazz Standard',
+  historicalContext: 'Composed by Duke Ellington with lyrics by Irving Gordon and Irving Mills in 1938, Prelude to a Kiss is one of Ellington\'s most harmonically adventurous compositions for a popular song. Its chromatic harmony — featuring unexpected half-step modulations and altered chords unusual for the era — gave jazz musicians a rich vehicle for sophisticated harmonic exploration.',
+  notableRecordings: [
+    'Duke Ellington — (1938 original)',
+    'Duke Ellington & John Coltrane — (1962 collaboration)',
+    'Bill Evans — (various recordings)',
+    'Widely recorded — (Ellington jazz standard)',
+  ],
+  harmonicSummary: 'Prelude to a Kiss is an AABA standard in G major with some of the most chromatic harmonic movement in Ellington\'s catalog. The A section features unexpected half-step chord movements and altered dominants that avoid predictable ii-V-I resolution, giving the tune a searching, yearning quality that matches its title. The bridge provides harmonic contrast before the final resolution. Its unusual chromatic language makes it more challenging than it appears on the surface and rewards careful harmonic analysis.',
+  metaDescription: 'Prelude to a Kiss chord changes and harmonic analysis. Duke Ellington\'s 1938 jazz standard in G major: chromatic harmony, unexpected half-step moves — with notation, playback, and scale guides.',
   sections: [
     {
       name: 'A',
