@@ -1,0 +1,151 @@
+# Jazz Circle
+> Interactive chord changes, harmonic analysis, and practice tools for 107 jazz standards.
+
+Jazz Circle (jazz-circle.com) provides accurate chord progressions, detailed harmonic analysis,
+voice-led piano voicings, and interactive practice tools for the most important jazz standards
+in the repertoire. All content is original analysis — no copyrighted melodies or lyrics.
+
+## What This Site Does
+
+- Chord changes for 107 jazz standards with bar-by-bar breakdown
+- Harmonic analysis: key centers, ii-V-I locations, modulations, borrowed chords
+- Interactive chord chart with playback at adjustable tempo
+- VexFlow staff notation for each standard
+- Circle of fifths explorer and key-based navigation
+- Practice tools: metronome, MIDI export, melody generator
+- Transposition: all standards available in Gm and Em voicings
+
+## Key Pages
+
+- Home: https://jazz-circle.com
+- All Standards: https://jazz-circle.com/standards
+- Circle of Fifths: https://jazz-circle.com/circle
+- Practice Tools: https://jazz-circle.com/practice
+
+## Jazz Standards — Chord Changes & Harmonic Analysis
+
+https://jazz-circle.com/standards/a-night-in-tunisia — A Night in Tunisia (Dizzy Gillespie, D minor)
+https://jazz-circle.com/standards/all-blues — All Blues (Miles Davis, G major)
+https://jazz-circle.com/standards/all-of-me — All of Me (Gerald Marks & Seymour Simons, C major)
+https://jazz-circle.com/standards/all-the-things-you-are — All The Things You Are (Jerome Kern, Ab major)
+https://jazz-circle.com/standards/alone-together — Alone Together (Arthur Schwartz, D minor)
+https://jazz-circle.com/standards/along-came-betty — Along Came Betty (Benny Golson, Bb major)
+https://jazz-circle.com/standards/anthropology — Anthropology (Charlie Parker, Bb major)
+https://jazz-circle.com/standards/autumn-leaves — Autumn Leaves (Joseph Kosma, G minor)
+https://jazz-circle.com/standards/beautiful-love — Beautiful Love (Victor Young, D minor)
+https://jazz-circle.com/standards/billie-s-bounce — Billie's Bounce (Charlie Parker, F major)
+https://jazz-circle.com/standards/black-orpheus — Black Orpheus (Luiz Bonfa, A minor)
+https://jazz-circle.com/standards/blue-bossa — Blue Bossa (Kenny Dorham, C minor)
+https://jazz-circle.com/standards/blue-in-green — Blue in Green (Miles Davis, Bb major)
+https://jazz-circle.com/standards/blues-for-alice — Blues for Alice (Charlie Parker, F major)
+https://jazz-circle.com/standards/blues-march — Blues March (Benny Golson, Bb major)
+https://jazz-circle.com/standards/body-and-soul — Body and Soul (Johnny Green, Db major)
+https://jazz-circle.com/standards/but-beautiful — But Beautiful (Jimmy Van Heusen, G major)
+https://jazz-circle.com/standards/cantaloupe-island — Cantaloupe Island (Herbie Hancock, F minor)
+https://jazz-circle.com/standards/ceora — Ceora (Lee Morgan, Ab major)
+https://jazz-circle.com/standards/cherokee — Cherokee (Ray Noble, Bb major)
+https://jazz-circle.com/standards/confirmation — Confirmation (Charlie Parker, F major)
+https://jazz-circle.com/standards/corcovado — Corcovado (Antonio Carlos Jobim, C major)
+https://jazz-circle.com/standards/darn-that-dream — Darn That Dream (Jimmy Van Heusen, G major)
+https://jazz-circle.com/standards/days-of-wine-and-roses — Days of Wine and Roses (Henry Mancini, F major)
+https://jazz-circle.com/standards/desafinado — Desafinado (Antonio Carlos Jobim, F major)
+https://jazz-circle.com/standards/dolphin-dance — Dolphin Dance (Herbie Hancock, Eb major)
+https://jazz-circle.com/standards/donna-lee — Donna Lee (Miles Davis, Ab major)
+https://jazz-circle.com/standards/easy-living — Easy Living (Ralph Rainger, F major)
+https://jazz-circle.com/standards/everything-happens-to-me — Everything Happens to Me (Matt Dennis, Eb major)
+https://jazz-circle.com/standards/fly-me-to-the-moon — Fly Me to the Moon (Bart Howard, C major)
+https://jazz-circle.com/standards/footprints — Footprints (Wayne Shorter, C minor)
+https://jazz-circle.com/standards/four — Four (Miles Davis, Eb major)
+https://jazz-circle.com/standards/freddie-freeloader — Freddie Freeloader (Miles Davis, Bb major)
+https://jazz-circle.com/standards/giant-steps — Giant Steps (John Coltrane, B major)
+https://jazz-circle.com/standards/goodbye-pork-pie-hat — Goodbye Pork Pie Hat (Charles Mingus, Eb major)
+https://jazz-circle.com/standards/have-you-met-miss-jones — Have You Met Miss Jones? (Richard Rodgers, F major)
+https://jazz-circle.com/standards/heres-that-rainy-day — Here's That Rainy Day (Jimmy Van Heusen, G major)
+https://jazz-circle.com/standards/how-high-the-moon — How High the Moon (Morgan Lewis, G major)
+https://jazz-circle.com/standards/how-insensitive — How Insensitive (Antonio Carlos Jobim, D minor)
+https://jazz-circle.com/standards/i-got-rhythm — I Got Rhythm (George Gershwin, Bb major)
+https://jazz-circle.com/standards/i-hear-a-rhapsody — I Hear a Rhapsody (George Fragos, Eb major)
+https://jazz-circle.com/standards/i-love-you — I Love You (Cole Porter, F major)
+https://jazz-circle.com/standards/i-remember-you — I Remember You (Victor Schertzinger, F major)
+https://jazz-circle.com/standards/if-i-should-lose-you — If I Should Lose You (Ralph Rainger, Db major)
+https://jazz-circle.com/standards/impressions — Impressions (John Coltrane, D minor)
+https://jazz-circle.com/standards/in-a-mellow-tone — In a Mellow Tone (Duke Ellington, Ab major)
+https://jazz-circle.com/standards/in-a-sentimental-mood — In a Sentimental Mood (Duke Ellington, F major)
+https://jazz-circle.com/standards/invitation — Invitation (Bronislau Kaper, C minor)
+https://jazz-circle.com/standards/it-could-happen-to-you — It Could Happen to You (Jimmy Van Heusen, Eb major)
+https://jazz-circle.com/standards/joy-spring — Joy Spring (Clifford Brown, F major)
+https://jazz-circle.com/standards/just-friends — Just Friends (John Klenner, C major)
+https://jazz-circle.com/standards/killer-joe — Killer Joe (Benny Golson, C major)
+https://jazz-circle.com/standards/like-someone-in-love — Like Someone in Love (Jimmy Van Heusen, C major)
+https://jazz-circle.com/standards/lush-life — Lush Life (Billy Strayhorn, Db major)
+https://jazz-circle.com/standards/maiden-voyage — Maiden Voyage (Herbie Hancock, D major)
+https://jazz-circle.com/standards/mercy-mercy-mercy — Mercy, Mercy, Mercy (Joe Zawinul, Bb major)
+https://jazz-circle.com/standards/misty — Misty (Erroll Garner, Eb major)
+https://jazz-circle.com/standards/moanin — Moanin' (Bobby Timmons, F minor)
+https://jazz-circle.com/standards/moment-s-notice — Moment's Notice (John Coltrane, Eb major)
+https://jazz-circle.com/standards/my-favorite-things — My Favorite Things (Richard Rodgers, E minor)
+https://jazz-circle.com/standards/my-funny-valentine — My Funny Valentine (Richard Rodgers, C minor)
+https://jazz-circle.com/standards/my-one-and-only-love — My One and Only Love (Guy Wood, C major)
+https://jazz-circle.com/standards/my-romance — My Romance (Richard Rodgers, C major)
+https://jazz-circle.com/standards/naima — Naima (John Coltrane, Eb major)
+https://jazz-circle.com/standards/nefertiti — Nefertiti (Wayne Shorter, Bb major)
+https://jazz-circle.com/standards/nicas-dream — Nica's Dream (Horace Silver, Bb minor)
+https://jazz-circle.com/standards/night-and-day — Night and Day (Cole Porter, Eb major)
+https://jazz-circle.com/standards/old-folks — Old Folks (Willard Robison, C major)
+https://jazz-circle.com/standards/oleo — Oleo (Sonny Rollins, Bb major)
+https://jazz-circle.com/standards/on-green-dolphin-street — On Green Dolphin Street (Bronislau Kaper, C major)
+https://jazz-circle.com/standards/one-note-samba — One Note Samba (Antonio Carlos Jobim, Bb major)
+https://jazz-circle.com/standards/ornithology — Ornithology (Charlie Parker, G major)
+https://jazz-circle.com/standards/polka-dots-and-moonbeams — Polka Dots and Moonbeams (Jimmy Van Heusen, F major)
+https://jazz-circle.com/standards/prelude-to-a-kiss — Prelude to a Kiss (Duke Ellington, D major)
+https://jazz-circle.com/standards/recorda-me — Recorda-Me (Joe Henderson, A minor)
+https://jazz-circle.com/standards/round-midnight — 'Round Midnight (Thelonious Monk, Eb minor)
+https://jazz-circle.com/standards/satin-doll — Satin Doll (Duke Ellington, C major)
+https://jazz-circle.com/standards/so-what — So What (Miles Davis, D minor)
+https://jazz-circle.com/standards/solar — Solar (Miles Davis, C minor)
+https://jazz-circle.com/standards/song-for-my-father — Song for My Father (Horace Silver, F minor)
+https://jazz-circle.com/standards/sophisticated-lady — Sophisticated Lady (Duke Ellington, Ab major)
+https://jazz-circle.com/standards/speak-no-evil — Speak No Evil (Wayne Shorter, C minor)
+https://jazz-circle.com/standards/spring-is-here — Spring Is Here (Richard Rodgers, Bb major)
+https://jazz-circle.com/standards/stardust — Stardust (Hoagy Carmichael, C major)
+https://jazz-circle.com/standards/stella-by-starlight — Stella by Starlight (Victor Young, Bb major)
+https://jazz-circle.com/standards/stolen-moments — Stolen Moments (Oliver Nelson, C minor)
+https://jazz-circle.com/standards/summertime — Summertime (George Gershwin, A minor)
+https://jazz-circle.com/standards/take-the-a-train — Take the A Train (Billy Strayhorn, C major)
+https://jazz-circle.com/standards/tenderly — Tenderly (Walter Gross, Eb major)
+https://jazz-circle.com/standards/the-girl-from-ipanema — The Girl from Ipanema (Antonio Carlos Jobim, F major)
+https://jazz-circle.com/standards/the-nearness-of-you — The Nearness of You (Hoagy Carmichael, F major)
+https://jazz-circle.com/standards/the-preacher — The Preacher (Horace Silver, F major)
+https://jazz-circle.com/standards/the-shadow-of-your-smile — The Shadow of Your Smile (Johnny Mandel, F# minor)
+https://jazz-circle.com/standards/the-sidewinder — The Sidewinder (Lee Morgan, Eb major)
+https://jazz-circle.com/standards/there-will-never-be-another-you — There Will Never Be Another You (Harry Warren, Eb major)
+https://jazz-circle.com/standards/tune-up — Tune Up (Miles Davis, D major)
+https://jazz-circle.com/standards/watermelon-man — Watermelon Man (Herbie Hancock, F major)
+https://jazz-circle.com/standards/wave — Wave (Antonio Carlos Jobim, D major)
+https://jazz-circle.com/standards/well-you-neednt — Well You Needn't (Thelonious Monk, F major)
+https://jazz-circle.com/standards/what-is-this-thing-called-love — What Is This Thing Called Love? (Cole Porter, C major)
+https://jazz-circle.com/standards/when-i-fall-in-love — When I Fall in Love (Victor Young, Eb major)
+https://jazz-circle.com/standards/whisper-not — Whisper Not (Benny Golson, C minor)
+https://jazz-circle.com/standards/witch-hunt — Witch Hunt (Wayne Shorter, Eb minor)
+https://jazz-circle.com/standards/work-song — Work Song (Nat Adderley, F minor)
+https://jazz-circle.com/standards/yesterdays — Yesterdays (Jerome Kern, D minor)
+https://jazz-circle.com/standards/you-don-t-know-what-love-is — You Don't Know What Love Is (Gene de Paul, F minor)
+https://jazz-circle.com/standards/you-stepped-out-of-a-dream — You Stepped Out of a Dream (Nacio Herb Brown, C major)
+
+## Theory & Key Pages
+
+https://jazz-circle.com/key/c-major — C Major: chords, scales, jazz standards
+https://jazz-circle.com/key/g-major — G Major: chords, scales, jazz standards
+https://jazz-circle.com/key/d-major — D Major: chords, scales, jazz standards
+https://jazz-circle.com/key/a-major — A Major: chords, scales, jazz standards
+https://jazz-circle.com/key/e-major — E Major: chords, scales, jazz standards
+https://jazz-circle.com/key/b-major — B Major: chords, scales, jazz standards
+https://jazz-circle.com/key/f-major — F Major: chords, scales, jazz standards
+https://jazz-circle.com/key/bb-major — Bb Major: chords, scales, jazz standards
+https://jazz-circle.com/key/eb-major — Eb Major: chords, scales, jazz standards
+https://jazz-circle.com/key/ab-major — Ab Major: chords, scales, jazz standards
+https://jazz-circle.com/key/db-major — Db Major: chords, scales, jazz standards
+https://jazz-circle.com/key/f-minor — F Minor: chords, scales, jazz standards
+https://jazz-circle.com/key/c-minor — C Minor: chords, scales, jazz standards
+https://jazz-circle.com/key/g-minor — G Minor: chords, scales, jazz standards
+https://jazz-circle.com/key/d-minor — D Minor: chords, scales, jazz standards

@@ -3,6 +3,78 @@ import { notFound } from 'next/navigation';
 import { STANDARDS, getStandardBySlug } from '@/lib/music/standards';
 import { generateStandardPageMeta } from '@/lib/seo';
 import { StandardPageClient } from '@/components/standards/StandardPageClient';
+import type { Standard } from '@/lib/music/types';
+
+const SITE_URL = 'https://jazz-circle.com';
+
+function buildJsonLd(standard: Standard) {
+  const pageUrl = `${SITE_URL}/standards/${standard.slug}`;
+
+  const musicComposition = {
+    '@context': 'https://schema.org',
+    '@type': 'MusicComposition',
+    name: standard.title,
+    composer: { '@type': 'Person', name: standard.composer },
+    musicalKey: standard.defaultKey,
+    datePublished: String(standard.year),
+    genre: standard.style ?? 'Jazz Standard',
+    description: standard.metaDescription ?? standard.description,
+    url: pageUrl,
+  };
+
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Standards', item: `${SITE_URL}/standards` },
+      { '@type': 'ListItem', position: 3, name: standard.title, item: pageUrl },
+    ],
+  };
+
+  const faqItems = [
+    {
+      '@type': 'Question',
+      name: `What are the chord changes to ${standard.title}?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: standard.harmonicSummary ?? standard.description,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: `What key is ${standard.title} in?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `${standard.title} is in ${standard.defaultKey}. The ${standard.form} form spans ${standard.totalBars} bars.`,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: `Who composed ${standard.title}?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `${standard.title} was composed by ${standard.composer} in ${standard.year}.`,
+      },
+    },
+    ...(standard.style ? [{
+      '@type': 'Question',
+      name: `What style is ${standard.title}?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `${standard.title} is a ${standard.style} composition, typically played at ${standard.tempo.slow}–${standard.tempo.fast} BPM.`,
+      },
+    }] : []),
+  ];
+
+  const faqPage = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems,
+  };
+
+  return { musicComposition, breadcrumb, faqPage };
+}
 
 interface PageProps {
   params: { slug: string };
@@ -22,7 +94,13 @@ export default function StandardPage({ params }: PageProps) {
   const standard = getStandardBySlug(params.slug);
   if (!standard) notFound();
 
+  const { musicComposition, breadcrumb, faqPage } = buildJsonLd(standard);
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(musicComposition) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPage) }} />
     <main className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       {/* Header */}
       <header className="mb-8">
@@ -105,5 +183,6 @@ export default function StandardPage({ params }: PageProps) {
         </section>
       )}
     </main>
+    </>
   );
 }
