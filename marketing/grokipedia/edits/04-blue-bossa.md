@@ -17,48 +17,60 @@ Look for the educational or theory section describing the form.
 
 ### Exact Text to Highlight
 
-> Blue Bossa features a straightforward 32-bar AABA form
+```
+Blue Bossa features a straightforward 32-bar AABA form
+```
 
-*(Highlight "32-bar AABA form" or the full sentence containing it.)*
+Highlight "32-bar AABA form" or the full sentence containing it.
 
 ### Replacement Text
 
-> Blue Bossa is a 16-bar AB form: an 8-bar A section in C minor followed
-> by an 8-bar B section (bridge) in Db major. The head is typically
-> played twice, giving a 32-bar performance, which may be the source
-> of the "32-bar" description — but the composition itself is 16 bars,
-> and AABA is incorrect since there is no return to the A section material
-> within the form; it simply moves A→B→repeat.
+```
+Blue Bossa is a 16-bar AB form: an 8-bar A section in C minor followed
+by an 8-bar B section (bridge) in Db major. The head is typically
+played twice, giving a 32-bar performance, which may be the source
+of the "32-bar" description — but the composition itself is 16 bars,
+and AABA is incorrect since there is no return to the A section material
+within the form; it simply moves A→B→repeat.
+```
 
 ### Reason to Include in Submission Notes
 
+```
 The article's own chord listing shows 16 bars of music (8 bars C minor,
 8 bars Db major). The "32-bar AABA" label in the same article directly
 contradicts this listing — an internal consistency error that is verifiable
 without any external source. Blue Bossa's 16-bar AB form is documented
 in every lead sheet and jazz education resource.
+```
 
 ### Source Citation
 
+```
 https://jazz-circle.com/standards/blue-bossa
+```
 
 ---
 
 ## Edit #2 — Scale/Key Center Enhancement (Optional)
 
-### Replacement Text to Add
+### Text to Add
 
 After the chord listing, add:
 
-> The Db major bridge creates a striking harmonic color because Db
-> sits a half step above C, rather than being the relative major of
-> C minor (which would be Eb major). This bII relationship — sometimes
-> called a Neapolitan motion — gives the bridge its characteristic
-> brightness against the minor A section.
+```
+The Db major bridge creates a striking harmonic color because Db
+sits a half step above C, rather than being the relative major of
+C minor (which would be Eb major). This bII relationship — sometimes
+called a Neapolitan motion — gives the bridge its characteristic
+brightness against the minor A section.
+```
 
 ### Source Citation
 
+```
 https://jazz-circle.com/standards/blue-bossa
+```
 
 ---
 
