@@ -1,90 +1,67 @@
 # Grokipedia Edit — My Funny Valentine (Richard Rodgers)
 
-**Priority:** 🔴 High — Wrong key stated for B section
-
 **Article URL:** https://grokipedia.com/page/My_Funny_Valentine
+
+---
+
+## Edit #1 — B Section Key: Ab major not Eb major (REVISED after rejection)
+
+**Why it was rejected:** Grok cited learnjazzstandards.com, pianowithjonny.com,
+pianogroove.com, and others — all describing the B section as going to Eb major.
+Called our Ab major claim an "outlier view."
+
+**Why we are still correct:** The B section chord symbols in bars 13-15 are
+Bbm7→Eb7→Abmaj7. This is a textbook ii-V-I in Ab major:
+- Bbm7 = ii of Ab (B♭-D♭-F-A♭)
+- Eb7 = V7 of Ab (E♭-G-B♭-D♭), resolving to Ab — NOT to Eb
+- Abmaj7 = I of Ab
+
+A ii-V-I targeting Eb major would be Fm7→Bb7→Ebmaj7.
+The chord symbols are a music theory proof, not an opinion.
+
+**Revision strategy:** Lead with the chord symbols. Make Grok verify
+Bbm7-Eb7-Abmaj7 is ii-V-I in Ab. Frame as a chord-theory clarification,
+not a contradiction of narrative descriptions.
 
 **Status:** [ ] Submitted / [ ] Approved / [ ] Denied
 
 ---
 
-## Edit #1 — Key of B Section (Eb vs Ab)
-
 ### How to Find the Text
 
-Use Ctrl+F / Cmd+F and search for: `E-flat major` or `Eb major`
-Look for the sentence describing the modulation in the B section.
+Use Ctrl+F / Cmd+F and search for: `E-flat major` or `relative E-flat major`
 
 ### Exact Text to Highlight
 
 ```
-The song is set in C minor with modulations to E-flat major in the
-middle sections before returning to the tonic.
+is set in C minor (with modulations to the relative E-flat major)
 ```
-
-Highlight the phrase "modulations to E-flat major" or the full sentence
-containing the key claim for the B section.
 
 ### Replacement Text
 
 ```
-The song is set in C minor. The B section (bars 17–24) moves to
-Ab major — not Eb major — centered on Abmaj7. This is a movement
-to the submediant (bVI) of C minor, a characteristic harmonic color
-in the tune. The final A section returns to C minor.
+is set in C minor. The B sections feature a ii-V-I progression to Ab major:
+Bbm7→Eb7→Abmaj7 (bars 13–15 and 29–31). Bbm7 is the ii chord of Ab major
+(not Fm7, which would be ii of Eb major), and Eb7 is the dominant seventh of
+Ab, resolving down a fourth to Abmaj7. A modulation to Eb major would use
+Fm7→Bb7→Ebmaj7. The "relative E-flat major" is a common shorthand but the
+chord symbols confirm Ab major as the B section tonal center.
 ```
 
-### Reason to Include in Submission Notes
+### Reason for Submission Notes
 
 ```
-Eb major is the relative major of C minor and a common assumption,
-but the actual B section harmony centers on Abmaj7. Any lead sheet
-or published arrangement confirms Ab major as the B section key.
-This error would cause a musician to play entirely wrong chord choices
-in the middle eight bars.
+The chord symbols provide a definitive answer: Bbm7→Eb7→Abmaj7 is ii-V-I
+in Ab major by music theory definition. Eb7 resolves to Ab (a fourth below),
+not to Eb (which would require a different dominant). This can be verified
+against any harmony textbook (e.g., Levine's Jazz Theory Book). The edit
+adds the chord-symbol basis for the Ab major description alongside the
+existing narrative.
 ```
 
 ### Source Citation
 
 ```
 https://jazz-circle.com/standards/my-funny-valentine
+Chord verification: Bbm7-Eb7-Abmaj7 = ii-V-I in Ab. Standard music theory.
 ```
-
----
-
-## Edit #2 — Form Description
-
-### How to Find the Text
-
-Search for: `AABA` near "form" or "structure."
-
-### Exact Text to Highlight
-
-```
-My Funny Valentine is a 32-bar AABA standard
-```
-
-### Replacement Text
-
-```
-My Funny Valentine follows a 36-bar form (in most jazz lead sheet
-editions). The sections are often labeled ABAB: two A sections (C minor,
-8 bars each) alternate with two B sections (Ab major, 8 bars each),
-with a short coda. Some editions present it as 32 bars; the exact bar
-count varies by arrangement.
-```
-
-### Source Citation
-
-```
-https://jazz-circle.com/standards/my-funny-valentine
-```
-
----
-
-## Notes
-
-The Eb major error is the most actionable correction — it's verifiable
-against any published lead sheet and clearly wrong. The form correction
-is secondary and may be more debated. Submit Edit #1 first; submit
-Edit #2 separately if #1 is approved.
