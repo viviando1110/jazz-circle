@@ -1,0 +1,5 @@
+# Playwright browser profile (contains auth session — never commit)
+.browser-profile/
+
+# Node modules
+node_modules/
