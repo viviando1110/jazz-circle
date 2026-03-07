@@ -12,6 +12,7 @@ const NAV_LINKS = [
   { href: '/standards', label: 'Songs' },
   { href: '/practice', label: 'Practice' },
   { href: '/voicings', label: 'Voicings' },
+  { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About' },
 ];
 
