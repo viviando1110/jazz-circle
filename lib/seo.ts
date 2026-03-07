@@ -45,6 +45,7 @@ export function generateKeyPageMeta(key: MusicalKey): Metadata {
   return {
     title,
     description,
+    alternates: { canonical: `${SITE_URL}/key/${key.slug}` },
     openGraph: {
       ...ogDefaults(),
       title,
@@ -64,6 +65,7 @@ export function generateStandardPageMeta(standard: Standard): Metadata {
   return {
     title: `${standard.title} — Jazz Chord Changes & Harmonic Analysis`,
     description,
+    alternates: { canonical: `${SITE_URL}/standards/${standard.slug}` },
     openGraph: {
       ...ogDefaults(),
       title,
@@ -83,6 +85,7 @@ export function generateProgressionsPageMeta(): Metadata {
   return {
     title,
     description,
+    alternates: { canonical: `${SITE_URL}/progressions` },
     openGraph: {
       ...ogDefaults(),
       title,
