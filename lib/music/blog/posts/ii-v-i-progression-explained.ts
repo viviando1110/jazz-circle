@@ -12,7 +12,7 @@ export const II_V_I_PROGRESSION_EXPLAINED: BlogPost = {
   content: [
     {
       type: 'p',
-      text: 'Here\'s a party trick for your next jazz gig: open any fake book to a random page, look at the chord changes, and start circling every spot where you see a minor 7th chord followed by a dominant 7th chord a fourth higher, resolving to a major or minor chord another fourth up. You\'ll run out of ink before you run out of ii-V-Is. This three-chord sequence is so fundamental to jazz that learning it is less like learning a progression and more like learning a language — one that every jazz musician on the planet already speaks.',
+      text: 'Here\'s a party trick for your next jazz gig: open any fake book to a random page, look at the chord changes, and start circling every spot where you see a minor 7th chord followed by a dominant 7th chord a fourth higher, resolving to a major or minor chord another fourth up. You\'ll run out of ink before you run out of ii-V-Is. This three-chord sequence is so fundamental to jazz that learning it is less like learning a progression and more like learning a language, one that every jazz musician on the planet already speaks.',
     },
     {
       type: 'h2',
@@ -20,11 +20,11 @@ export const II_V_I_PROGRESSION_EXPLAINED: BlogPost = {
     },
     {
       type: 'p',
-      text: 'Let\'s break it down in the key of C major. Build a seventh chord on the second degree of the C major scale and you get Dm7 — that\'s your ii. Build one on the fifth degree and you get G7 — that\'s your V. Resolve to the first degree, Cmaj7 — and there\'s your I. Three chords: Dm7, G7, Cmaj7. Sing them, play them on a piano, strum them on a guitar. You\'ll recognize the sound immediately. It\'s the sound of jazz.',
+      text: 'In C major: build a seventh chord on the second degree and you get Dm7, that\'s your ii. Build one on the fifth degree and you get G7, that\'s your V. Resolve to the first degree, Cmaj7, and there\'s your I. Three chords: Dm7, G7, Cmaj7. Sing them, play them on a piano, strum them on a guitar. You\'ll recognize the sound immediately. It\'s the sound of jazz.',
     },
     {
       type: 'p',
-      text: 'The Roman numerals tell you the function of each chord, not the specific notes. So a ii-V-I in Bb would be Cm7 - F7 - Bbmaj7. In Eb, it\'s Fm7 - Bb7 - Ebmaj7. Same pattern, different key. Once you can hear the shape of it, you can find it anywhere — which is exactly the point.',
+      text: 'The Roman numerals tell you the function of each chord, not the specific notes. So a ii-V-I in Bb would be Cm7 - F7 - Bbmaj7. In Eb, it\'s Fm7 - Bb7 - Ebmaj7. Same pattern, different key. Once you can hear the shape of it, you can find it anywhere, which is exactly the point.',
     },
     {
       type: 'h2',
@@ -32,11 +32,11 @@ export const II_V_I_PROGRESSION_EXPLAINED: BlogPost = {
     },
     {
       type: 'p',
-      text: 'The ii-V-I works because of tension and release, the oldest trick in music. The ii chord (Dm7 in C) is gentle, slightly restless — it introduces a soft instability. The V chord (G7) is where the tension peaks. That dominant 7th has a tritone inside it — the interval between the 3rd (B) and the 7th (F) of G7 — and tritones are the most unstable sound in Western harmony. They want to resolve. They demand it. And when they do resolve, landing on the I chord (Cmaj7), you get that satisfying feeling of arriving home.',
+      text: 'The ii-V-I works because of tension and release, the oldest trick in music. The ii chord (Dm7 in C) is gentle, slightly restless, it introduces a soft instability. The V chord (G7) is where the tension peaks. That dominant 7th has a tritone inside it, the interval between the 3rd (B) and the 7th (F) of G7, and tritones are the most unstable sound in Western harmony. They want to resolve. They demand it. And when they do resolve, landing on the I chord (Cmaj7), you get that satisfying feeling of arriving home.',
     },
     {
       type: 'p',
-      text: 'There\'s also a circle-of-fifths logic at work. The root motion — D to G to C — moves in descending fifths (or ascending fourths, same thing). This is the strongest, most natural harmonic motion in Western music. It\'s why the progression sounds inevitable, like water flowing downhill. Jazz composers figured this out early and never stopped using it.',
+      text: 'There\'s also a circle-of-fifths logic at work. The root motion (D to G to C) moves in descending fifths (or ascending fourths, same thing). This is the strongest, most natural harmonic motion in Western music. It\'s why the progression sounds inevitable, like water flowing downhill. Jazz composers figured this out early and never stopped using it.',
     },
     {
       type: 'h2',
@@ -48,13 +48,13 @@ export const II_V_I_PROGRESSION_EXPLAINED: BlogPost = {
     },
     {
       type: 'p',
-      text: 'This is why every jazz educator on the planet assigns this tune to beginners. It\'s not just a beautiful song (though it is) — it\'s a workout for the most important harmonic pattern in the music. Listen to the Cannonball Adderley version on "Somethin\' Else" and pay attention to how the soloists navigate those ii-V-I chains. They\'re not thinking chord-by-chord. They\'re thinking in groups of three, riding the momentum of each resolution into the next.',
+      text: 'This is why every jazz educator on the planet assigns this tune to beginners. It\'s not just a beautiful song (though it is), it\'s a workout for the most important harmonic pattern in the music. Listen to the Cannonball Adderley version on "Somethin\' Else" and pay attention to how the soloists navigate those ii-V-I chains. They\'re not thinking chord-by-chord. They\'re thinking in groups of three, riding the momentum of each resolution into the next.',
     },
     {
       type: 'standard-ref',
       slug: 'autumn-leaves',
       label: 'Autumn Leaves',
-      note: 'The perfect ii-V-I study piece — trace the major and minor ii-V-I patterns through the changes.',
+      note: 'The perfect ii-V-I study piece, trace the major and minor ii-V-I patterns through the changes.',
     },
     {
       type: 'h2',
@@ -62,11 +62,11 @@ export const II_V_I_PROGRESSION_EXPLAINED: BlogPost = {
     },
     {
       type: 'p',
-      text: 'Jazz doesn\'t just do major ii-V-Is. The minor version — where the ii is a half-diminished chord (m7b5), the V is usually a dominant 7th with some altered tension (b9, b13), and the i is minor — shows up constantly. In the key of C minor, that\'s Dm7b5 - G7(b9) - Cm. It\'s darker, more dramatic, and every bit as common as its major counterpart.',
+      text: 'Jazz doesn\'t just do major ii-V-Is. The minor version, where the ii is a half-diminished chord (m7b5), the V is usually a dominant 7th with some altered tension (b9, b13), and the i is minor, shows up constantly. In the key of C minor, that\'s Dm7b5 - G7(b9) - Cm. It\'s darker, more dramatic, and every bit as common as its major counterpart.',
     },
     {
       type: 'p',
-      text: 'Most standards mix major and minor ii-V-Is freely. "Autumn Leaves" does it within the same chorus. "All the Things You Are" does it across different key centers. Learning to hear the difference — and to navigate both on your instrument — is one of the first big milestones in becoming a jazz improviser.',
+      text: 'Most standards mix major and minor ii-V-Is freely. "Autumn Leaves" does it within the same chorus. "All the Things You Are" does it across different key centers. Learning to hear the difference, and to navigate both on your instrument, is one of the first big milestones in becoming a jazz improviser.',
     },
     {
       type: 'h2',
@@ -89,7 +89,7 @@ export const II_V_I_PROGRESSION_EXPLAINED: BlogPost = {
       type: 'standard-ref',
       slug: 'confirmation',
       label: 'Confirmation',
-      note: 'Charlie Parker\'s bebop masterpiece — a clinic in how to build a tune from ii-V-I bricks.',
+      note: 'Charlie Parker\'s bebop masterpiece, a clinic in how to build a tune from ii-V-I bricks.',
     },
     {
       type: 'h2',
@@ -102,11 +102,11 @@ export const II_V_I_PROGRESSION_EXPLAINED: BlogPost = {
     {
       type: 'tip',
       label: 'Try This',
-      text: 'Put on a ii-V-I backing track in one key and improvise using just the chord tones (roots, 3rds, 5ths, 7ths) of each chord. No scales, no licks — just the notes that are in the chord. This forces you to hear the changes and connect your lines to the harmony. It sounds simple, but it\'s one of the most effective exercises in jazz.',
+      text: 'Put on a ii-V-I backing track in one key and improvise using just the chord tones (roots, 3rds, 5ths, 7ths) of each chord. No scales, no licks, just the notes that are in the chord. This forces you to hear the changes and connect your lines to the harmony. It sounds simple, but it\'s one of the most effective exercises in jazz.',
     },
     {
       type: 'p',
-      text: 'For pianists, learning rootless left-hand voicings for ii-V-I is essential. The classic approach uses the 3rd and 7th (which form a tritone on the V chord) plus extensions like the 9th or 13th. Guitarists should start with shell voicings — root, 3rd, 7th — which give you the harmonic skeleton without cluttering the texture. Horn players should practice the arpeggios and learn to connect them with smooth voice leading.',
+      text: 'For pianists, learning rootless left-hand voicings for ii-V-I is essential. The classic approach uses the 3rd and 7th (which form a tritone on the V chord) plus extensions like the 9th or 13th. Guitarists should start with shell voicings, root, 3rd, 7th, which give you the harmonic skeleton without cluttering the texture. Horn players should practice the arpeggios and learn to connect them with smooth voice leading.',
     },
     {
       type: 'h2',
@@ -114,11 +114,11 @@ export const II_V_I_PROGRESSION_EXPLAINED: BlogPost = {
     },
     {
       type: 'p',
-      text: 'Here\'s the bottom line: if you\'re learning jazz, the ii-V-I isn\'t optional. It\'s not one pattern among many. It\'s the pattern. It shows up in swing, in bebop, in cool jazz, in fusion, in modern jazz — in basically every style that uses chord changes. Standards like "There Will Never Be Another You," "Stella by Starlight," "Have You Met Miss Jones," and hundreds more are all built from ii-V-I bricks arranged in different configurations.',
+      text: 'If you\'re learning jazz, the ii-V-I isn\'t optional. Not one pattern among many. The pattern. It shows up in swing, in bebop, in cool jazz, in fusion, in modern jazz, in basically every style that uses chord changes. Standards like "There Will Never Be Another You," "Stella by Starlight," "Have You Met Miss Jones," and hundreds more are all built from ii-V-I bricks arranged in different configurations.',
     },
     {
       type: 'p',
-      text: 'Master the ii-V-I in all 12 keys — hear it, play it, improvise over it — and you\'ve got the skeleton key to the entire jazz standard repertoire. Everything else is decoration. Important, beautiful, endlessly varied decoration. But decoration built on a foundation of ii, V, I.',
+      text: 'Master the ii-V-I in all 12 keys, hear it, play it, improvise over it, and you\'ve got the skeleton key to the entire jazz standard repertoire. Everything else is decoration built on top of it.',
     },
   ],
   relatedStandards: ['autumn-leaves', 'confirmation', 'all-the-things-you-are'],

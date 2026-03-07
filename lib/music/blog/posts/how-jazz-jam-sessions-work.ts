@@ -26,12 +26,12 @@ export const HOW_JAZZ_JAM_SESSIONS_WORK: BlogPost = {
     {
       type: 'list',
       items: [
-        'Head \u2014 The melody of the song. "Play the head" means play the written melody. "Head in" is the melody at the beginning; "head out" is the melody at the end.',
-        'Solos \u2014 The improvised section where musicians take turns soloing over the chord progression, usually the same chords as the head.',
-        'Vamp \u2014 A short, repeated chord progression (sometimes just one chord) used to fill time or set up the beginning or end of a tune.',
-        'Tag \u2014 Repeating the final phrase of a tune, usually the last four bars, as a way to end it. Often happens two or three times.',
-        'Trading fours \u2014 Taking turns soloing four bars at a time, usually between a soloist and the drummer.',
-        'Count-off \u2014 The person calling the tune snaps or counts "1, 2, 1-2-3-4" to set the tempo before everyone plays.',
+        'Head: The melody of the song. "Play the head" means play the written melody. "Head in" is the melody at the beginning; "head out" is the melody at the end.',
+        'Solos: The improvised section where musicians take turns soloing over the chord progression, usually the same chords as the head.',
+        'Vamp: A short, repeated chord progression (sometimes just one chord) used to fill time or set up the beginning or end of a tune.',
+        'Tag: Repeating the final phrase of a tune, usually the last four bars, as a way to end it. Often happens two or three times.',
+        'Trading fours: Taking turns soloing four bars at a time, usually between a soloist and the drummer.',
+        'Count-off: The person calling the tune snaps or counts "1, 2, 1-2-3-4" to set the tempo before everyone plays.',
       ],
     },
     {
@@ -40,7 +40,7 @@ export const HOW_JAZZ_JAM_SESSIONS_WORK: BlogPost = {
     },
     {
       type: 'p',
-      text: 'Here\'s the thing about jam sessions: there\'s usually no rehearsal and almost no discussion about the arrangement. Someone calls a tune, counts it off, and everyone plays. This works because jazz has a default arrangement that nearly every musician knows implicitly. Once you know it, you know what to expect on almost any tune at any jam session.',
+      text: 'Most jam sessions have no rehearsal and almost no discussion about the arrangement. Someone calls a tune, counts it off, and everyone plays. This works because jazz has a default arrangement that nearly every musician knows implicitly. Once you know it, you know what to expect on almost any tune at any jam session.',
     },
     {
       type: 'p',
@@ -52,7 +52,7 @@ export const HOW_JAZZ_JAM_SESSIONS_WORK: BlogPost = {
     },
     {
       type: 'p',
-      text: 'Solo order at a jam session isn\'t written down anywhere, but there\'s a general convention: horn players and melody instruments go first, then piano or guitar, then bass, and finally the drummer (who often trades fours with the other soloists rather than taking a full solo). This isn\'t a hard rule \u2014 sometimes the piano player will jump in first, or the bass player will take a long solo \u2014 but it\'s the default everyone falls back on.',
+      text: 'Solo order at a jam session isn\'t written down anywhere, but there\'s a general convention: horn players and melody instruments go first, then piano or guitar, then bass, and finally the drummer (who often trades fours with the other soloists rather than taking a full solo). This isn\'t a hard rule, sometimes the piano player will jump in first, or the bass player will take a long solo, but it\'s the default everyone falls back on.',
     },
     {
       type: 'p',
@@ -69,11 +69,11 @@ export const HOW_JAZZ_JAM_SESSIONS_WORK: BlogPost = {
     },
     {
       type: 'p',
-      text: 'When it\'s your turn to call a tune, a little social awareness goes a long way. Not everyone knows the same songs, and the goal is to play something that the whole group can get through. Blues in Bb or F is always safe \u2014 everyone knows a blues. "Autumn Leaves" and "Summertime" are close to universal. Rhythm changes (the chord progression from "I Got Rhythm") are another safe bet. The deeper you go into the repertoire, the more likely someone on the bandstand hasn\'t learned it yet.',
+      text: 'When it\'s your turn to call a tune, a little social awareness goes a long way. Not everyone knows the same songs, and the goal is to play something that the whole group can get through. Blues in Bb or F is always safe, everyone knows a blues. "Autumn Leaves" and "Summertime" are close to universal. Rhythm changes (the chord progression from "I Got Rhythm") are another safe bet. The deeper you go into the repertoire, the more likely someone on the bandstand hasn\'t learned it yet.',
     },
     {
       type: 'p',
-      text: 'A smart approach: if there\'s someone on the bandstand who seems less experienced, let them pick the tune. They\'ll choose something they know, which maximizes the chance that everyone can play it. This is actually common jam session etiquette \u2014 the person with the smallest repertoire picks, because they have the narrowest comfort zone.',
+      text: 'A smart approach: if there\'s someone on the bandstand who seems less experienced, let them pick the tune. They\'ll choose something they know, which maximizes the chance that everyone can play it. This is actually common jam session etiquette, the person with the smallest repertoire picks, because they have the narrowest comfort zone.',
     },
     {
       type: 'standard-ref',
@@ -85,7 +85,7 @@ export const HOW_JAZZ_JAM_SESSIONS_WORK: BlogPost = {
       type: 'standard-ref',
       slug: 'summertime',
       label: 'Summertime',
-      note: 'A Gershwin classic that nearly every jazz musician knows \u2014 simple changes, singable melody, works at any tempo.',
+      note: 'A Gershwin classic that nearly every jazz musician knows, simple changes, singable melody, works at any tempo.',
     },
     {
       type: 'h2',
@@ -93,7 +93,7 @@ export const HOW_JAZZ_JAM_SESSIONS_WORK: BlogPost = {
     },
     {
       type: 'p',
-      text: 'Beginnings are easy. Endings are where jam sessions get interesting. If no one has discussed how to end the tune, any of several things might happen: a tag (repeating the last four bars a few times, ritarding on the final pass), a vamp that fades, or a sudden unison ending on the last note. There are also named endings that experienced players reference \u2014 the "Basie ending" (a particular rhythmic figure associated with Count Basie\'s band) and the "Ellington ending" are two classics.',
+      text: 'Beginnings are easy. Endings are where jam sessions get interesting. If no one has discussed how to end the tune, any of several things might happen: a tag (repeating the last four bars a few times, ritarding on the final pass), a vamp that fades, or a sudden unison ending on the last note. There are also named endings that experienced players reference, the "Basie ending" (a particular rhythmic figure associated with Count Basie\'s band) and the "Ellington ending" are two classics.',
     },
     {
       type: 'p',
@@ -105,7 +105,7 @@ export const HOW_JAZZ_JAM_SESSIONS_WORK: BlogPost = {
     },
     {
       type: 'p',
-      text: 'Beyond the musical stuff, there\'s a whole layer of social etiquette that makes jam sessions work. First and most important: when someone else is soloing, listen. Don\'t noodle on your instrument. Don\'t practice your licks under your breath. Pay attention to what they\'re playing, because interacting with other soloists \u2014 even if you\'re just comping behind them \u2014 is what makes jazz a group music.',
+      text: 'Beyond the musical stuff, there\'s a whole layer of social etiquette that makes jam sessions work. First and most important: when someone else is soloing, listen. Don\'t noodle on your instrument. Don\'t practice your licks under your breath. Pay attention to what they\'re playing, because interacting with other soloists, even if you\'re just comping behind them, is what makes jazz a group music.',
     },
     {
       type: 'list',
@@ -127,13 +127,13 @@ export const HOW_JAZZ_JAM_SESSIONS_WORK: BlogPost = {
     },
     {
       type: 'p',
-      text: 'And when you do sit in for the first time, remember this: everyone in that room had a first jam session. Every one of them was nervous. Every one of them messed something up. The jazz community, at its best, is welcoming and supportive of people who are learning. Bring a good attitude, listen more than you play, keep your solos short, and you\'ll be fine. More than fine \u2014 you\'ll probably have so much fun that you\'ll wonder why you waited so long.',
+      text: 'And when you do sit in for the first time, remember this: everyone in that room had a first jam session. Every one of them was nervous. Every one of them messed something up. The jazz community, at its best, is welcoming and supportive of people who are learning. Bring a good attitude, listen more than you play, keep your solos short, and you\'ll be fine. More than fine, you\'ll probably have so much fun that you\'ll wonder why you waited so long.',
     },
   ],
   relatedStandards: ['autumn-leaves', 'summertime'],
   furtherReading: [
     {
-      title: 'Jam Session Basics \u2014 Jazz Night School',
+      title: 'Jam Session Basics. Jazz Night School',
       url: 'https://jazznightschool.org/pages/jam-session-basics',
       description: 'A thorough primer on jam session terminology, structure, and etiquette.',
     },
@@ -143,7 +143,7 @@ export const HOW_JAZZ_JAM_SESSIONS_WORK: BlogPost = {
       description: 'The do\'s and don\'ts of sitting in at a jazz jam, from a working musician\'s perspective.',
     },
     {
-      title: 'Jazz Jam Etiquette From the Masters \u2014 SFJAZZ',
+      title: 'Jazz Jam Etiquette From the Masters. SFJAZZ',
       url: 'https://www.sfjazz.org/onthecorner/jazz-jam-etiquette-masters',
       description: 'Advice from legendary jazz musicians on how to handle yourself at a jam session.',
     },

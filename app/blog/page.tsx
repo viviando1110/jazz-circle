@@ -32,7 +32,7 @@ export default function BlogPage() {
           The Jazz Circle Blog
         </h1>
         <p className="text-[var(--cream-dim)] text-base sm:text-lg max-w-2xl">
-          Practical writing on jazz theory, improvisation, and the art of playing together — without the textbook vibes.
+          Jazz theory, improv, and what it means to play well with others. No textbook required.
         </p>
       </header>
 

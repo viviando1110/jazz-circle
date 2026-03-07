@@ -9,7 +9,7 @@ export const ARPEGGIOS_JAZZ_IMPROV: BlogPost = {
   category: 'improv',
   tags: ['arpeggios', 'chord tones', 'jazz improvisation', 'playing the changes', 'bebop'],
   excerpt:
-    'Every jazz musician hits a wall where scales stop being enough. You know the notes, you can run up and down the fingerboard, but your solos still sound like exercises. The missing ingredient? Arpeggios \u2014 the single fastest way to start actually playing the harmony.',
+    'Every jazz musician hits a wall where scales stop being enough. You know the notes, you can run up and down the fingerboard, but your solos still sound like exercises. Arpeggios are the missing piece: the fastest way to start actually playing the harmony.',
   content: [
     {
       type: 'p',
@@ -21,11 +21,11 @@ export const ARPEGGIOS_JAZZ_IMPROV: BlogPost = {
     },
     {
       type: 'p',
-      text: 'You\'ve probably heard the phrase "playing the changes" thrown around at jam sessions and in lessons. It sounds abstract until you realize it\'s actually very concrete: it means your melodic choices reflect the harmony happening underneath you. When the chord is Cmaj7, you\'re not just playing notes from the C major scale and hoping for the best \u2014 you\'re targeting the C, E, G, and B that define that chord. When it moves to Dm7, you shift to D, F, A, C. You\'re outlining the harmony with your melody, and that\'s what makes a solo sound like it belongs to the tune rather than floating above it.',
+      text: 'You\'ve probably heard the phrase "playing the changes" thrown around at jam sessions and in lessons. It sounds abstract until you realize it\'s actually very concrete: it means your melodic choices reflect the harmony happening underneath you. When the chord is Cmaj7, you\'re not just playing notes from the C major scale and hoping for the best. You\'re targeting the C, E, G, and B that define that chord. When it moves to Dm7, you shift to D, F, A, C. You\'re outlining the harmony with your melody, and that\'s what makes a solo sound like it belongs to the tune rather than floating above it.',
     },
     {
       type: 'p',
-      text: 'An arpeggio is simply a chord played one note at a time. It\'s not a fancy technique \u2014 it\'s the most direct way to connect your melody to the harmony. When you practice arpeggios over a tune\'s chord progression, you\'re training your ears and fingers to grab the notes that matter most at any given moment.',
+      text: 'An arpeggio is simply a chord played one note at a time. It\'s just the most direct way to connect your melody to the harmony. When you practice arpeggios over a tune\'s chord progression, you\'re training your ears and fingers to grab the notes that matter most at any given moment.',
     },
     {
       type: 'h2',
@@ -33,17 +33,17 @@ export const ARPEGGIOS_JAZZ_IMPROV: BlogPost = {
     },
     {
       type: 'p',
-      text: 'If you want to hear what arpeggio mastery sounds like, listen to Charlie Parker on "Confirmation." Bird didn\'t just know his arpeggios \u2014 he lived inside them. His solos are built on a foundation of chord tones, with every blazing eighth-note run landing on the 3rd or the root of the next chord right on the downbeat. What sounds like wild, free-flowing invention is actually incredibly precise harmonic navigation. He knew exactly where he was in the changes at all times.',
+      text: 'If you want to hear what arpeggio mastery sounds like, listen to Charlie Parker on "Confirmation." Bird didn\'t just know his arpeggios. He lived inside them. His solos are built on a foundation of chord tones, with every blazing eighth-note run landing on the 3rd or the root of the next chord right on the downbeat. What sounds like wild, free-flowing invention is actually incredibly precise harmonic navigation. He knew exactly where he was in the changes at all times.',
     },
     {
       type: 'p',
-      text: 'Parker took things further than basic 1-3-5-7 arpeggios, though. He discovered that by playing the upper extensions \u2014 the 9th, 11th, and 13th \u2014 he could add color and tension without ever losing the thread of the harmony. He\'d superimpose triads on top of chords, thinking of something like "Am7b5 over F7" to naturally hit both the chord tones and the juicy tensions. This is how bebop works: simple harmonic concepts deployed with rhythmic and melodic sophistication.',
+      text: 'Parker took things further than basic 1-3-5-7 arpeggios, though. He discovered that by playing the upper extensions, the 9th, 11th, and 13th, he could add color and tension without ever losing the thread of the harmony. He\'d superimpose triads on top of chords, thinking of something like "Am7b5 over F7" to naturally hit both the chord tones and the juicy tensions. This is how bebop works: simple harmonic concepts deployed with rhythmic and melodic sophistication.',
     },
     {
       type: 'standard-ref',
       slug: 'confirmation',
       label: 'Confirmation',
-      note: 'Parker\'s bebop masterpiece with its own unique set of chord changes \u2014 a masterclass in arpeggio-based lines. Listen to how the melody itself spells out the harmony.',
+      note: 'Parker\'s bebop masterpiece with its own unique set of chord changes, a masterclass in arpeggio-based lines. Listen to how the melody itself spells out the harmony.',
     },
     {
       type: 'h2',
@@ -51,11 +51,11 @@ export const ARPEGGIOS_JAZZ_IMPROV: BlogPost = {
     },
     {
       type: 'p',
-      text: 'Here\'s a pattern that plays out in practice rooms everywhere: you learn that Dorian works over a minor 7th chord, so you play D Dorian over Dm7. Then the chord moves to G7 and you switch to G Mixolydian. Technically correct, and it\'ll never sound wrong \u2014 but it also won\'t sound like much. You\'re painting with the right palette but not making any shapes. The notes blur together because nothing is being emphasized. Every note in the scale gets equal weight, and equal weight means no melody.',
+      text: 'Here\'s a pattern that plays out in practice rooms everywhere: you learn that Dorian works over a minor 7th chord, so you play D Dorian over Dm7. Then the chord moves to G7 and you switch to G Mixolydian. Technically correct, and it\'ll never sound wrong, but it also won\'t sound like much. You\'re painting with the right palette but not making any shapes. The notes blur together because nothing is being emphasized. Every note in the scale gets equal weight, and equal weight means no melody.',
     },
     {
       type: 'p',
-      text: 'Arpeggios fix this by giving you anchor points. When you know that the 3rd and 7th of each chord are the notes that define its quality, you can aim for those. A line that passes through the F and C of a Dm7 chord, then resolves to the B and F of a G7, then lands on the E of Cmaj7 \u2014 that\'s a line that tells a harmonic story. The scale notes in between become connective tissue rather than the main event.',
+      text: 'Arpeggios fix this by giving you anchor points. When you know that the 3rd and 7th of each chord are the notes that define its quality, you can aim for those. A line that passes through the F and C of a Dm7 chord, then resolves to the B and F of a G7, then lands on the E of Cmaj7. That\'s a line that tells a harmonic story. The scale notes in between become connective tissue rather than the main event.',
     },
     {
       type: 'h2',
@@ -63,13 +63,13 @@ export const ARPEGGIOS_JAZZ_IMPROV: BlogPost = {
     },
     {
       type: 'p',
-      text: 'Start with a tune you know, not a theoretical exercise. Take "Donna Lee" \u2014 Parker\'s 32-bar bebop head built on the chord changes to the old standard "Indiana (Back Home Again in Indiana)," with its fast-moving harmony and breakneck velocity. Play through the changes using only the 1, 3, 5, and 7 of each chord, in whole notes at first. Just the arpeggios, nothing else. It\'ll sound bare and mechanical, and that\'s fine. You\'re building the skeleton. Once you can hear the chord tones moving from one chord to the next, you\'ll start noticing something beautiful: certain notes connect smoothly between chords. The 7th of one chord is often a half step away from the 3rd of the next. That\'s voice leading, and it\'s where arpeggios start becoming real jazz lines.',
+      text: 'Start with a tune you know, not a theoretical exercise. Take "Donna Lee," Parker\'s 32-bar bebop head built on the chord changes to the old standard "Indiana (Back Home Again in Indiana)," with its fast-moving harmony and breakneck velocity. Play through the changes using only the 1, 3, 5, and 7 of each chord, in whole notes at first. Just the arpeggios, nothing else. It\'ll sound bare and mechanical, and that\'s fine. You\'re building the skeleton. Once you can hear the chord tones moving from one chord to the next, you\'ll start noticing something beautiful: certain notes connect smoothly between chords. The 7th of one chord is often a half step away from the 3rd of the next. That\'s voice leading, and it\'s where arpeggios start becoming real jazz lines.',
     },
     {
       type: 'standard-ref',
       slug: 'donna-lee',
       label: 'Donna Lee',
-      note: 'A blazing bebop head with fast-moving harmony \u2014 perfect for practicing arpeggio navigation through rapid chord changes.',
+      note: 'A blazing bebop head with fast-moving harmony, perfect for practicing arpeggio navigation through rapid chord changes.',
     },
     {
       type: 'tip',
@@ -86,7 +86,7 @@ export const ARPEGGIOS_JAZZ_IMPROV: BlogPost = {
     },
     {
       type: 'p',
-      text: 'The point isn\'t to play arpeggios all the time. The point is to know where the chord tones are so thoroughly that you can find them without thinking. When you reach that level, your scale passages start landing on chord tones naturally, because your ear is guiding your fingers to the right places. That\'s what "playing the changes" really means \u2014 not mechanical arpeggio exercises, but deep enough harmonic awareness that your instincts are harmonically informed.',
+      text: 'The point isn\'t to play arpeggios all the time. The point is to know where the chord tones are so thoroughly that you can find them without thinking. When you reach that level, your scale passages start landing on chord tones naturally, because your ear is guiding your fingers to the right places. That\'s what "playing the changes" really means: not mechanical arpeggio exercises, but deep enough harmonic awareness that your instincts are harmonically informed.',
     },
     {
       type: 'pullquote',
@@ -99,7 +99,7 @@ export const ARPEGGIOS_JAZZ_IMPROV: BlogPost = {
     },
     {
       type: 'p',
-      text: 'There\'s a reason so many jazz musicians describe learning arpeggios as a turning point. Before arpeggios, you\'re navigating by map \u2014 "this scale goes with this chord, that scale goes with that chord." After arpeggios, you\'re navigating by landmarks. You can hear the 3rd of the chord coming up, and you aim for it the way a basketball player aims for the rim without measuring the distance. Your solos stop sounding like someone reciting vocabulary and start sounding like someone who has something to say.',
+      text: 'There\'s a reason so many jazz musicians describe learning arpeggios as a turning point. Before arpeggios, you\'re navigating by map: "this scale goes with this chord, that scale goes with that chord." After arpeggios, you\'re navigating by landmarks. You can hear the 3rd of the chord coming up, and you aim for it the way a basketball player aims for the rim without measuring the distance. Your solos stop sounding like someone reciting vocabulary and start sounding like someone who has something to say.',
     },
     {
       type: 'p',
@@ -114,7 +114,7 @@ export const ARPEGGIOS_JAZZ_IMPROV: BlogPost = {
       description: 'Deep analysis of how Parker uses chord tones, enclosures, and arpeggios in Confirmation.',
     },
     {
-      title: 'Charlie Parker for Guitar \u2014 Licks, Patterns, and Clich\u00e9s',
+      title: 'Charlie Parker for Guitar: Licks, Patterns, and Clich\u00e9s',
       url: 'https://www.jazzguitar.be/blog/charlie-parker/',
       description: 'Bebop vocabulary patterns extracted from Parker solos, applicable to any instrument.',
     },

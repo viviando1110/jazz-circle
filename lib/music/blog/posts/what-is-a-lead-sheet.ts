@@ -13,7 +13,7 @@ export const WHAT_IS_A_LEAD_SHEET: BlogPost = {
   content: [
     {
       type: 'p',
-      text: 'Imagine someone hands you a recipe that says "chicken, lemon, heat" and expects you to produce dinner. No cooking times, no measurements, no plating instructions. Just three words and a vague sense of confidence that you\'ll figure it out. That, in essence, is what a lead sheet does for a jazz musician.',
+      text: 'Imagine someone hands you a recipe that says "chicken, lemon, heat" and expects you to produce dinner. No cooking times, no measurements, no plating instructions. Just three words and a vague sense of confidence that you\'ll figure it out. That\'s what a lead sheet does for a jazz musician.',
     },
     {
       type: 'p',

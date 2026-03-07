@@ -8,11 +8,11 @@ export const MINOR_PENTATONIC_JAZZ_IMPROV: BlogPost = {
   readingTime: 5,
   category: 'improv',
   tags: ['pentatonic scale', 'jazz improvisation', 'beginner jazz', 'scales', 'soloing'],
-  excerpt: 'Forget the chord-by-chord approach for a minute. The minor pentatonic scale gives you five notes that sound good over a shocking number of jazz tunes — and it frees you up to focus on what really matters: rhythm, phrasing, and listening.',
+  excerpt: 'Forget the chord-by-chord approach for a minute. The minor pentatonic scale gives you five notes that sound good over a shocking number of jazz tunes, and it frees you up to focus on what really matters: rhythm, phrasing, and listening.',
   content: [
     {
       type: 'p',
-      text: 'There\'s a dirty secret in jazz education that nobody talks about enough: you don\'t have to play the changes to sound good. At least, not at first. While the long-term goal of any jazz improviser is to hear and navigate chord progressions in real time, obsessing over that from day one is a great way to sound stiff, mechanical, and completely unlike the relaxed, swinging musicians you\'re trying to emulate. Enter the minor pentatonic scale — five notes that will get you through your first jam session with your dignity intact.',
+      text: 'There\'s a dirty secret in jazz education that nobody talks about enough: you don\'t have to play the changes to sound good. At least, not at first. While the long-term goal of any jazz improviser is to hear and navigate chord progressions in real time, obsessing over that from day one is a great way to sound stiff, mechanical, and completely unlike the relaxed, swinging musicians you\'re trying to emulate. The minor pentatonic scale is your way in: five notes that will get you through your first jam session with your dignity intact.',
     },
     {
       type: 'h2',
@@ -20,7 +20,7 @@ export const MINOR_PENTATONIC_JAZZ_IMPROV: BlogPost = {
     },
     {
       type: 'p',
-      text: 'The minor pentatonic scale is exactly what it sounds like: a five-note scale built from the root, minor 3rd, 4th, 5th, and minor 7th. In F minor pentatonic, that\'s F, Ab, Bb, C, Eb. That\'s it. Five notes. And here\'s the magic — over certain chord progressions, none of these notes will sound "wrong." You might not always land on the hippest note, but you won\'t hit a clunker either.',
+      text: 'The minor pentatonic scale is exactly what it sounds like: a five-note scale built from the root, minor 3rd, 4th, 5th, and minor 7th. In F minor pentatonic, that\'s F, Ab, Bb, C, Eb. That\'s it. Five notes. And here\'s the magic, over certain chord progressions, none of these notes will sound "wrong." You might not always land on the hippest note, but you won\'t hit a clunker either.',
     },
     {
       type: 'p',
@@ -32,7 +32,7 @@ export const MINOR_PENTATONIC_JAZZ_IMPROV: BlogPost = {
     },
     {
       type: 'p',
-      text: 'Why F minor pentatonic specifically? Because an enormous number of jazz standards are played in keys where F minor pentatonic just works. Any 12-bar blues in F — and there are dozens in the standard repertoire — is fair game. "Watermelon Man," "Straight, No Chaser," "Moanin\'," "Song for My Father," "Cold Duck Time" — one scale covers all of them. That\'s not a shortcut. That\'s a genuine musical choice that connects back to the blues roots of jazz.',
+      text: 'Why F minor pentatonic specifically? Because an enormous number of jazz standards are played in keys where F minor pentatonic just works. Any 12-bar blues in F, and there are dozens in the standard repertoire, is fair game. "Watermelon Man," "Straight, No Chaser," "Moanin\'," "Song for My Father," "Cold Duck Time", one scale covers all of them. That\'s not a shortcut. That\'s a genuine musical choice that connects back to the blues roots of jazz.',
     },
     {
       type: 'p',
@@ -44,17 +44,17 @@ export const MINOR_PENTATONIC_JAZZ_IMPROV: BlogPost = {
     },
     {
       type: 'p',
-      text: 'If you want to hear what a master can do with the minor pentatonic, listen to Dexter Gordon\'s solo on "Watermelon Man" from Herbie Hancock\'s 1962 debut album "Takin\' Off." Gordon — a tenor sax giant whose elongated phrasing and blues-drenched sound influenced the generation of saxophonists that followed him — builds his entire solo almost exclusively from the F minor pentatonic scale. And it swings like crazy.',
+      text: 'If you want to hear what a master can do with the minor pentatonic, listen to Dexter Gordon\'s solo on "Watermelon Man" from Herbie Hancock\'s 1962 debut album "Takin\' Off." Gordon, a tenor sax giant whose elongated phrasing and blues-drenched sound influenced the generation of saxophonists that followed him. He builds his entire solo almost exclusively from the F minor pentatonic scale. And it swings like crazy.',
     },
     {
       type: 'p',
-      text: 'What makes Gordon\'s solo great isn\'t the note selection (which is deliberately limited) — it\'s everything else. His timing is impeccable, lagging just behind the beat in that signature Dexter way. His phrases breathe — he plays something, leaves space, then responds to his own idea. He uses dynamics, going from a whisper to a shout and back. He tells a story using five notes and a whole lot of rhythm. That\'s the lesson: the pentatonic scale isn\'t a limitation. It\'s a framework that lets you focus on what really counts.',
+      text: 'What makes Gordon\'s solo great isn\'t the note selection (which is deliberately limited), it\'s everything else. His timing is impeccable, lagging just behind the beat in that signature Dexter way. His phrases breathe, he plays something, leaves space, then responds to his own idea. He uses dynamics, going from a whisper to a shout and back. He tells a story using five notes and a whole lot of rhythm. That\'s the lesson: the pentatonic scale isn\'t a limitation. It\'s a framework that lets you focus on what really counts.',
     },
     {
       type: 'standard-ref',
       slug: 'watermelon-man',
       label: 'Watermelon Man',
-      note: 'Herbie Hancock\'s funky classic — a perfect vehicle for F minor pentatonic improvisation.',
+      note: 'Herbie Hancock\'s funky classic, a perfect vehicle for F minor pentatonic improvisation.',
     },
     {
       type: 'h2',
@@ -66,13 +66,13 @@ export const MINOR_PENTATONIC_JAZZ_IMPROV: BlogPost = {
     },
     {
       type: 'p',
-      text: 'That means you go from memorizing a dozen individual chord-scale relationships to practicing two scales and one shift point. The resulting solo won\'t sound chord-by-chord sophisticated, but it will sound musical, connected, and grounded in the key — which is exactly what you want at this stage. You can always add more harmonic detail later. The pentatonic gives you the foundation.',
+      text: 'That means you go from memorizing a dozen individual chord-scale relationships to practicing two scales and one shift point. The resulting solo won\'t sound chord-by-chord sophisticated, but it will sound musical, connected, and grounded in the key, which is exactly what you want at this stage. You can always add more harmonic detail later. The pentatonic gives you the foundation.',
     },
     {
       type: 'standard-ref',
       slug: 'blue-bossa',
       label: 'Blue Bossa',
-      note: 'Kenny Dorham\'s bossa classic — try improvising with just C minor and Bb minor pentatonic scales.',
+      note: 'Kenny Dorham\'s bossa classic, try improvising with just C minor and Bb minor pentatonic scales.',
     },
     {
       type: 'h2',
@@ -85,7 +85,7 @@ export const MINOR_PENTATONIC_JAZZ_IMPROV: BlogPost = {
     {
       type: 'tip',
       label: 'Try This',
-      text: 'Set a metronome to a comfortable tempo and play your pentatonic scale with one rule: you must play a note on every beat, and you cannot stop. Change direction whenever you want, skip notes, repeat notes — but keep going. This "perpetual motion" exercise builds fluency and forces you to make musical decisions in real time.',
+      text: 'Set a metronome to a comfortable tempo and play your pentatonic scale with one rule: you must play a note on every beat, and you cannot stop. Change direction whenever you want, skip notes, repeat notes, but keep going. This "perpetual motion" exercise builds fluency and forces you to make musical decisions in real time.',
     },
     {
       type: 'p',
@@ -97,11 +97,11 @@ export const MINOR_PENTATONIC_JAZZ_IMPROV: BlogPost = {
     },
     {
       type: 'p',
-      text: 'The minor pentatonic isn\'t training wheels that you\'ll eventually throw away. Professional jazz musicians use pentatonic scales all the time — McCoy Tyner built an entire pianistic style around them, and Wayne Shorter and Woody Shaw used pentatonic superimpositions to create some of the most adventurous sounds in modern jazz. The difference is context and intention.',
+      text: 'The minor pentatonic isn\'t training wheels that you\'ll eventually throw away. Professional jazz musicians use pentatonic scales all the time. McCoy Tyner built an entire pianistic style around them, and Wayne Shorter and Woody Shaw used pentatonic superimpositions to create some of the most adventurous sounds in modern jazz. The difference is context and intention.',
     },
     {
       type: 'p',
-      text: 'As a beginner, the pentatonic gives you a safe space to develop your ear, your time, and your phrasing. As you grow, it becomes one tool among many — but it never stops being useful. Five notes. That\'s all you need to start making music. Everything else is an expansion of that foundation.',
+      text: 'As a beginner, the pentatonic gives you a safe space to develop your ear, your time, and your phrasing. As you grow, it becomes one tool among many, but it never stops being useful. Five notes. That\'s all you need to start making music. Everything else is an expansion of that foundation.',
     },
   ],
   relatedStandards: ['watermelon-man', 'blue-bossa', 'moanin'],

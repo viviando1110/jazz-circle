@@ -25,7 +25,7 @@ export const SHELL_VOICINGS_JAZZ_GUITAR: BlogPost = {
     },
     {
       type: 'p',
-      text: 'Here\'s the secret that nobody tells you early enough: you don\'t need any of that to start playing jazz. You need three notes. Root, third, and seventh. That\'s a shell voicing, and it\'s the single most useful tool a beginning jazz guitarist can learn.',
+      text: 'Nobody tells you this early enough: you don\'t need any of that to start playing jazz. You need three notes. Root, third, and seventh. That\'s a shell voicing, and it\'s the single most useful tool a beginning jazz guitarist can learn.',
     },
     {
       type: 'h2',
@@ -92,7 +92,7 @@ export const SHELL_VOICINGS_JAZZ_GUITAR: BlogPost = {
     },
     {
       type: 'p',
-      text: 'Pass was pointing to something that guitarists coming from rock often miss: in jazz, comping is not the boring part that you endure between solos. Comping is the art. The way you voice a chord, the rhythm you choose, the dynamic you play at — these choices shape the entire sound of the band. Shell voicings give you the harmonic foundation to start making those choices without getting lost in chord diagrams.',
+      text: 'Pass was pointing to something that guitarists coming from rock often miss: in jazz, comping is not the boring part that you endure between solos. Comping is the art. The way you voice a chord, the rhythm you choose, the dynamic you play at, these choices shape the entire sound of the band. Shell voicings give you the harmonic foundation to start making those choices without getting lost in chord diagrams.',
     },
     {
       type: 'standard-ref',

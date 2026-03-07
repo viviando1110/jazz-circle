@@ -44,7 +44,7 @@ export const FEEDBACK_IN_JAZZ_REHEARSAL: BlogPost = {
     },
     {
       type: 'p',
-      text: 'Here\'s a technique that experienced band leaders use all the time, and it works like magic. Instead of framing feedback as your personal opinion, reference an outside authority. "I think you should do X" lands very differently than "I was watching this Joe Pass lesson and he said to always keep voice leading smooth between chord changes." Same information. Completely different reception.',
+      text: 'Here\'s a technique experienced band leaders use all the time. Instead of framing feedback as your personal opinion, reference an outside authority. "I think you should do X" lands very differently than "I was watching this Joe Pass lesson and he said to always keep voice leading smooth between chord changes." Same information. Completely different reception.',
     },
     {
       type: 'p',
@@ -121,7 +121,7 @@ export const FEEDBACK_IN_JAZZ_REHEARSAL: BlogPost = {
     },
     {
       type: 'p',
-      text: 'At the end of the day, feedback exists to serve the music. A great rehearsal isn\'t one where nobody makes mistakes. It\'s one where mistakes get identified, addressed, and improved in a way that makes everyone want to come back next week. The band that communicates well doesn\'t just sound better. It lasts longer. It gigs more. It has more fun.',
+      text: 'Feedback exists to serve the music. A great rehearsal isn\'t one where nobody makes mistakes. It\'s one where mistakes get identified, addressed, and improved in a way that makes everyone want to come back next week. The band that communicates well doesn\'t just sound better. It lasts longer. It gigs more. It has more fun.',
     },
     {
       type: 'p',
