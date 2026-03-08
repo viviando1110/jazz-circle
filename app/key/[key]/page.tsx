@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ALL_KEYS, getKeyBySlug } from '@/lib/music/keys';
 import { generateKeyPageMeta } from '@/lib/seo';
+import { KEY_TIPS, getStandardsInKey } from '@/lib/music/key-tips';
 import KeyPageClient from '@/components/key/KeyPageClient';
 import AdSlot from '@/components/ads/AdSlot';
 
@@ -60,6 +62,46 @@ export default function KeyPage({ params }: PageProps) {
             : 'Minor key jazz often features the ii-V-i progression, where the V chord is frequently altered for extra tension.'}
         </p>
       </section>
+
+      {(() => {
+        const tip = KEY_TIPS[musicalKey.slug];
+        if (!tip) return null;
+        const standards = getStandardsInKey(musicalKey.displayName);
+        return (
+          <section className="mt-12 rounded-xl border border-[var(--border)] bg-[var(--card)] p-6">
+            <h2 className="text-lg font-semibold text-[var(--cream)] mb-3">
+              Pro Tips for {musicalKey.displayName}
+            </h2>
+            <p className="text-base font-serif text-[var(--gold)] mb-2">
+              {tip.headline}
+            </p>
+            <p className="text-sm text-[var(--cream-dim)] mb-4">{tip.tip}</p>
+            {standards.length > 0 ? (
+              <>
+                <p className="text-sm font-semibold text-[var(--cream)] mb-2">
+                  Standards in {musicalKey.displayName}:
+                </p>
+                <ul className="list-disc list-inside space-y-1 text-sm text-[var(--cream-dim)]">
+                  {standards.map((s) => (
+                    <li key={s.slug}>
+                      <Link
+                        href={`/standards/${s.slug}`}
+                        className="text-[var(--gold)] hover:underline"
+                      >
+                        {s.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : (
+              <p className="text-sm text-[var(--cream-dim)] italic">
+                No standards in our collection are in this key yet.
+              </p>
+            )}
+          </section>
+        );
+      })()}
     </div>
   );
 }

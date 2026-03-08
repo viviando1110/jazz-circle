@@ -6,6 +6,7 @@ import { KEYS_MAJOR, getKeyBySlug } from '@/lib/music/keys';
 import { JAZZ_PROGRESSIONS, renderProgression } from '@/lib/music/progressions';
 import { ProgressionList } from '@/components/progressions/ProgressionList';
 import { ProgressionPlayer } from '@/components/progressions/ProgressionPlayer';
+import { IIVIGenerator } from '@/components/progressions/IIVIGenerator';
 
 export default function ProgressionsPageClient() {
   const [keySlug, setKeySlug] = useState('c-major');
@@ -21,6 +22,9 @@ export default function ProgressionsPageClient() {
   }, []);
 
   return (
+    <>
+    <IIVIGenerator />
+    <div className="border-t border-[var(--border)] my-8" />
     <div className="space-y-6">
       {/* Key selector */}
       <div className="flex items-center gap-3">
@@ -57,5 +61,6 @@ export default function ProgressionsPageClient() {
         </div>
       )}
     </div>
+    </>
   );
 }

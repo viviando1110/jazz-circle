@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import PracticeMode from '@/components/practice/PracticeMode';
 
 export const metadata: Metadata = {
@@ -18,6 +19,32 @@ export default function PracticePage() {
         metronome and scale guide.
       </p>
       <PracticeMode />
+
+      {/* Practice sub-pages */}
+      <div className="mt-12 grid gap-4 sm:grid-cols-2">
+        <Link
+          href="/practice/melody"
+          className="rounded-lg border border-[var(--border)] bg-[var(--surface)] p-5 hover:border-[var(--gold)]/40 transition-colors"
+        >
+          <h2 className="font-serif text-lg text-[var(--cream)] mb-1">
+            Melody &amp; Lick Generator
+          </h2>
+          <p className="text-sm text-[var(--cream-dim)]">
+            Generate jazz licks over any chord quality with notation and audio.
+          </p>
+        </Link>
+        <Link
+          href="/practice/ear-training"
+          className="rounded-lg border border-[var(--border)] bg-[var(--surface)] p-5 hover:border-[var(--gold)]/40 transition-colors"
+        >
+          <h2 className="font-serif text-lg text-[var(--cream)] mb-1">
+            Ear Training
+          </h2>
+          <p className="text-sm text-[var(--cream-dim)]">
+            Identify chord qualities and key centers by ear with interactive quizzes.
+          </p>
+        </Link>
+      </div>
     </div>
   );
 }
