@@ -21,16 +21,34 @@ function difficultyColor(difficulty: string): string {
   }
 }
 
+const selectClass = (active: boolean) =>
+  `rounded-lg border ${active ? 'border-[var(--gold)]/40' : 'border-[var(--border)]'} bg-[var(--surface)] px-3 py-2 text-xs text-[var(--cream)] focus:border-[var(--gold)] focus:outline-none focus:ring-1 focus:ring-[var(--gold)]`;
+
 export function SongsSearch({ standards }: SongsSearchProps) {
   const [query, setQuery] = useState('');
   const [difficultyFilter, setDifficultyFilter] = useState<string>('all');
+  const [styleFilter, setStyleFilter] = useState<string>('all');
+  const [keyFilter, setKeyFilter] = useState<string>('all');
+
+  const uniqueStyles = useMemo(
+    () => Array.from(new Set(standards.map((s) => s.style).filter((v): v is string => !!v))).sort(),
+    [standards],
+  );
+
+  const uniqueKeys = useMemo(
+    () => Array.from(new Set(standards.map((s) => s.defaultKey))).sort(),
+    [standards],
+  );
+
+  const hasActiveFilter =
+    query !== '' || difficultyFilter !== 'all' || styleFilter !== 'all' || keyFilter !== 'all';
 
   const filtered = useMemo(() => {
     const q = query.toLowerCase().trim();
     return standards.filter((s) => {
-      // Difficulty filter
       if (difficultyFilter !== 'all' && s.difficulty !== difficultyFilter) return false;
-      // Text search
+      if (styleFilter !== 'all' && s.style !== styleFilter) return false;
+      if (keyFilter !== 'all' && s.defaultKey !== keyFilter) return false;
       if (!q) return true;
       return (
         s.title.toLowerCase().includes(q) ||
@@ -39,12 +57,19 @@ export function SongsSearch({ standards }: SongsSearchProps) {
         s.defaultKey.toLowerCase().includes(q)
       );
     });
-  }, [standards, query, difficultyFilter]);
+  }, [standards, query, difficultyFilter, styleFilter, keyFilter]);
+
+  const clearAll = () => {
+    setQuery('');
+    setDifficultyFilter('all');
+    setStyleFilter('all');
+    setKeyFilter('all');
+  };
 
   return (
     <div>
       {/* Search + Filter controls */}
-      <div className="flex flex-col sm:flex-row gap-3 mb-6">
+      <div className="flex flex-col sm:flex-row gap-3 mb-3">
         <div className="relative flex-1">
           <input
             type="text"
@@ -83,6 +108,41 @@ export function SongsSearch({ standards }: SongsSearchProps) {
         </div>
       </div>
 
+      {/* Style + Key dropdowns */}
+      <div className="flex flex-wrap gap-2 mb-6">
+        <select
+          value={styleFilter}
+          onChange={(e) => setStyleFilter(e.target.value)}
+          className={selectClass(styleFilter !== 'all')}
+          aria-label="Filter by style"
+        >
+          <option value="all">All Styles</option>
+          {uniqueStyles.map((style) => (
+            <option key={style} value={style}>{style}</option>
+          ))}
+        </select>
+        <select
+          value={keyFilter}
+          onChange={(e) => setKeyFilter(e.target.value)}
+          className={selectClass(keyFilter !== 'all')}
+          aria-label="Filter by key"
+        >
+          <option value="all">All Keys</option>
+          {uniqueKeys.map((key) => (
+            <option key={key} value={key}>{key}</option>
+          ))}
+        </select>
+        {hasActiveFilter && (
+          <button
+            type="button"
+            onClick={clearAll}
+            className="text-xs text-[var(--cream-dim)] hover:text-[var(--cream)] underline"
+          >
+            Clear all filters
+          </button>
+        )}
+      </div>
+
       {/* Results count */}
       <p className="text-xs text-[var(--cream-dim)] mb-4">
         {filtered.length} {filtered.length === 1 ? 'song' : 'songs'}
@@ -107,9 +167,20 @@ export function SongsSearch({ standards }: SongsSearchProps) {
                 {standard.difficulty}
               </span>
             </div>
-            <p className="text-sm text-[var(--cream-dim)] mb-3">
+            <p className="text-sm text-[var(--cream-dim)] mb-1">
               {standard.composer} ({standard.year}) &middot; {standard.form} &middot;{' '}
               {standard.totalBars} bars
+            </p>
+            <p className="text-xs text-[var(--cream-dim)] mb-3 flex items-center gap-1.5">
+              {standard.style && (
+                <>
+                  <span className="px-2 py-0.5 rounded bg-[var(--blue)]/20 text-[var(--blue)]">
+                    {standard.style}
+                  </span>
+                  <span>&middot;</span>
+                </>
+              )}
+              <span>{standard.defaultKey}</span>
             </p>
             <div className="flex flex-wrap gap-1.5">
               {standard.tags.map((tag) => (

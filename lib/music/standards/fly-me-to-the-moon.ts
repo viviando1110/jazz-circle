@@ -8,7 +8,7 @@ export const FLY_ME_TO_THE_MOON: Standard = {
   composer: 'Bart Howard',
   year: 1954,
   form: 'ABAB',
-  defaultKey: 'C',
+  defaultKey: 'C major',
   alternateKey: 'Am',
   tempo: {
     slow: 100,

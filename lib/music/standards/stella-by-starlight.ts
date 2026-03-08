@@ -8,7 +8,7 @@ export const STELLA_BY_STARLIGHT: Standard = {
   composer: 'Victor Young',
   year: 1944,
   form: 'ABCD',
-  defaultKey: 'Bb',
+  defaultKey: 'Bb major',
   alternateKey: 'G',
   tempo: {
     slow: 100,

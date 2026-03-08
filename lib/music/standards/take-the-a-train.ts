@@ -8,7 +8,7 @@ export const TAKE_THE_A_TRAIN: Standard = {
   composer: 'Billy Strayhorn',
   year: 1941,
   form: 'AABA',
-  defaultKey: 'C',
+  defaultKey: 'C major',
   alternateKey: 'Eb',
   tempo: {
     slow: 120,
