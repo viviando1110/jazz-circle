@@ -22,7 +22,10 @@ export default function MobileNav({ isOpen, links, onClose }: MobileNavProps) {
     if (!isOpen) return;
 
     function handleClick(e: MouseEvent) {
-      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+      const target = e.target as HTMLElement;
+      // Ignore clicks on the toggle button — it has its own onClick handler
+      if (target.closest('[aria-controls="mobile-nav"]')) return;
+      if (navRef.current && !navRef.current.contains(target)) {
         onClose();
       }
     }
